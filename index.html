@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Playyon Football Academy - About Us</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- Navbar -->
+  <header class="navbar-bg py-4 rounded-full mt-5 mx-auto max-w-[1200px] px-6 sticky top-5 z-30 shadow-lg">
+    <nav class="navbar flex justify-between items-center">
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-sm font-semibold">
+        <li><a href="#" class="nav-link text-gray-900">Home</a></li>
+        <li class="dropdown relative cursor-pointer group">
+          <button class="nav-link flex items-center gap-1 text-gray-900 focus:outline-none">
+            About us
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu absolute bg-white shadow rounded-lg mt-2 p-2 w-32 hidden top-full left-0 border border-gray-200">
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Our Vision</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Our Mission</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Our Motto</a></li>
+          </ul>
+        </li>
+        <li class="dropdown relative cursor-pointer group">
+          <button class="nav-link flex items-center gap-1 text-gray-900 focus:outline-none">
+            Programs
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu absolute bg-white shadow rounded-lg mt-2 p-2 w-32 hidden top-full left-0 border border-gray-200">
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Youth Academy</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Professional Training</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Elite Camps</a></li>
+          </ul>
+        </li>
+        <li class="dropdown relative cursor-pointer group">
+          <button class="nav-link flex items-center gap-1 text-gray-900 focus:outline-none">
+            Pages
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <ul class="dropdown-menu absolute bg-white shadow rounded-lg mt-2 p-2 w-32 hidden top-full left-0 border border-gray-200">
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Gallery</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Events</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-pink-600 hover:text-white rounded transition-all">Blog</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Mobile Hamburger -->
+      <div class="md:hidden">
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- Logo -->
+      <a href="#" aria-label="Playyon logo" class="flex-shrink-0 transition-transform hover:scale-105">
+        <svg xmlns="http://www.w3.org/2000/svg" width="72" height="66" viewBox="0 0 72 66" fill="none" aria-hidden="true" role="img" class="pointer-events-none select-none">
+          <rect width="72" height="66" rx="14" fill="#BE123C"/>
+          <path fill="#152746" d="M10 12h52v42H10z"/>
+          <text fill="white" x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="19">
+            PLAYYON
+          </text>
+        </svg>
+      </a>
+
+      <!-- Register button -->
+      <div class="hidden md:block">
+        <a href="#" class="btn-pink text-sm whitespace-nowrap">Register Now</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu fixed top-0 left-0 w-full h-full bg-white z-40 md:hidden" id="mobileMenu">
+      <div class="p-6">
+        <div class="flex justify-between items-center mb-8">
+          <a href="#" class="flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="55" viewBox="0 0 72 66" fill="none">
+              <rect width="72" height="66" rx="14" fill="#BE123C"/>
+              <path fill="#152746" d="M10 12h52v42H10z"/>
+              <text fill="white" x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="16">PLAYYON</text>
+            </svg>
+          </a>
+          <div class="hamburger active" id="mobileClose">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        
+        <nav class="space-y-6">
+          <a href="#" class="block text-lg text-gray-900 hover:text-pink-600 transition-colors">Home</a>
+          <div class="space-y-3">
+            <p class="text-lg text-gray-900">About us</p>
+            <div class="pl-4 space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Our Vision</a>
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Our Mission</a>
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Our Motto</a>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <p class="text-lg text-gray-900">Programs</p>
+            <div class="pl-4 space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Youth Academy</a>
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Professional Training</a>
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Elite Camps</a>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <p class="text-lg text-gray-900">Pages</p>
+            <div class="pl-4 space-y-2">
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Gallery</a>
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Events</a>
+              <a href="#" class="block text-gray-600 hover:text-pink-600 transition-colors">Blog</a>
+            </div>
+          </div>
+          <a href="#" class="btn-pink text-sm inline-block mt-6">Register Now</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-bg rounded-[22px] max-w-[1200px] mx-auto mt-8 px-6">
+    <div class="hero-content max-w-3xl mx-auto">
+      <h1 class="text-3xl md:text-4xl font-extrabold mb-2">About us</h1>
+      <p class="text-base md:text-lg font-medium max-w-xl mx-auto">Precision training, advanced career, that's our promise</p>
+    </div>
+  </section>
+
+  <main class="max-w-[1200px] mx-auto px-6 mt-14">
+
+    <!-- Section 1 -->
+    <section class="grid md:grid-cols-2 gap-8 md:gap-10 items-center scroll-fade mb-8">
+      <article class="scroll-slide-left">
+        <p class="text-pink-700 uppercase text-xs font-semibold tracking-wider mb-3">Who We Are</p>
+        <h2 class="font-bold text-xl mb-3 leading-tight">Enhancement beyond limits, Playyon is the Gateway to champions</h2>
+        <p class="text-gray-600 mb-8 leading-relaxed max-w-lg">
+          Turpis non est facilisis aliquet potent primu penatibus maura sanetis dignissim porta.
+          Ligula ultricies curae ultricis eleifend rhentra senectus hac pharetra iustortti lectus consectetur velit finibus est volutpat sagittis nascetur feugiat molestie congue nullam nam accumsan curabitur ele odio urna aliquet nec tristique porta.
+        </p>
+
+        <div class="flex flex-col sm:flex-row sm:space-x-10 space-y-6 sm:space-y-0 text-center max-w-lg">
+          <div class="stat-item">
+            <p class="stat-number">91+</p>
+            <p class="uppercase text-xs font-semibold tracking-wide text-gray-600">Active Players</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-number">271+</p>
+            <p class="uppercase text-xs font-semibold tracking-wide text-gray-600">Academy Alumni</p>
+          </div>
+          <div class="stat-item">
+            <p class="stat-number">42+</p>
+            <p class="uppercase text-xs font-semibold tracking-wide text-gray-600">Company Support</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="relative scroll-slide-right">
+        <div class="image-hover rounded-xl overflow-hidden">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9c1a0738-44e1-49b5-b151-93e7b05679b6.png" alt="Aerial view of a large football stadium during daylight with empty stands and green field" class="shadow-lg w-full object-cover" />
+        </div>
+        <div class="absolute bottom-6 left-6 bg-white rounded-xl p-4 max-w-xs shadow-lg border border-gray-200 card">
+          <h3 class="text-pink-700 font-semibold text-sm leading-snug mb-1">Become a Champion with Playyon Football Academy!</h3>
+          <p class="text-gray-700 text-xs leading-tight">Ridiculus in taciti semper vivamus etiam luctus montes primis eleifend viverra congue</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="relative bg-[url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d4460625-3315-4bce-92db-b09b8708fdb4.png')] bg-cover bg-center rounded-xl shadow-lg scroll-fade mb-12">
+      <div class="bg-black bg-opacity-50 rounded-xl p-6 md:p-10 max-w-4xl">
+        <div class="card max-w-lg">
+          <p class="uppercase text-pink-600 text-xs font-bold mb-2 tracking-widest">Our Value</p>
+          <h2 class="font-extrabold text-xl md:text-2xl mb-4 leading-tight">Kickstart Your Football Career with Playyon Academy</h2>
+          <p class="text-gray-700 leading-relaxed mb-8">
+            Integer posuere mattis luctus iaculis mattis serrarin odis primum vehicula nostra i tutela semper class.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 mb-6">
+            <button class="btn-pink py-2 px-6 text-sm">Our Vision</button>
+            <button class="btn-pink bg-pink-300 text-pink-900 py-2 px-6 text-sm hover:bg-pink-400">Our Mission</button>
+            <button class="btn-pink bg-pink-300 text-pink-900 py-2 px-6 text-sm hover:bg-pink-400">Our Motto</button>
+          </div>
+          <p class="text-gray-600 text-sm leading-relaxed max-w-xs">
+            Ultricies habitant nulla per et semper hac primum torrant classe porta gravida ante dis laoreet porttitor arcu mattis viverra sodales augue suspendisse placerat sapien finibus a justo vel.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section class="grid md:grid-cols-3 gap-8 md:gap-10 items-center scroll-fade">
+      <article class="max-w-md scroll-slide-left">
+        <h2 class="font-bold text-xl mb-3 leading-tight">The Playyon Promise: Commitment, Growth, and Victory</h2>
+        <p class="text-gray-700 mb-6 leading-relaxed">
+          Auctor posuere morbi consectetur ut pellentesque montes parturient. Orciada lectus fusce lectus amet aliquam rutrum erat. Arcu fusce praesent fermentum lames passerat nis purus id libero congue malesuada.
+        </p>
+        <button class="btn-pink py-2 px-5 text-sm">Discover More</button>
+      </article>
+      
+      <article class="scroll-fade">
+        <div class="image-hover rounded-xl overflow-hidden">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4b04c6c3-50a8-4255-af19-9b38d6ff7bdc.png" alt="Young football players celebrating victory on the field" class="shadow-lg w-full object-cover h-64" />
+        </div>
+      </article>
+
+      <article class="space-y-6 scroll-slide-right">
+        <div class="flex items-start gap-4">
+          <div class="icon-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm mb-1">Elite Training</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">World-class training facilities and experienced coaches to help you reach your full potential.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="icon-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm mb-1">Developing Talent</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">Personalized development programs designed to nurture individual strengths and abilities.</p>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-4">
+          <div class="icon-circle">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm mb-1">Inspiring Champions</h3>
+            <p class="text-gray-600 text-xs leading-relaxed">Creating future champions through dedication, discipline, and the pursuit of excellence.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sponsorship Section -->
+    <section class="text-center py-12 scroll-fade">
+      <h2 class="font-bold text-2xl mb-8">Sponsorship</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">accufirm</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">bloomly</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">brighto</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">Digancy</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">EcoScape</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">Kithara</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">finexo</text>
+          </svg>
+        </div>
+        <div class="sponsor-logo">
+          <svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="40" rx="8" fill="#f3f4f6"/>
+            <text x="60" y="24" text-anchor="middle" fill="#6b7280" font-family="Arial, sans-serif" font-size="12" font-weight="600">BeyGenie</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-16 py-12">
+    <div class="max-w-[1200px] mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <!-- Logo and Social -->
+        <div class="space-y-4">
+          <a href="#" class="inline-block">
+            <svg xmlns="http://www.w3.org/2000/svg" width="72" height="66" viewBox="0 0 72 66" fill="none">
+              <rect width="72" height="66" rx="14" fill="#BE123C"/>
+              <path fill="#152746" d="M10 12h52v42H10z"/>
+              <text fill="white" x="50%" y="46%" dominant-baseline="middle" text-anchor="middle" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="19">
+                PLAYYON
+              </text>
+            </svg>
+          </a>
+          <div class="flex space-x-4">
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.219-.359-1.219c0-1.142.662-1.995 1.488-1.995.702 0 1.041.219 1.041 1.219 0 .738-.469 1.844-.711 2.866-.203.859.219 1.219 1.125 1.219 1.352 0 2.391-1.422 2.391-3.47 0-1.813-1.305-3.081-3.169-3.081-2.16 0-3.428 1.62-3.428 3.298 0 .653.25 1.353.563 1.734a.327.327 0 0 1 .078.312c-.086.359-.281 1.141-.318 1.301-.053.218-.172.265-.395.159-1.479-.687-2.407-2.844-2.407-4.578 0-3.739 2.719-7.179 7.835-7.179 4.115 0 6.916 2.929 6.916 6.84 0 4.087-2.578 7.378-6.159 7.378-1.203 0-2.344-.625-2.734-1.378l-.742 2.829c-.269 1.031-1 2.328-1.488 3.114C9.563 23.812 10.781 24.029 12.017 24.029c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.027 9.92L16.15 5H14.956L11.585 9.14L8.928 5H6.5l4.312 6.286L6.5 17h1.194l3.562-4.172L13.072 17H15.5L12.027 9.92zM10.934 12.338l-.416-.59L7.04 6.55h1.42l2.662 3.797.416.59L14.956 16.36H13.536l-2.602-3.723z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Home</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Programs</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Gallery</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Programs -->
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Youth Academy</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Professional Training</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Elite Camps</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Summer Camps</a></li>
+            <li><a href="#" class="hover:text-pink-600 transition-colors">Private Coaching</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-col">
+          <h5>Contact Info</h5>
+          <div class="space-y-3 text-sm">
+            <div>
+              <p class="font-semibold">Complete Wings Rd 22</p>
+              <p>Jakarta, Indonesia</p>
+            </div>
+            <div>
+              <p class="font-semibold">Hotline/yourdomain.ltd</p>
+              <p>(888) 1500 234</p>
+            </div>
+            <div>
+              <p class="font-semibold">Monday - Friday :</p>
+              <p>08.00 - 18.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Footer -->
+      <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p>&copy; 2024 Playyon. All rights reserved. Developed by Your Company</p>
+        <div class="mt-4 md:mt-0">
+          <a href="#" class="btn-pink text-xs py-2 px-4">Register Now</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
