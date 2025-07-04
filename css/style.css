@@ -13693,7 +13693,11 @@ html .group-sm-justify .button + .button {
 .section-md,
 .section-lg,
 .section-xl {
+<<<<<<< HEAD
 	padding: 0px 0;
+=======
+	padding: 50px 0;
+>>>>>>> aa693e4 (ithu majaavana akka bro)
 }
 
 .section-collapse + .section-collapse {
@@ -13727,7 +13731,11 @@ html [class*='section-'].section-bottom-0 {
 		padding: 60px 0;
 	}
 	.section-md {
+<<<<<<< HEAD
 		padding-top: 10cap;
+=======
+		padding: 70px 0;
+>>>>>>> aa693e4 (ithu majaavana akka bro)
 	}
 	.section-lg {
 		padding: 85px 0;
@@ -13739,7 +13747,11 @@ html [class*='section-'].section-bottom-0 {
 
 @media (min-width: 992px) {
 	.section-md {
+<<<<<<< HEAD
 		padding: 0px 0 0px;
+=======
+		padding: 80px 0 90px;
+>>>>>>> aa693e4 (ithu majaavana akka bro)
 	}
 	.section-lg {
 		padding: 100px 0;

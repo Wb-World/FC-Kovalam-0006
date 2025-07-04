@@ -1,9 +1,0 @@
-default:
-	@git add .
-	@git commit -m "Updated"
-	@git push
-
-pull:
-	@git add .
-	@git commit -m "Updated"
-	@git pull
