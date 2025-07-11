@@ -1,18 +1,400 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>About Us</title>
+    <title>About Us - FC Kovalam</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
-    
-
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
+      .footer {
+          background-color: #000;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+      }
+
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1000;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* Side Menu */
+      .side-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        height: 100vh;
+        width: 250px;
+        background: #111;
+        color: white;
+        z-index: 2000;
+        padding: 60px 20px;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+      }
+
+      .side-menu.active {
+        right: 0;
+        display: block;
+      }
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-menu ul li {
+        margin: 20px 0;
+      }
+
+      .side-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .side-menu .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+      }
+
+      /* Header Styles */
+      .header-container {
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        padding: 15px 0;
+        transition: all 0.3s ease;
+      }
+      
+      .header-container.scrolled {
+        background: rgba(0,0,0,0.95);
+        padding: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .logo-nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .brand-logo {
+        height: 60px;
+        width: auto;
+        transition: all 0.3s ease;
+      }
+      
+      .scrolled .brand-logo {
+        height: 50px;
+      }
+      
+      .main-nav {
+        display: flex;
+        align-items: center;
+      }
+      
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .main-nav li {
+        margin: 0 15px;
+        position: relative;
+      }
+      
+      .main-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        padding: 5px 0;
+        position: relative;
+      }
+      
+      .main-nav a:hover {
+        color: #2a7fef;
+      }
+      
+      .main-nav a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #2a7fef;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      
+      .main-nav a:hover:after {
+        width: 100%;
+      }
+      
+      .social-icons {
+        display: flex;
+        margin-left: 30px;
+      }
+      
+      .social-icons a {
+        color: white;
+        font-size: 18px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        color: #2a7fef;
+        transform: translateY(-3px);
+      }
+      
+      /* About Us Hero */
+      .about-hero {
+        height: 60vh;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/about-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding-top: 80px;
+      }
+      
+      .about-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+      }
+      
+      .about-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      
+      /* About Content Sections */
+      .about-section {
+        padding: 80px 0;
+      }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .section-title h2 {
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .section-title h2:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        background: #2a7fef;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      
+      .about-card {
+        background: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+      }
+      
+      .about-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      }
+      
+      .about-card h3 {
+        color: #2a7fef;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+      
+      .about-card p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+      
+      /* Timeline for History */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .timeline:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background: #2a7fef;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+      }
+      
+      .timeline-item {
+        padding: 20px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+      }
+      
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+      
+      .timeline-content {
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .timeline-year {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #2a7fef;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-weight: bold;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-year {
+        right: -120px;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-year {
+        left: -120px;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .main-nav ul {
+          display: none !important;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+        
+        .about-hero h1 {
+          font-size: 2.5rem;
+        }
+        
+        .timeline:before {
+          left: 40px;
+        }
+        
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+        
+        .timeline-item:nth-child(even) {
+          left: 0;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year,
+        .timeline-item:nth-child(even) .timeline-year {
+          left: 0;
+          right: auto;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .about-hero {
+          height: auto !important;
+          padding-top: 200px !important;
+          padding-bottom: 60px;
+        }
+
+        .about-hero h1 {
+          font-size: 2rem;
+        }
+
+        .about-hero p {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .brand-logo {
+          height: 50px;
+        }
+        
+        .about-hero {
+          height: 40vh;
+          padding-top: 70px;
+        }
+        
+        .about-card {
+          padding: 20px;
+        }
+      }
+      
       .ie-panel {
         display: none;
         background: #212121;
@@ -22,276 +404,231 @@
         text-align: center;
         position: relative;
         z-index: 1;
-      }
-
+      } 
+      
       html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
         display: block;
       }
-
-      body {
-        margin: 0;
-        font-family: 'Kanit', sans-serif;
-      }
-
-      /* Navigation Styles */
-      .rd-navbar-darker {
-        background-color: #1a1a1a;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-      }
-      
-      .rd-navbar-main-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      
-      .rd-navbar-nav {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-      }
-      
-      .rd-nav-item {
-        position: relative;
-      }
-      
-      .rd-nav-link {
-        color: white;
-        text-decoration: none;
-        padding: 20px 15px;
-        display: block;
-        font-weight: 500;
-        transition: color 0.3s ease;
-      }
-      
-      .rd-nav-link:hover {
-        color: #e63946;
-      }
-      
-      .list-inline-sm {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        gap: 15px;
-      }
-      
-      .icon-light {
-        color: white;
-        transition: color 0.3s ease;
-      }
-      
-      .icon-light:hover {
-        color: #e63946;
-      }
-
-      .hero-section {
-        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                    url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1470&q=80') center/cover no-repeat;
-        color: white;
-        padding: 120px 0;
-        text-align: center;
-        margin-top: 60px; /* Added to account for fixed navbar */
-      }
-
-      .section-dark {
-        background-color: #1a1a1a;
-        color: white;
-        padding: 80px 0;
-      }
-
-      .value-card {
-        background: rgba(255,255,255,0.1);
-        border-radius: 15px;
-        padding: 40px 30px;
-        margin-bottom: 30px;
-        transition: all 0.3s ease;
-        border-left: 5px solid;
-      }
-
-      .value-card:hover {
-        transform: translateY(-10px);
-        background: rgba(255,255,255,0.15);
-      }
-
-      .mission-card {
-        border-left-color: #e63946;
-      }
-
-      .vision-card {
-        border-left-color: #1da1f2;
-      }
-
-      .history-card {
-        border-left-color: #f4a261;
-      }
-
-      .value-icon {
-        font-size: 3rem;
-        margin-bottom: 20px;
-        color: white;
-      }
-
-      .section-title {
-        font-size: 2.8rem;
-        margin-bottom: 60px;
-        position: relative;
-        display: inline-block;
-      }
-
-      .section-title:after {
-        content: '';
-        position: absolute;
-        width: 50%;
-        height: 3px;
-        background: #e63946;
-        bottom: -10px;
-        left: 25%;
-      }
-
-      .club-motto {
-        font-size: 1.8rem;
-        font-style: italic;
-        margin-top: 20px;
-        color: rgba(255,255,255,0.8);
-      }
-
-      .container {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      .row {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 -15px;
-      }
-
-      .col-md-4, .col-md-6 {
-        padding: 15px;
-        box-sizing: border-box;
-      }
-
-      .col-md-4 {
-        width: 100%;
-      }
-
-      @media(min-width: 768px) {
-        .col-md-4 {
-          width: 33.3333%;
-        }
-        .col-md-6 {
-          width: 50%;
-        }
-        
-        .rd-navbar-nav {
-          flex-wrap: nowrap;
-        }
-      }
-
-      footer {
-        background: #111;
-        padding: 30px 0;
-        color: #aaa;
-        font-size: 14px;
-        text-align: center;
-      }
-
-      .nav-minimal-list {
-        list-style: none;
-        padding: 0;
-        margin: 15px 0 0;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-      }
-
-      .nav-minimal-list li a {
-        color: #aaa;
-        text-decoration: none;
-      }
-
-      .nav-minimal-list li a:hover {
-        color: #fff;
-      }
     </style>
   </head>
-
   <body>
-    <div class="ie-panel"><a href="#"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser."></a></div>
-
-    <div class="page">
-      <!-- Navigation Bar -->
-      <div class="rd-navbar-main-bottom rd-navbar-darker">
-        <div class="rd-navbar-main-container container">
-          <!-- RD Navbar Nav-->
-          <ul class="rd-navbar-nav">
-            <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
-            <li class="rd-nav-item"><a class="rd-nav-link" href="About.html">About us</a></li>
-            <li class="rd-nav-item"><a class="rd-nav-link" href="Teams.html">Teams</a></li>
-            <li class="rd-nav-item"><a class="rd-nav-link" href="Events.html">Events</a></li>
-            <li class="rd-nav-item"><a class="rd-nav-link" href="Staff.html">Staff</a></li>
-            <li class="rd-nav-item"><a class="rd-nav-link" href="Achievement.html">Achievements</a></li>
-            <li class="rd-nav-item"><a class="rd-nav-link" href="Contact-us.html">Contact us</a></li>
-          </ul>
-        </div>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+      </a>
+    </div>
+    
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
       </div>
-
-      <!-- Hero Section -->
-      <section class="hero-section" style="margin-top:0px">
+    </div>
+    
+    <!-- Page -->
+    <div class="page">
+      <!-- Header -->
+      <header class="header-container">
         <div class="container">
-          <h1 style="font-size: 4rem; font-weight: 700; text-transform: uppercase;">FC KOVALAM</h1>
-          <p class="club-motto">Where Passion Meets Purpose</p>
+          <div class="logo-nav-wrapper">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            
+            <a class="navbar-brand" href="index.html">
+              <img class="brand-logo" src="images/logo.png" alt="FC Kovalam">
+            </a>
+            
+            <nav class="main-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="About.html">About</a></li>
+                <li><a href="Teams.html">Teams</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Staff.html">Staff</a></li>
+                <li><a href="Achievement.html">Achievements</a></li>
+                <li><a href="Contact-us.html">Contact</a></li>
+              </ul>
+              
+              <div class="social-icons">
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Side Menu -->
+      <div class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Teams.html">Teams</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Staff.html">Staff</a></li>
+          <li><a href="Achievement.html">Achievements</a></li>
+          <li><a href="Contact-us.html">Contact</a></li>
+        </ul>
+      </div>      
+      
+      <!-- About Hero Section -->
+      <section class="about-hero">
+        <div class="container">
+          <h1>About us</h1>
+          <p>
+            <b>
+            FC Kovalam Club was established in the year 2019 out of love for the beautiful game called football (soccer). Nestled in the picturesque coastal town of Kovalam (often referred to as Mini Goa), Chennai, Tamil Nadu, FC Kovalam is dedicated to nurturing young talent, instilling discipline, and igniting a lifelong passion for football.
+            At FCK, our primary mission is to develop well-rounded, skilled, and confident footballers who excel both on the pitch and in life. We are a premier youth football club focused on grassroots football development.
+            </b>
+          </p>
         </div>
       </section>
-
-      <!-- Values Section -->
-      <section class="section-dark">
+      
+      <!-- Mission Section -->
+      <section class="about-section bg-gray-100">
         <div class="container">
-          <h2 class="section-title text-center">OUR CORE VALUES</h2>
-
-          <div class="row">
-            <!-- Mission Card -->
-            <div class="col-md-4">
-              <div class="value-card mission-card text-center">
-                <div class="value-icon"><i class="fas fa-bullseye"></i></div>
-                <h3 style="color: #e63946;">OUR MISSION</h3>
-                <p>At FC Kovalam, we believe football is more than a game—it's a tool for transformation. Our mission is to nurture young talent, instill discipline, and foster teamwork while promoting values like resilience, respect, and fair play.</p>
-                <p>Through structured training and mentorship, we empower players to excel both on and off the field, shaping not just athletes, but future leaders.</p>
+          <div class="section-title">
+            <h2>Our Mission</h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="about-card">
+                <h3>FC Kovalam Mission Statement</h3>
+                <p><strong>“To develop and promote Indian football by providing a professional, disciplined, and inclusive environment that nurtures talent, inspires youth, and builds a strong football culture across the nation.”</strong></p>
+      
+                <h4>Our Mission Goals</h4>
+                <ul style="padding-left: 20px;">
+                  <li><strong>Develop Indian Talent:</strong> To identify and train young Indian players with structured grassroots and academy programs focused on skill, fitness, and tactical awareness.</li>
+                  <li><strong>Promote Football Culture:</strong> To raise awareness, excitement, and participation in football at the local and national level through matches, events, and community outreach.</li>
+                  <li><strong>Build Character and Discipline:</strong> To instill values of teamwork, leadership, sportsmanship, and discipline in every player, preparing them for success both on and off the pitch.</li>
+                  <li><strong>Achieve Competitive Excellence:</strong> To create a team that competes with passion, pride, and professionalism in local, state, and national competitions.</li>
+                  <li><strong>Empower the Next Generation:</strong> To inspire children and youth across India to dream big through football—offering them a platform to grow, achieve, and represent their communities and country.</li>
+                  <li><strong>Unite Through Football:</strong> To bring people together from different backgrounds, regions, and communities through the love of the game.</li>
+                </ul>
               </div>
             </div>
-
-            <!-- Vision Card -->
-            <div class="col-md-4">
-              <div class="value-card vision-card text-center">
-                <div class="value-icon"><i class="fas fa-eye"></i></div>
-                <h3 style="color: #1da1f2;">OUR VISION</h3>
-                <p>We dream of a future where every child, regardless of background, has the opportunity to chase their football dreams. FC Kovalam aspires to be a beacon of excellence, producing players who shine at national and international levels.</p>
-                <p>Beyond trophies, we aim to create a legacy of inspiration—where passion for the game fuels personal growth, community pride, and lifelong bonds.</p>
-              </div>
-            </div>
-
-            <!-- History Card -->
-            <div class="col-md-4">
-              <div class="value-card history-card text-center">
-                <div class="value-icon"><i class="fas fa-history"></i></div>
-                <h3 style="color: #f4a261;">OUR HISTORY</h3>
-                <p>Born from a humble ground and a shared love for football, FC Kovalam started as a small local club with big dreams. Over the years, we've grown from neighborhood matches to competitive leagues.</p>
-                <p>Today, we stand as proof that with dedication, even the smallest beginnings can inspire greatness. This is our story, and it's only the beginning.</p>
+          </div>
+        </div>
+      </section>      
+      
+      <section class="about-section">
+        <div class="container">
+          <div class="section-title">
+            <h2>Our Vision</h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="about-card">
+                <h3>FC Kovalam Vision Statement</h3>
+                <p><strong>“To build a respected and successful football club that inspires young talent, fosters community pride, and consistently competes at the highest level, both on and off the field.”</strong></p>
+      
+                <h4>Key Elements of Our Vision</h4>
+                <ul style="padding-left: 20px;">
+                  <li><strong>Player Development:</strong> To nurture and develop young footballers into skilled, disciplined, and confident athletes through structured training, mentorship, and exposure to competitive opportunities.</li>
+                  <li><strong>Community Engagement:</strong> To become a pillar of our local community by promoting unity, participation, and a love for the game among all age groups.</li>
+                  <li><strong>Professional Excellence:</strong> To maintain the highest standards of professionalism, sportsmanship, and integrity in everything we do—on the pitch and in our administration.</li>
+                  <li><strong>Sustainable Growth:</strong> To establish a long-term structure that supports financial sustainability, modern facilities, and strong partnerships with sponsors, schools, and local bodies.</li>
+                  <li><strong>Winning Spirit:</strong> To cultivate a culture of resilience, teamwork, and a relentless drive to win—while respecting the spirit of the game.</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
-
+      
+      
+      <section class="about-section bg-gray-100">
+        <div class="container">
+          <div class="section-title">
+            <h2>History of Kovalam</h2>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="about-card">
+                <p>
+                  In 2019, on the golden sands of India's coastline, a dream was born. With no backing, no sponsors, and limited resources—just a ball, the open beach, and a burning passion for the game—a man with unmatched talent took the first step in building what would become one of India's most inspiring football teams.
+                </p>
+                <p>
+                  The journey began with nothing but determination. With no financial help, no proper training ground, and no recognition, the founder trained alone—often using makeshift equipment and drawing lines in the sand. What he lacked in support, he made up for with belief, discipline, and vision. Slowly, others noticed. A few local youngsters joined him, drawn not by fame or money, but by their love for football and a desire to be part of something special.
+                </p>
+                <p>
+                  By 2020, the team had grown into a brotherhood—united by sweat, struggle, and the sea breeze. They trained hard, organized friendly matches, and started gaining attention for their raw skill, unity, and fighting spirit. Without any big names or facilities, they took on more experienced teams and began to win hearts—and games.
+                </p>
+                <p>
+                  Their biggest victory wasn't just on the scoreboard, but in proving that a dream fueled by passion can overcome any obstacle.
+                </p>
+                <p>
+                  Today, the team stands as a symbol of grassroots football in India—a testament to grit, talent, and the power of belief. The story is still being written, with eyes set on national recognition and international glory.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- Call to Action -->
+      <section class="section-md bg-primary context-dark text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2>Join the FC Kovalam Family</h2>
+              <p class="big">Be part of our journey as we shape the future of Indian football</p>
+              <a class="button button-white" href="Contact-us.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <!-- Footer -->
-      <footer>
-        <p class="rights"><span>FC Kovalam</span> © <span class="copyright-year">2025</span>. All Rights Reserved.</p>
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 FC Kovalam. All rights reserved.</p>
+        </div>
       </footer>
     </div>
+    
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        hamburger.addEventListener('click', function() {
+          sideMenu.classList.add('active');
+        });
+        
+        closeMenu.addEventListener('click', function() {
+          sideMenu.classList.remove('active');
+        });
+        
+        // Close menu when clicking on links
+        const menuLinks = document.querySelectorAll('.side-menu a');
+        menuLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            sideMenu.classList.remove('active');
+          });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+          const header = document.querySelector('.header-container');
+          if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+          } else {
+            header.classList.remove('scrolled');
+          }
+        });
+      });
+    </script>
   </body>
 </html>
