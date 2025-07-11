@@ -1,423 +1,654 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <title>Contact FC Kovalam - Where Passion Meets Purpose</title>
+    <!-- Site Title-->
+    <title>Contact Us | Sportland</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
     <style>
-      :root {
-        --primary: #1a3e72;
-        --secondary: #e63946;
-        --accent: #f4a261;
-        --dark: #1a1a1a;
-        --light: #f8f9fa;
-      }
-
-      body {
-        margin: 0;
-        font-family: 'Kanit', sans-serif;
-        background-color: var(--light);
-        color: #333;
-      }
-
-      /* Navigation */
-      .rd-navbar-darker {
-        background-color: var(--dark);
-        box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-      }
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
       
-      .rd-navbar-main-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-      
-      .rd-navbar-nav {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        flex-wrap: wrap;
-      }
-      
-      .rd-nav-item {
-        position: relative;
-      }
-      
-      .rd-nav-link {
-        color: white;
-        text-decoration: none;
-        padding: 20px 15px;
-        display: block;
-        font-weight: 500;
-        transition: all 0.3s ease;
-      }
-      
-      .rd-nav-link:hover {
-        color: var(--secondary);
-      }
-      
-      .rd-nav-link.active {
-        color: var(--secondary);
-        font-weight: 600;
-      }
-
-      /* Hero Section */
+      /* Custom Animation Styles */
       .contact-hero {
-        background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                   url('https://images.unsplash.com/photo-1522778119026-d647f0596c20?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-        color: white;
-        padding: 100px 0;
-        text-align: center;
-      }
-
-      .hero-title {
-        font-size: 4rem;
-        font-weight: 700;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-        letter-spacing: 2px;
-      }
-
-      .hero-subtitle {
-        font-size: 1.5rem;
-        max-width: 700px;
-        margin: 0 auto;
-        opacity: 0.9;
-      }
-
-      /* Contact Section */
-      .contact-section {
-        padding: 80px 0;
-        background-color: white;
-      }
-
-      .contact-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 40px;
-        padding: 0 20px;
-      }
-
-      .contact-info {
-        background-color: var(--dark);
-        color: white;
-        padding: 50px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      }
-
-      .contact-form {
-        background-color: white;
-        padding: 50px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 30px;
         position: relative;
-        color: var(--dark);
+        overflow: hidden;
       }
-
-      .section-title:after {
+      .contact-hero:before {
         content: '';
         position: absolute;
-        width: 60px;
-        height: 4px;
-        background: var(--secondary);
-        bottom: -10px;
+        top: 0;
         left: 0;
-      }
-
-      .contact-info .section-title {
-        color: white;
-      }
-
-      .contact-info .section-title:after {
-        background: var(--accent);
-      }
-
-      .info-item {
-        display: flex;
-        align-items: flex-start;
-        margin-bottom: 30px;
-      }
-
-      .info-icon {
-        font-size: 1.5rem;
-        color: var(--accent);
-        margin-right: 20px;
-        margin-top: 5px;
-      }
-
-      .info-content h3 {
-        margin: 0 0 10px 0;
-        font-size: 1.3rem;
-      }
-
-      .info-content p {
-        margin: 0;
-        opacity: 0.9;
-        line-height: 1.6;
-      }
-
-      .form-group {
-        margin-bottom: 25px;
-      }
-
-      .form-control {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        font-family: 'Kanit', sans-serif;
-      }
-
-      .form-control:focus {
-        outline: none;
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(26, 62, 114, 0.2);
-      }
-
-      textarea.form-control {
-        min-height: 150px;
-        resize: vertical;
-      }
-
-      .submit-btn {
-        background-color: var(--secondary);
-        color: white;
-        border: none;
-        padding: 15px 30px;
-        font-size: 1rem;
-        font-weight: 600;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .submit-btn:hover {
-        background-color: #c1121f;
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
-      }
-
-      /* Social Media */
-      .social-links {
-        display: flex;
-        gap: 15px;
-        margin-top: 30px;
-      }
-
-      .social-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background-color: rgba(255,255,255,0.1);
-        border-radius: 50%;
-        color: white;
-        font-size: 1.2rem;
-        transition: all 0.3s ease;
-      }
-
-      .social-link:hover {
-        background-color: var(--accent);
-        transform: translateY(-3px);
-      }
-
-      /* Map */
-      .map-container {
-        margin-top: 50px;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        height: 400px;
-      }
-
-      .map-container iframe {
         width: 100%;
         height: 100%;
-        border: none;
+        background: rgba(0,0,0,0.6);
+        z-index: 1;
       }
-
-      /* Footer */
-      footer {
-        background-color: var(--dark);
-        color: #aaa;
-        padding: 30px 0;
-        text-align: center;
+      .contact-hero-content {
+        position: relative;
+        z-index: 2;
       }
-
-      .footer-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
+      .contact-card {
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
       }
-
-      .copyright {
-        margin: 0;
-        font-size: 0.9rem;
+      .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
       }
-
-      /* Responsive */
-      @media (max-width: 992px) {
-        .contact-container {
-          grid-template-columns: 1fr;
+      .contact-icon {
+        transition: all 0.3s ease;
+      }
+      .contact-card:hover .contact-icon {
+        transform: scale(1.1);
+        color: #ff6b00;
+      }
+      .map-container {
+        height: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      .form-control {
+        transition: all 0.3s ease;
+        border: 1px solid #e1e1e1;
+      }
+      .form-control:focus {
+        border-color: #ff6b00;
+        box-shadow: 0 0 0 0.2rem rgba(255, 107, 0, 0.25);
+      }
+      .btn-submit {
+        position: relative;
+        overflow: hidden;
+      }
+      .btn-submit:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 5px;
+        height: 5px;
+        background: rgba(255,255,255,0.5);
+        opacity: 0;
+        border-radius: 100%;
+        transform: scale(1, 1) translate(-50%);
+        transform-origin: 50% 50%;
+      }
+      .btn-submit:focus:not(:active)::after {
+        animation: ripple 1s ease-out;
+      }
+      @keyframes ripple {
+        0% {
+          transform: scale(0, 0);
+          opacity: 0.5;
         }
-        
-        .hero-title {
-          font-size: 3rem;
+        20% {
+          transform: scale(25, 25);
+          opacity: 0;
         }
-      }
-
-      @media (max-width: 768px) {
-        .rd-navbar-nav {
-          justify-content: center;
-        }
-        
-        .hero-title {
-          font-size: 2.5rem;
-        }
-        
-        .contact-info,
-        .contact-form {
-          padding: 30px;
+        100% {
+          opacity: 0;
+          transform: scale(40, 40);
         }
       }
     </style>
   </head>
-
   <body>
-    <!-- Navigation Bar -->
-    <div class="rd-navbar-main-bottom rd-navbar-darker">
-      <div class="rd-navbar-main-container container">
-        <ul class="rd-navbar-nav">
-          <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a></li>
-          <li class="rd-nav-item"><a class="rd-nav-link" href="About.html">About us</a></li>
-          <li class="rd-nav-item"><a class="rd-nav-link" href="Teams.html">Teams</a></li>
-          <li class="rd-nav-item"><a class="rd-nav-link" href="Events.html">Events</a></li>
-          <li class="rd-nav-item"><a class="rd-nav-link" href="Staff.html">Staff</a></li>
-          <li class="rd-nav-item"><a class="rd-nav-link" href="Achievement.html">Achievements</a></li>
-          <li class="rd-nav-item"><a class="rd-nav-link active" href="Contact-us.html">Contact us</a></li>
-        </ul>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
       </div>
     </div>
+    <!-- Page-->
+    <div class="page">
+      <!-- Page Header-->
+      <header class="section page-header rd-navbar-dark">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap">
+          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="166px" data-xl-stick-up-offset="166px" data-xxl-stick-up-offset="166px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+            <div class="rd-navbar-panel">
+              <!-- RD Navbar Toggle-->
+              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-main"><span></span></button>
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel-inner container">
+                <div class="rd-navbar-collapse rd-navbar-panel-item rd-navbar-panel-item-left">
+                  <!-- Owl Carousel-->
+                  <div class="owl-carousel-navbar owl-carousel-inline-outer">
+                    <div class="owl-carousel-inline-wrap">
+                    </div>
+                  </div>
+                </div>
+                <div class="rd-navbar-panel-item rd-navbar-panel-item-right">
+                  
+                </div>
+                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+              </div>
+            </div>
+            <div class="rd-navbar-main">
+              <div class="rd-navbar-main-top">
+                <div class="rd-navbar-main-container container">
+                  <!-- RD Navbar Brand-->
+                  <div class="rd-navbar-brand"><a class="brand" href="./"><img class="brand-logo " src="images/logo.png" alt="" width="95" height="126"/></a>
+                  </div>
+                  <!-- RD Navbar List-->
+                  <ul class="rd-navbar-list">
+                    <li class="rd-navbar-list-item"></li>
+                    <li class="rd-navbar-list-item"></li>
+                    <li class="rd-navbar-list-item"></li>
+                  </ul>
+                  <!-- RD Navbar Search-->
+                  <div class="rd-navbar-search">
+                    <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="rd-navbar-main-bottom rd-navbar-darker">
+                <div class="rd-navbar-main-container container">
+                  <!-- RD Navbar Nav-->
+                  <ul class="rd-navbar-nav">
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="about-us.html">About us</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="teams.html">Teams</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="events.html">Events</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="staff.html">Staff</a>
+                    </li>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="achievements.html">Achievements</a>
+                    </li>
+                    <li class="rd-nav-item active"><a class="rd-nav-link" href="contact-us.html">Contact us</a>
+                    </li>
+                  </ul>
+                  <div class="rd-navbar-main-element">
+                    <ul class="list-inline list-inline-sm">
+                      <li><a class="icon icon-xs icon-light fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-xs icon-light fa fa-twitter" href="#"></a></li>
+                      <li><a class="icon icon-xs icon-light fa fa-google-plus" href="#"></a></li>
+                      <li><a class="icon icon-xs icon-light fa fa-instagram" href="#"></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
 
-    <!-- Hero Section -->
-    <section class="contact-hero">
-      <div class="container">
-        <h1 class="hero-title">GET IN TOUCH</h1>
-        <p class="hero-subtitle">We'd love to hear from you! Reach out to us for inquiries, partnerships, or just to say hello.</p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact-section">
-      <div class="contact-container">
-        <!-- Contact Info -->
-        <div class="contact-info">
-          <h2 class="section-title">OUR CONTACT INFO</h2>
-          
-          <div class="info-item">
-            <div class="info-icon">
-              <i class="fas fa-map-marker-alt"></i>
+      <!-- Hero Section -->
+      <section class="section swiper-container swiper-slider swiper-classic bg-gray-2 contact-hero" data-loop="true" data-autoplay="4000" data-simulate-touch="false" data-slide-effect="fade">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide text-center" data-slide-bg="images/slider-1-slide-1-1920x671.jpg">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-xl-8 contact-hero-content">
+                  <div class="swiper-slide-caption">
+                    <h1 data-caption-animate="fadeInUp" data-caption-delay="100">Get In Touch With Sportland</h1>
+                    <h4 data-caption-animate="fadeInUp" data-caption-delay="200">We're here to answer your questions and connect with our community</h4>
+                    <div class="mt-4" data-caption-animate="fadeInUp" data-caption-delay="300">
+                      <a class="button button-primary mr-3" href="#contact-form">Contact Us</a>
+                      <a class="button button-gray-outline" href="#contact-info">Our Info</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="info-content">
-              <h3>Our Location</h3>
-              <p>Kovalam Beach Road,<br>Kovalam, Kerala 695527<br>India</p>
-            </div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="info-content">
-              <h3>Phone Number</h3>
-              <p>+91 98765 43210<br>+91 12345 67890</p>
-            </div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="info-content">
-              <h3>Email Address</h3>
-              <p>info@fckovalam.com<br>support@fckovalam.com</p>
-            </div>
-          </div>
-          
-          <div class="info-item">
-            <div class="info-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="info-content">
-              <h3>Working Hours</h3>
-              <p>Monday - Friday: 9AM - 6PM<br>Saturday: 10AM - 4PM<br>Sunday: Closed</p>
-            </div>
-          </div>
-          
-          <div class="social-links">
-            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
           </div>
         </div>
+      </section>
+
+      <!-- Contact Info Section -->
+      <section class="section section-md bg-gray-100" id="contact-info">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2>How Can We Help You?</h2>
+            <div class="divider divider-secondary"></div>
+            <p class="lead">Choose the best way to reach out to our team</p>
+          </div>
+          
+          <div class="row row-30">
+            <div class="col-md-4">
+              <div class="contact-card bg-white p-4 text-center h-100">
+                <div class="contact-icon icon icon-xl text-primary material-icons-phone_in_talk mb-3"></div>
+                <h4 class="mb-2">Call Us</h4>
+                <p>Speak directly with our support team during business hours</p>
+                <div class="mt-3">
+                  <a class="button button-primary button-sm" href="tel:+18005551234">+1 (800) 555-1234</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="contact-card bg-white p-4 text-center h-100">
+                <div class="contact-icon icon icon-xl text-primary material-icons-email mb-3"></div>
+                <h4 class="mb-2">Email Us</h4>
+                <p>Send us a message and we'll respond within 24 hours</p>
+                <div class="mt-3">
+                  <a class="button button-primary button-sm" href="mailto:info@sportland.com">info@sportland.com</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <div class="contact-card bg-white p-4 text-center h-100">
+                <div class="contact-icon icon icon-xl text-primary material-icons-location_on mb-3"></div>
+                <h4 class="mb-2">Visit Us</h4>
+                <p>Come see us at our headquarters in New York City</p>
+                <div class="mt-3">
+                  <a class="button button-primary button-sm" href="#location-map">View Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Form Section -->
+      <section class="section section-md bg-white" id="contact-form">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <h2 class="mb-4">Send Us a Message</h2>
+              <p class="mb-5">Have questions about our teams, events, or anything else? Fill out the form below and we'll get back to you as soon as possible.</p>
+              
+              <!-- RD Mailform-->
+              <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+                <div class="row row-20">
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                      <label class="form-label" for="contact-name">Your Name</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-email" type="email" name="email" data-constraints="@Email @Required">
+                      <label class="form-label" for="contact-email">Your Email</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <input class="form-input" id="contact-subject" type="text" name="subject" data-constraints="@Required">
+                      <label class="form-label" for="contact-subject">Subject</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-wrap">
+                      <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
+                      <label class="form-label" for="contact-message">Your Message</label>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <button class="button button-primary btn-submit" type="submit">Send Message</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+              <div class="map-container" id="location-map">
+                <!-- Google Map Embed -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256027582!2d-73.9878446845938!3d40.7484404793279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1623456789012!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+              
+              <div class="mt-4">
+                <h4>Office Hours</h4>
+                <ul class="list list-divided">
+                  <li class="list-item">
+                    <div class="d-flex justify-content-between">
+                      <span>Monday - Friday</span>
+                      <span>9:00 AM - 6:00 PM</span>
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="d-flex justify-content-between">
+                      <span>Saturday</span>
+                      <span>10:00 AM - 4:00 PM</span>
+                    </div>
+                  </li>
+                  <li class="list-item">
+                    <div class="d-flex justify-content-between">
+                      <span>Sunday</span>
+                      <span>Closed</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="section section-md bg-gray-100">
+        <div class="container">
+          <div class="text-center mb-5">
+            <h2>Frequently Asked Questions</h2>
+            <div class="divider divider-secondary"></div>
+            <p class="lead">Find quick answers to common questions</p>
+          </div>
+          
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <!-- Bootstrap Accordion-->
+              <div class="accordion" id="accordionFAQ">
+                <div class="card mb-3">
+                  <div class="card-header" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link w-100 text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        How can I purchase tickets for matches?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFAQ">
+                    <div class="card-body">
+                      Tickets can be purchased online through our website, at the stadium box office, or through authorized ticket partners. We recommend purchasing in advance as popular matches often sell out quickly.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card mb-3">
+                  <div class="card-header" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link w-100 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What are the requirements for youth tryouts?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFAQ">
+                    <div class="card-body">
+                      Youth tryouts are open to players aged 8-18. Participants must complete a registration form, provide proof of age, and have a current physical examination. Check our Teams page for specific tryout dates and additional requirements.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card mb-3">
+                  <div class="card-header" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link w-100 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        How can I become a sponsor or partner?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFAQ">
+                    <div class="card-body">
+                      We welcome corporate sponsors and community partners. Please contact our business development team at sponsors@sportland.com or call our main office to discuss partnership opportunities tailored to your organization's goals.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card mb-3">
+                  <div class="card-header" id="headingFour">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link w-100 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Where can I find information about player autograph sessions?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionFAQ">
+                    <div class="card-body">
+                      Player autograph sessions are typically announced on our Events page and through our social media channels. These sessions often coincide with home games or special community events. Sign up for our newsletter to receive notifications.
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="card mb-3">
+                  <div class="card-header" id="headingFive">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link w-100 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        What is your refund policy for canceled events?
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionFAQ">
+                    <div class="card-body">
+                      For canceled events, full refunds will be automatically issued to the original payment method. For rescheduled events, tickets will be valid for the new date, or refunds can be requested within 30 days of the announcement.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="text-center mt-5">
+                <p>Didn't find what you were looking for?</p>
+                <a class="button button-primary" href="#contact-form">Ask Your Question</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter Section -->
+      <section class="section section-md bg-primary text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <h2 class="text-white mb-3">Stay Connected With Sportland</h2>
+              <p class="text-white mb-4">Subscribe to our newsletter for the latest news, events, and exclusive offers</p>
+              
+              <!-- RD Mailform-->
+              <form class="rd-mailform rd-form-inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                <div class="form-wrap">
+                  <input class="form-input" id="subscribe-email" type="email" name="email" data-constraints="@Email @Required">
+                  <label class="form-label" for="subscribe-email">Enter your e-mail</label>
+                </div>
+                <div class="form-button">
+                  <button class="button button-white-outline" type="submit">Subscribe</button>
+                </div>
+              </form>
+              
+              <div class="mt-4">
+                <ul class="list-inline list-inline-sm">
+                  <li><a class="icon icon-sm icon-white fa fa-facebook" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-white fa fa-twitter" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-white fa fa-instagram" href="#"></a></li>
+                  <li><a class="icon icon-sm icon-white fa fa-youtube" href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Page Footer-->
+      <footer class="section footer-classic footer-classic-dark context-dark">
+        <div class="footer-classic-main">
+          <div class="container">
+            <div class="row row-50">
+              <div class="col-lg-5 text-center text-sm-left">
+                <article class="unit unit-sm-horizontal unit-middle justify-content-center justify-content-sm-start footer-classic-info">
+                  <div class="unit-left"><a class="brand brand-md" href="./"><img class="brand-logo " src="images/logo-soccer-default-95x126.png" alt="" width="95" height="126"/></a>
+                  </div>
+                  <div class="unit-body">
+                    <p>Sportland website offers you the latest news about our team as well as updates on our matches and other events.</p>
+                  </div>
+                </article>
+                <ul class="list-inline list-inline-bordered list-inline-bordered-lg">
+                  <li>
+                    <div class="unit unit-horizontal unit-middle">
+                      <div class="unit-left">
+                        <svg class="svg-color-primary svg-sizing-35" x="0px" y="0px" width="27px" height="27px" viewbox="0 0 27 27" preserveAspectRatio="none">
+                          <path d="M2,26c0,0.553,0.447,1,1,1h5c0.553,0,1-0.447,1-1v-8.185c-0.373-0.132-0.711-0.335-1-0.595V19 H6v-1v-1v-1H5v1v2H3v-9H2v1H1V9V8c0-0.552,0.449-1,1-1h1h1h3h0.184c0.078-0.218,0.173-0.426,0.297-0.617C8.397,5.751,9,4.696,9,3.5 C9,1.567,7.434,0,5.5,0S2,1.567,2,3.5C2,4.48,2.406,5.364,3.056,6H3H2C0.895,6,0,6.895,0,8v7c0,1.104,0.895,2,2,2V26z M8,26H6v-6h2 V26z M5,26H3v-6h2V26z M3,3.5C3,2.121,4.121,1,5.5,1S8,2.121,8,3.5S6.879,6,5.5,6S3,4.879,3,3.5 M1,15v-3h1v4 C1.449,16,1,15.552,1,15"></path>
+                          <path d="M11.056,6H11h-1C8.895,6,8,6.895,8,8v7c0,1.104,0.895,2,2,2v9c0,0.553,0.447,1,1,1h5 c0.553,0,1-0.447,1-1v-9c1.104,0,2-0.896,2-2V8c0-1.105-0.896-2-2-2h-1h-0.056C16.594,5.364,17,4.48,17,3.5 C17,1.567,15.434,0,13.5,0S10,1.567,10,3.5C10,4.48,10.406,5.364,11.056,6 M10,15v1c-0.551,0-1-0.448-1-1v-3h1V15z M11,20h2v6h-2 V20z M16,26h-2v-6h2V26z M17,16v-1v-3h1v3C18,15.552,17.551,16,17,16 M17,7c0.551,0,1,0.448,1,1v1v1v1h-1v-1h-1v5v4h-2v-1v-1v-1h-1 v1v1v1h-2v-4v-5h-1v1H9v-1V9V8c0-0.552,0.449-1,1-1h1h1h3h1H17z M13.5,1C14.879,1,16,2.121,16,3.5C16,4.879,14.879,6,13.5,6 S11,4.879,11,3.5C11,2.121,12.121,1,13.5,1"></path>
+                          <polygon points="15,13 14,13 14,9 13,9 12,9 12,10 13,10 13,13 12,13 12,14 13,14 14,14 15,14 	"></polygon>
+                          <polygon points="7,14 7,13 5,13 5,12 6,12 7,12 7,10 7,9 6,9 4,9 4,10 6,10 6,11 5,11 4,11 4,12 4,13 4,14 5,14"></polygon>
+                          <polygon points="20,10 22,10 22,11 21,11 21,12 22,12 22,13 20,13 20,14 22,14 23,14 23,13 23,12 23,11 23,10 23,9 22,9 20,9 	"></polygon>
+                          <path d="M19.519,6.383C19.643,6.574,19.738,6.782,19.816,7H20h3h1h1c0.551,0,1,0.448,1,1v3h-1v-1h-1v9 h-2v-2v-1h-1v1v2h-2v-1.78c-0.289,0.26-0.627,0.463-1,0.595V26c0,0.553,0.447,1,1,1h5c0.553,0,1-0.447,1-1v-9c1.104,0,2-0.896,2-2 V8c0-1.105-0.896-2-2-2h-1h-0.056C24.594,5.364,25,4.48,25,3.5C25,1.567,23.434,0,21.5,0S18,1.567,18,3.5 c0,0.736,0.229,1.418,0.617,1.981C18.861,5.834,19.166,6.14,19.519,6.383 M19,20h2v6h-2V20z M24,26h-2v-6h2V26z M26,15 c0,0.552-0.449,1-1,1v-4h1V15z M21.5,1C22.879,1,24,2.121,24,3.5C24,4.879,22.879,6,21.5,6C20.121,6,19,4.879,19,3.5 C19,2.121,20.121,1,21.5,1"></path>
+                        </svg>
+                      </div>
+                      <div class="unit-body">
+                        <h6>Join Our Team</h6><a class="link" href="mailto:#">info@demolink.org</a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="unit unit-horizontal unit-middle">
+                      <div class="unit-left">
+                        <svg class="svg-color-primary svg-sizing-35" x="0px" y="0px" width="72px" height="72px" viewbox="0 0 72 72">
+                          <path d="M36.002,0c-0.41,0-0.701,0.184-0.931,0.332c-0.23,0.149-0.4,0.303-0.4,0.303l-9.251,8.18H11.58 c-1.236,0-1.99,0.702-2.318,1.358c-0.329,0.658-0.326,1.3-0.326,1.3v11.928l-8.962,7.936V66c0,0.015-0.038,1.479,0.694,2.972 C1.402,70.471,3.006,72,5.973,72h30.03h30.022c2.967,0,4.571-1.53,5.306-3.028c0.736-1.499,0.702-2.985,0.702-2.985V31.338 l-8.964-7.936V11.475c0,0,0.004-0.643-0.324-1.3c-0.329-0.658-1.092-1.358-2.328-1.358H46.575l-9.251-8.18 c0,0-0.161-0.154-0.391-0.303C36.703,0.184,36.412,0,36.002,0z M36.002,3.325c0.49,0,0.665,0.184,0.665,0.184l6,5.306h-6.665 h-6.665l6-5.306C35.337,3.51,35.512,3.325,36.002,3.325z M12.081,11.977h23.92H59.92v9.754v2.121v14.816L48.511,48.762 l-10.078-8.911c0,0-0.307-0.279-0.747-0.548s-1.022-0.562-1.684-0.562c-0.662,0-1.245,0.292-1.686,0.562 c-0.439,0.268-0.747,0.548-0.747,0.548l-10.078,8.911L12.082,38.668V23.852v-2.121v-9.754H12.081z M8.934,26.867v9.015 l-5.091-4.507L8.934,26.867z M63.068,26.867l5.091,4.509l-5.091,4.507V26.867z M69.031,34.44v31.559 c0,0.328-0.103,0.52-0.162,0.771L50.685,50.684L69.031,34.44z M2.971,34.448l18.348,16.235L3.133,66.77 c-0.059-0.251-0.162-0.439-0.162-0.769C2.971,66.001,2.971,34.448,2.971,34.448z M36.002,41.956c0.264,0,0.437,0.057,0.546,0.104 c0.108,0.047,0.119,0.059,0.119,0.059l30.147,26.675c-0.3,0.054-0.79,0.207-0.79,0.207H36.002H5.98H5.972 c-0.003,0-0.488-0.154-0.784-0.207l30.149-26.675c0,0,0.002-0.011,0.109-0.059C35.555,42.013,35.738,41.956,36.002,41.956z"></path>
+                        </svg>
+                      </div>
+                      <div class="unit-body">
+                        <h6>Contact Us</h6><a class="link" href="mailto:#">info@demolink.org</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="group-md group-middle">
+                  <div class="group-item">
+                    <ul class="list-inline list-inline-xs">
+                      <li><a class="icon icon-corporate fa fa-facebook" href="#"></a></li>
+                      <li><a class="icon icon-corporate fa fa-twitter" href="#"></a></li>
+                      <li><a class="icon icon-corporate fa fa-google-plus" href="#"></a></li>
+                      <li><a class="icon icon-corporate fa fa-instagram" href="#"></a></li>
+                    </ul>
+                  </div><a class="button button-sm button-gray-outline" href="contact-us.html">Get in Touch</a>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <h5>Popular News</h5>
+                <div class="divider-small divider-secondary"></div>
+                <div class="row row-20">
+                  <div class="col-sm-6">
+                          <!-- Post Classic-->
+                          <article class="post-classic">
+                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-1-93x87.jpg" alt="" width="93" height="87"/></a></div>
+                            <div class="post-classic-main">
+                              <!-- Badge-->
+                              <div class="badge badge-secondary">The Team
+                              </div>
+                              <p class="post-classic-title"><a href="#">Bundy stymies Blue Jays and Orioles hit 2 HRs</a></p>
+                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                <time datetime="2020">April 15, 2020</time>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6">
+                          <!-- Post Classic-->
+                          <article class="post-classic">
+                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-2-93x87.jpg" alt="" width="93" height="87"/></a></div>
+                            <div class="post-classic-main">
+                              <!-- Badge-->
+                              <div class="badge badge-red">Hot<span class="icon material-icons-whatshot"></span>
+                              </div>
+                              <p class="post-classic-title"><a href="#">Good vibes back at struggling Schalke</a></p>
+                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                <time datetime="2020">April 15, 2020</time>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6">
+                          <!-- Post Classic-->
+                          <article class="post-classic">
+                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-3-93x87.jpg" alt="" width="93" height="87"/></a></div>
+                            <div class="post-classic-main">
+                              <!-- Badge-->
+                              <div class="badge badge-primary">The League
+                              </div>
+                              <p class="post-classic-title"><a href="#">Prem in 90 seconds: Chelsea's crisis is over!</a></p>
+                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                <time datetime="2020">April 15, 2020</time>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-sm-6">
+                          <!-- Post Classic-->
+                          <article class="post-classic">
+                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-4-93x87.jpg" alt="" width="93" height="87"/></a></div>
+                            <div class="post-classic-main">
+                              <!-- Badge-->
+                              <div class="badge badge-primary">The League
+                              </div>
+                              <p class="post-classic-title"><a href="#">Liverpool in desperate need of backup players</a></p>
+                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
+                                <time datetime="2020">April 15, 2020</time>
+                              </div>
+                            </div>
+                          </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-classic-aside footer-classic-darken">
+          <div class="container">
+            <div class="layout-justify">
+              <!-- Rights-->
+              <p class="rights"><span>Sportland</span><span>&nbsp;&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>Designed by <a href="https://www.templatemonster.com/products/author/zemez/">Zemez.</a></span></p>
+              <nav class="nav-minimal">
+                <ul class="nav-minimal-list">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="about-us.html">About</a></li>
+                  <li><a href="teams.html">Teams</a></li>
+                  <li><a href="events.html">Events</a></li>
+                  <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Additional animations
+      document.addEventListener('DOMContentLoaded', function() {
+        // Animate elements when they come into view
+        const animateOnScroll = function() {
+          const elements = document.querySelectorAll('.contact-card, .form-wrap, #accordionFAQ .card');
+          
+          elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if(elementPosition < screenPosition) {
+              element.style.opacity = '1';
+              element.style.transform = 'translateY(0)';
+            }
+          });
+        };
         
-        <!-- Contact Form -->
-        <div class="contact-form">
-          <h2 class="section-title">SEND US A MESSAGE</h2>
-          <form>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name" required>
-            </div>
-            <div class="form-group">
-              <input type="email" class="form-control" placeholder="Your Email" required>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Send Message</button>
-          </form>
-        </div>
-      </div>
-      
-      <!-- Map -->
-      <div class="container">
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31585.4382113584!2d76.976216!3d8.400383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05a5e6883f1f9d%3A0x82a249a6f8f8f8f8!2sKovalam%2C%20Kerala!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-      <div class="footer-content">
-        <p class="copyright">FC Kovalam © <span class="copyright-year">2025</span>. All Rights Reserved.</p>
-      </div>
-    </footer>
+        // Set initial state for animation
+        const animatedElements = document.querySelectorAll('.contact-card, .form-wrap, #accordionFAQ .card');
+        animatedElements.forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          el.style.transition = 'all 0.6s ease';
+        });
+        
+        // Run on load and scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+              behavior: 'smooth'
+            });
+          });
+        });
+      });
+    </script>
   </body>
 </html>

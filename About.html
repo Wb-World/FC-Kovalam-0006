@@ -13,6 +13,29 @@
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
+      /* Animation Keyframes */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes slideInRight {
+        from { transform: translateX(20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      
       .footer {
           background-color: #000;
           color: #fff;
@@ -20,6 +43,7 @@
           text-align: center;
           font-size: 16px;
           letter-spacing: 0.5px;
+          animation: fadeIn 1s ease-out;
       }
 
       /* Hamburger Menu */
@@ -34,6 +58,11 @@
         border: none;
         padding: 0;
         z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+      
+      .hamburger:hover {
+        transform: scale(1.1);
       }
 
       .hamburger span {
@@ -58,7 +87,7 @@
         z-index: 2000;
         padding: 60px 20px;
         box-shadow: -3px 0 10px rgba(0, 0, 0, 0.5);
-        transition: right 0.3s ease;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
       }
 
       .side-menu.active {
@@ -73,13 +102,31 @@
 
       .side-menu ul li {
         margin: 20px 0;
+        transform: translateX(20px);
+        opacity: 0;
+        animation: slideInRight 0.5s forwards;
       }
+      
+      .side-menu ul li:nth-child(1) { animation-delay: 0.1s; }
+      .side-menu ul li:nth-child(2) { animation-delay: 0.2s; }
+      .side-menu ul li:nth-child(3) { animation-delay: 0.3s; }
+      .side-menu ul li:nth-child(4) { animation-delay: 0.4s; }
+      .side-menu ul li:nth-child(5) { animation-delay: 0.5s; }
+      .side-menu ul li:nth-child(6) { animation-delay: 0.6s; }
+      .side-menu ul li:nth-child(7) { animation-delay: 0.7s; }
 
       .side-menu ul li a {
         color: white;
         text-decoration: none;
         font-size: 18px;
         font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      
+      .side-menu ul li a:hover {
+        color: #2a7fef;
+        transform: translateX(5px);
       }
 
       .side-menu .close-btn {
@@ -91,6 +138,11 @@
         background: transparent;
         border: none;
         color: white;
+        transition: transform 0.3s ease;
+      }
+      
+      .side-menu .close-btn:hover {
+        transform: rotate(90deg);
       }
 
       /* Header Styles */
@@ -203,23 +255,33 @@
         text-align: center;
         color: white;
         padding-top: 80px;
+        animation: fadeIn 1s ease-out;
       }
       
       .about-hero h1 {
         font-size: 3.5rem;
         margin-bottom: 20px;
+        animation: fadeIn 1s ease-out 0.2s both;
       }
       
       .about-hero p {
         font-size: 1.2rem;
         max-width: 700px;
         margin: 0 auto;
+        animation: fadeIn 1s ease-out 0.4s both;
       }
       
       /* About Content Sections */
       .about-section {
         padding: 80px 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 0.8s ease-out forwards;
       }
+      
+      .about-section:nth-child(1) { animation-delay: 0.2s; }
+      .about-section:nth-child(2) { animation-delay: 0.4s; }
+      .about-section:nth-child(3) { animation-delay: 0.6s; }
       
       .section-title {
         text-align: center;
@@ -241,6 +303,7 @@
         bottom: -15px;
         left: 50%;
         transform: translateX(-50%);
+        animation: pulse 2s infinite;
       }
       
       .about-card {
@@ -291,7 +354,14 @@
         position: relative;
         width: 50%;
         box-sizing: border-box;
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out forwards;
       }
+      
+      .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+      .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+      .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+      .timeline-item:nth-child(4) { animation-delay: 0.8s; }
       
       .timeline-item:nth-child(odd) {
         left: 0;
@@ -306,6 +376,11 @@
         background: white;
         border-radius: 8px;
         box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .timeline-content:hover {
+        transform: scale(1.02);
       }
       
       .timeline-year {
@@ -319,6 +394,7 @@
         justify-content: center;
         border-radius: 20px;
         font-weight: bold;
+        animation: float 3s ease-in-out infinite;
       }
       
       .timeline-item:nth-child(odd) .timeline-year {
@@ -327,6 +403,19 @@
       
       .timeline-item:nth-child(even) .timeline-year {
         left: -120px;
+      }
+      
+      /* Call to Action */
+      .section-md {
+        animation: pulse 2s infinite 1s;
+      }
+      
+      .button {
+        transition: all 0.3s ease;
+      }
+      
+      .button:hover {
+        animation: pulse 1s infinite;
       }
       
       /* Responsive Styles */
@@ -393,6 +482,12 @@
         .about-card {
           padding: 20px;
         }
+        
+        .side-menu ul li {
+          animation: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
       }
       
       .ie-panel {
@@ -449,13 +544,10 @@
                 <li><a href="Events.html">Events</a></li>
                 <li><a href="Staff.html">Staff</a></li>
                 <li><a href="Achievement.html">Achievements</a></li>
-                <li><a href="Contact-us.html">Contact</a></li>
+                <li><a href="Contact-us.html">Contact us</a></li>
               </ul>
               
               <div class="social-icons">
-                <a href="#" class="fa fa-twitter"></a>
-                <a href="#" class="fa fa-youtube"></a>
-                <a href="#" class="fa fa-instagram"></a>
               </div>
             </nav>
           </div>
@@ -479,7 +571,7 @@
       <!-- About Hero Section -->
       <section class="about-hero">
         <div class="container">
-          <h1>About us</h1>
+          <h1 style="font-size: 10cap;color: whitesmoke;">About us</h1>
           <p>
             <b>
             FC Kovalam Club was established in the year 2019 out of love for the beautiful game called football (soccer). Nestled in the picturesque coastal town of Kovalam (often referred to as Mini Goa), Chennai, Tamil Nadu, FC Kovalam is dedicated to nurturing young talent, instilling discipline, and igniting a lifelong passion for football.
@@ -497,11 +589,11 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <div class="about-card">
-                <h3>FC Kovalam Mission Statement</h3>
+              <div class="about-card" style="background-color: #2d6e5c;">
+                <h3 style="font-size: 10cap;color: white;"><b>FC Kovalam Mission Statement</b></h3>
                 <p><strong>“To develop and promote Indian football by providing a professional, disciplined, and inclusive environment that nurtures talent, inspires youth, and builds a strong football culture across the nation.”</strong></p>
       
-                <h4>Our Mission Goals</h4>
+                <h4 style="font-size: 5cap;"><b>Our Mission Goals</b></h4>
                 <ul style="padding-left: 20px;">
                   <li><strong>Develop Indian Talent:</strong> To identify and train young Indian players with structured grassroots and academy programs focused on skill, fitness, and tactical awareness.</li>
                   <li><strong>Promote Football Culture:</strong> To raise awareness, excitement, and participation in football at the local and national level through matches, events, and community outreach.</li>
@@ -523,11 +615,11 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-8">
-              <div class="about-card">
-                <h3>FC Kovalam Vision Statement</h3>
+              <div class="about-card" style="background-color: #2d6e5c;">
+                <h3 style="font-size: 10cap;color: white;"><b>FC Kovalam Vision Statement</b></h3>
                 <p><strong>“To build a respected and successful football club that inspires young talent, fosters community pride, and consistently competes at the highest level, both on and off the field.”</strong></p>
       
-                <h4>Key Elements of Our Vision</h4>
+                <h4 style="font-size: 5cap;"><b>Key Elements of Our Vision</b></h4>
                 <ul style="padding-left: 20px;">
                   <li><strong>Player Development:</strong> To nurture and develop young footballers into skilled, disciplined, and confident athletes through structured training, mentorship, and exposure to competitive opportunities.</li>
                   <li><strong>Community Engagement:</strong> To become a pillar of our local community by promoting unity, participation, and a love for the game among all age groups.</li>
@@ -550,6 +642,7 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="about-card">
+                <b style="font-size: 2cap;">
                 <p>
                   In 2019, on the golden sands of India's coastline, a dream was born. With no backing, no sponsors, and limited resources—just a ball, the open beach, and a burning passion for the game—a man with unmatched talent took the first step in building what would become one of India's most inspiring football teams.
                 </p>
@@ -565,6 +658,7 @@
                 <p>
                   Today, the team stands as a symbol of grassroots football in India—a testament to grit, talent, and the power of belief. The story is still being written, with eyes set on national recognition and international glory.
                 </p>
+                </b>
               </div>
             </div>
           </div>
@@ -605,10 +699,12 @@
         
         hamburger.addEventListener('click', function() {
           sideMenu.classList.add('active');
+          document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
         });
         
         closeMenu.addEventListener('click', function() {
           sideMenu.classList.remove('active');
+          document.body.style.overflow = ''; // Re-enable scrolling
         });
         
         // Close menu when clicking on links
@@ -616,6 +712,7 @@
         menuLinks.forEach(function(link) {
           link.addEventListener('click', function() {
             sideMenu.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
           });
         });
         
@@ -628,6 +725,28 @@
             header.classList.remove('scrolled');
           }
         });
+        
+        // Intersection Observer for scroll animations
+        const animateOnScroll = function() {
+          const elements = document.querySelectorAll('.about-section, .timeline-item');
+          
+          const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.1 });
+          
+          elements.forEach(element => {
+            observer.observe(element);
+          });
+        };
+        
+        // Initialize animations
+        animateOnScroll();
       });
     </script>
   </body>
