@@ -5,6 +5,7 @@
     <title>Home</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -17,53 +18,79 @@
   </head>
   <style>
     @media (max-width: 992px) {
-      /* Stack slogans and logo on smaller screens */
-      .rd-navbar-main-top > .rd-navbar-main-container > div {
-        flex-direction: column !important;
-        text-align: center;
-      }
-  
-      .rd-navbar-main-top h3 {
-        font-size: 16px !important;
-        padding: 10px 0 !important;
-        transform: none !important;
-      }
-  
-      .brand-logo {
-        width: 80px !important;
-      }
-  
-      .group-sm.group-flex {
-        justify-content: center;
-      }
-  
-      .button-media {
-        width: 100% !important;
-        max-width: 300px;
-        margin-left: auto !important;
-        margin-right: auto !important;
-      }
+  /* Stack slogans above and below the logo on tablets and phones */
+    .logo-slogan-wrapper {
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .slogan-left,
+    .slogan-right {
+      transform: none !important;
+      padding: 0 !important;
+    }
+
+    .slogan-left {
+      order: 1;
+    }
+
+    .logo-center {
+      order: 2;
+    }
+
+    .slogan-right {
+      order: 3;
+    }
+  }
+
+    /* Responsive utility fix */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
   
-    @media (max-width: 576px) {
-      /* Extra small devices */
-      .post-future img {
-        height: auto !important;
-        width: 100% !important;
-      }
+    .post-future {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
   
-      .rd-navbar-nav {
+    @media (max-width: 768px) {
+      .rd-navbar-main-top > .rd-navbar-main-container {
         flex-direction: column;
         align-items: center;
       }
   
-      .rd-nav-item {
-        width: 100%;
+      .rd-navbar-main-top h3 {
+        font-size: 18px;
+        padding: 10px;
         text-align: center;
+        transform: none !important;
       }
   
-      .col-12 {
-        padding: 0 15px !important;
+      .rd-navbar-main-top > .rd-navbar-main-container > div {
+        transform: none !important;
+        padding: 10px !important;
+      }
+  
+      .brand-logo {
+        width: 80px !important;
+        margin: 0 auto;
+      }
+  
+      .group-sm.group-flex {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+      }
+  
+      .button-media {
+        width: 90% !important;
+        max-width: 300px;
+        font-size: 18px !important;
       }
   
       .aside-component article {
@@ -72,20 +99,25 @@
       }
   
       .swiper-container {
-        height: 70vh !important;
+        height: 50vh !important;
       }
+    }
   
-      .group-sm.group-flex {
-        flex-direction: column;
-        gap: 10px;
+    @media (max-width: 480px) {
+      .rd-navbar-main-top h3 {
+        font-size: 16px;
       }
   
       .button-media {
-        height: 80px !important;
-        font-size: 20px !important;
+        height: 60px !important;
+        font-size: 16px !important;
+      }
+  
+      .post-future {
+        max-width: 90%;
       }
     }
-  </style>
+  </style>  
   
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
@@ -139,56 +171,54 @@
                     </button>
                   </div> -->
                   <!-- Logo with top slogans (left and right) -->
-                  <div style="width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px 0;">
+                  <!-- Logo with top slogans (left and right) -->
+                  <div class="logo-slogan-wrapper" style="width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px 0;">
 
-                    <!-- Left Slogan -->
-                    <div style="flex: 1; text-align: right; padding-right: 60px; transform: translateX(-150px);">
-                      <h3 style="margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; max-width: 450px;">
-                        “It began on the sand with a ball, now Kovalam inspires dreams that grow tall.”
-                      </h3>
-                    </div>
-                  
-                    <!-- Logo -->
-                    <div style="flex: 0 0 auto; display: flex; align-items: center; justify-content: center; padding: 0 30px;">
-                      <img 
-                            class="brand-logo" 
-                            src="images/logo.png" 
-                            alt="Logo" 
-                            style="width: 120px; height: auto; display: block;"
-                         />
+                  <!-- Left Slogan -->
+                  <div class="slogan-left" style="flex: 1; text-align: right; padding-right: 60px; transform: translateX(-150px);">
+                  <h3 style="margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; max-width: 450px;">
+                    “It began on the sand with a ball, now Kovalam inspires dreams that grow tall.”
+                  </h3>
+                  </div>
 
-                    </div>
-                  
-                    <!-- Right Slogan -->
-                    <div style="flex: 1; text-align: left; padding-left: 60px; transform: translateX(100px);">
-                      <h3 style="margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; max-width: 450px;">
-                        “From barefoot kicks on village ground, to chasing greatness the world around.”
-                      </h3>
-                    </div>
-                  
-                  </div>                                                  
-                  
+                  <!-- Logo -->
+                  <div class="logo-center" style="flex: 0 0 auto; display: flex; align-items: center; justify-content: center; padding: 0 30px;">
+                  <img 
+                    class="brand-logo" 
+                    src="images/logo.png" 
+                    alt="Logo" 
+                    style="width: 120px; height: auto; display: block;"
+                  />
+                  </div>
+
+                  <!-- Right Slogan -->
+                  <div class="slogan-right" style="flex: 1; text-align: left; padding-left: 60px; transform: translateX(100px);">
+                  <h3 style="margin: 0; font-size: 22px; font-weight: bold; color: #ffffff; max-width: 450px;">
+                    “From barefoot kicks on village ground, to chasing greatness the world around.”
+                  </h3>
+                  </div>
+
+                  </div>
                 </div>                                                       
-
             </div>
               
               <div class="rd-navbar-main-bottom rd-navbar-darker">
                 <div class="rd-navbar-main-container container">
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="index">Home</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="index.html">Home</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="About">About us</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="About.html">About us</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Teams">Teams</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Teams.html">Teams</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Events">Events</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Events.html">Events</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Staff">Staff</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Staff.html">Staff</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Achievement">Achievements</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Achievement.html">Achievements</a>
                     </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Contact-us">Contact us</a>
+                    <li class="rd-nav-item"><a class="rd-nav-link" href="Contact-us.html">Contact us</a>
                     </li>
                   </ul>
                   <div class="rd-navbar-main-element">
