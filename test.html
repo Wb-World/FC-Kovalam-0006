@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Home</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .footer-text {
+        margin: 0;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        padding: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+        .footer-text {
+          font-size: 14px;
+          padding: 15px;
+        }
+      }
+
+      /* Added theme styles without changing your structure */
+      :root {
+        --primary-color: #2d6e5c;
+        --secondary-color: #f8b400;
+        --dark-color: #1e4d3e;
+        --light-color: #f8f9fa;
+      }
+      
+      /* Background colors */
+      .page {
+        background-color: var(--light-color) !important;
+      }
+      
+      .header-container {
+        background-color: var(--primary-color) !important;
+      }
+      
+      .section-md {
+        background-color: white;
+      }
+      
+      .bg-gray-100 {
+        background-color: var(--light-color) !important;
+      }
+      
+      /* Text colors */
+      .main-nav a {
+        color: white !important;
+      }
+      
+      .main-nav a:hover {
+        color: var(--secondary-color) !important;
+      }
+      
+      /* Buttons */
+      button[style*="background-color: orange"] {
+        background-color: var(--secondary-color) !important;
+        color: black !important;
+      }
+      
+      button[style*="background-color: orange"]:hover {
+        background-color: #e0a800 !important;
+      }
+      
+      /* Footer */
+      .footer-classic-dark {
+        background-color: var(--primary-color) !important;
+        color: white !important;
+      }
+      
+      /* Mobile menu */
+      .side-menu {
+        background-color: var(--primary-color) !important;
+      }
+      
+      /* Link hover effects */
+      .main-nav a::after {
+        background-color: var(--secondary-color) !important;
+      }
+      
+      /* Keep all your original responsive styles */
+      @media (max-width: 992px) {
+        .slogan-left,
+        .slogan-right {
+          transform: none !important;
+          padding: 0 !important;
+        }
+
+        .slogan-left {
+          order: 1;
+        }
+
+        .logo-center {
+          order: 2;
+        }
+
+        .slogan-right {
+          order: 3;
+        }
+        
+        /* Hide desktop nav on mobile */
+        .main-nav ul {
+          display: none !important;
+        }
+        
+        /* Show hamburger on mobile */
+        .hamburger {
+          display: block !important;
+        }
+      }
+
+      @media (min-width: 993px) {
+        /* Hide mobile menu on desktop */
+        .side-menu {
+          display: none !important;
+        }
+        
+        /* Show desktop nav */
+        .main-nav ul {
+          display: flex !important;
+        }
+        
+        /* Hide hamburger */
+        .hamburger {
+          display: none !important;
+        }
+      }
+
+      /* Responsive utility fix */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    
+      .post-future {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    
+      @media (max-width: 768px) {
+        .rd-navbar-main-top > .rd-navbar-main-container {
+          flex-direction: column;
+          align-items: center;
+        }
+    
+        .rd-navbar-main-top h3 {
+          font-size: 18px;
+          padding: 10px;
+          text-align: center;
+          transform: none !important;
+        }
+    
+        .rd-navbar-main-top > .rd-navbar-main-container > div {
+          transform: none !important;
+          padding: 10px !important;
+        }
+    
+        .brand-logo {
+          width: 80px !important;
+          margin: 0 auto;
+        }
+    
+        .group-sm.group-flex {
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        }
+    
+        .button-media {
+          width: 90% !important;
+          max-width: 300px;
+          font-size: 18px !important;
+        }
+    
+        .aside-component article {
+          margin-left: 0 !important;
+          text-align: center;
+        }
+    
+        .swiper-container {
+          height: 50vh !important;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .rd-navbar-main-top h3 {
+          font-size: 16px;
+        }
+    
+        .button-media {
+          height: 60px !important;
+          font-size: 16px !important;
+        }
+    
+        .post-future {
+          max-width: 90%;
+        }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        padding: 0;
+      }
+
+      .nav-item {
+        position: relative;
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+        padding-bottom: 5px;
+      }
+
+      .nav-item::after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 2px;
+        left: 0;
+        bottom: 0;
+        background-color: green;
+        transition: width 0.3s ease;
+      }
+
+      .nav-item:hover::after {
+        width: 100%;
+      }
+      
+      /* Hamburger menu styles */
+      .hamburger {
+        display: none;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 5px;
+        z-index: 1002;
+      }
+      
+      .hamburger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+      }
+      
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+      </a>
+    </div>
+    
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
+      </div>
+    </div>
+    
+    <!-- Page -->
+    <div class="page" style="background-color: #2d6e5c;">
+      <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+        <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; padding: 0 15px;background-color: black;">
+          <div class="logo-nav-wrapper" style="display: flex; align-items: center; padding: 15px 0; transition: all 0.3s ease;">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            
+            <a class="navbar-brand" href="index.html" style="padding-left: 10%; transition: all 0.3s ease;">
+              <img class="brand-logo" src="images/logo.png" alt="FC Kovalam" style="height: 80px; width: auto; transition: all 0.3s ease;">
+            </a>
+            
+            <nav class="main-nav" style="flex-grow: 1; transition: all 0.3s ease;">
+              <ul style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                <li style="margin: 0 15px;"><a href="index.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">Home</a></li>
+                <li style="margin: 0 15px;"><a href="About.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">About</a></li>
+                <li style="margin: 0 15px;"><a href="Teams.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">Teams</a></li>
+                <li style="margin: 0 15px;"><a href="Events.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">Events</a></li>
+                <li style="margin: 0 15px;"><a href="Staff.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">Staff</a></li>
+                <li style="margin: 0 15px;"><a href="Achievement.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">Achievements</a></li>
+                <li style="margin: 0 15px;"><a href="Contact-us.html" style="color: white; text-decoration: none; font-weight: 500; font-size: 18px; transition: all 0.3s ease; position: relative; padding: 10px 0;" class="nav-item">Contact us</a></li>
+                <li style="margin-left: 20%;">
+                  <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transform: translateY(0);"
+                    onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 10px rgba(0,0,0,0.2)'"
+                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px rgba(0,0,0,0.1)'">
+                    Register now!
+                  </button>
+                </li>
+              </ul>
+    
+              <div class="social-icons" style="display: none;"></div>
+            </nav>
+          </div>
+        </div>
+      </header>
+    
+      <!-- Mobile Menu -->
+      <div class="side-menu" id="sideMenu" style="position: fixed; top: 0; left: -100%; width: 80%; max-width: 300px; height: 100vh; background-color: black; z-index: 1001; transition: all 0.3s ease; overflow-y: auto; padding-top: 80px;">
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+        <ul style="list-style: none; padding: 20px;">
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease forwards;"><a href="index.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Home</a></li>
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease 0.1s forwards;"><a href="About.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">About</a></li>
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease 0.2s forwards;"><a href="Teams.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Teams</a></li>
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease 0.3s forwards;"><a href="Events.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Events</a></li>
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease 0.4s forwards;"><a href="Staff.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Staff</a></li>
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease 0.5s forwards;"><a href="Achievement.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Achievements</a></li>
+          <li style="margin-bottom: 25px; animation: fadeIn 0.5s ease 0.6s forwards;"><a href="Contact-us.html" style="color: white; text-decoration: none; font-size: 18px; display: block; padding: 10px; transition: all 0.3s ease;" onmouseover="this.style.color='orange'" onmouseout="this.style.color='white'">Contact us</a></li>
+          <li style="animation: fadeIn 0.5s ease 0.7s forwards;">
+            <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; transition: all 0.3s ease; margin-top: 10px; width: 100%;"
+              onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 10px rgba(0,0,0,0.2)'"
+              onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+              Register now!
+            </button>
+          </li>
+        </ul>
+      </div>
+    
+      <section
+        class="section swiper-container swiper-slider swiper-classic bg-gray-2"
+        data-loop="true"
+        data-autoplay="4000"
+        data-simulate-touch="false"
+        data-slide-effect="fade"
+        style="position: relative; width: 100%; height: 100vh; overflow: hidden; margin: 0; padding: 0;"
+      >
+        <video
+          autoplay
+          muted
+          loop
+          playsinline
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;"
+        >
+          <source src="videos/DJI_0719.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <section class="section section-md bg-gray-100">
+        <div>
+          <div class="row row-30 p-4">
+            <!-- Card 1 -->
+            <div class="col-12 mb-4">
+              <article class="post-future h-100" style="max-width: 200cap;">
+                <a class="post-future-figure" href="#">
+                  <img src="images/card1.webp" alt="FC Kovalam Team Training" class="img-fluid w-100" />
+                </a>
+                <div class="post-future-content p-4">
+                  <h4 class="post-future-title">Intensive Training Sessions</h4>
+                  <p class="post-future-text">Our players undergo rigorous training sessions to hone their skills and tactical understanding. Each drill is designed to improve technical ability, physical fitness, and team coordination.</p>
+                  <a href="#" class="btn btn-sm btn-primary">View Schedule</a>
+                </div>
+              </article>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="col-12 mb-4">
+              <article class="post-future h-100" style="max-width: 200cap;">
+                <a class="post-future-figure" href="#">
+                  <img src="images/card2.webp" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
+                </a>
+                <div class="post-future-content p-4">
+                  <h4 class="post-future-title">Youth Development Program</h4>
+                  <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
+                  <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+                </div>
+              </article>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-12 mb-4">
+              <article class="post-future h-100" style="max-width: 200cap;">
+                <a class="post-future-figure" href="#">
+                  <img src="images/card3.webp" alt="FC Kovalam Match Action" class="img-fluid w-100" />
+                </a>
+                <div class="post-future-content p-4">
+                  <h4 class="post-future-title">Competitive Match Play</h4>
+                  <p class="post-future-text">Our teams compete in regional and national leagues, testing their skills against top competition. We emphasize tactical awareness and mental toughness in game situations.</p>
+                  <a href="#" class="btn btn-sm btn-primary">View Fixtures</a>
+                </div>
+              </article>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-12 mb-4">
+              <article class="post-future h-100" style="max-width: 200cap;">
+                <a class="post-future-figure" href="#">
+                  <img src="images/card4.webp" alt="FC Kovalam Community Event" class="img-fluid w-100" />
+                </a>
+                <div class="post-future-content p-4">
+                  <h4 class="post-future-title">Community Engagement</h4>
+                  <p class="post-future-text">We regularly host football clinics and charity events to give back to our community. Our players serve as role models and ambassadors for the sport we love.</p>
+                  <a href="#" class="btn btn-sm btn-primary">Get Involved</a>
+                </div>
+              </article>
+            </div>
+          </div>
+                                  
+          <div class="main-component"></div>
+          <div class="aside-component" style="max-width: 800px; margin: 0 auto; padding: 30px 20px; background: #f8f9fa; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding-bottom: 5cap;">
+            <!-- Heading Component -->
+            <article style="text-align: center;">
+                <h5 style="font-size: 24px; color: #2a2a2a; font-weight: 600; letter-spacing: 0.5px; margin: 0; padding-bottom: 8px; position: relative; display: inline-block;">
+                    Follow Us
+                    <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: #2a7fef;"></span>
+                </h5>
+                <p style="margin-top: 12px; color: #666; font-size: 16px;">Stay connected with our latest updates</p>
+            </article>
+            
+            <!-- Social Media Buttons Grid -->
+            <div class="group-sm group-flex" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; justify-items: center;">
+        
+                <!-- YouTube -->
+                <a class="button-media button-media-youtube" href="#"
+                   style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #ff0000, #cc0000); 
+                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                          box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2);">
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                            <path d="M22.54 6.42C22.42 5.98 22.18 5.58 21.84 5.26C21.51 4.94 21.09 4.71 20.64 4.59C18.88 4.16 12 4.16 12 4.16C12 4.16 5.12 4.16 3.36 4.59C2.91 4.71 2.49 4.94 2.16 5.26C1.82 5.58 1.58 5.98 1.46 6.42C1.02 8.18 1.02 12 1.02 12C1.02 12 1.02 15.82 1.46 17.58C1.58 18.02 1.82 18.42 2.16 18.74C2.49 19.06 2.91 19.29 3.36 19.41C5.12 19.84 12 19.84 12 19.84C12 19.84 18.88 19.84 20.64 19.41C21.09 19.29 21.51 19.06 21.84 18.74C22.18 18.42 22.42 18.02 22.54 17.58C22.98 15.82 22.98 12 22.98 12C22.98 12 22.98 8.18 22.54 6.42Z" fill="white"/>
+                            <path d="M9.75 15.02L15.5 12L9.75 8.98V15.02Z" fill="#FF0000"/>
+                        </svg>
+                        YouTube
+                    </span>
+                </a>
+                
+                <!-- Twitter -->
+                <a class="button-media button-media-twitter" href="#"
+                   style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #1da1f2, #1a8cd8); 
+                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                          box-shadow: 0 4px 8px rgba(29, 161, 242, 0.2);">
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                            <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" fill="white"/>
+                        </svg>
+                        Twitter
+                    </span>
+                </a>
+                
+                <!-- Instagram -->
+                <a class="button-media button-media-instagram" href="#"
+                   style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); 
+                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                          box-shadow: 0 4px 8px rgba(225, 48, 108, 0.2);">
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                            <path d="M12 2.16C8.64 2.16 8.27 2.18 7.05 2.24C5.84 2.3 5.01 2.49 4.29 2.77C3.56 3.06 2.94 3.44 2.33 4.05C1.72 4.66 1.34 5.28 1.05 6.01C0.77 6.73 0.58 7.56 0.52 8.77C0.46 9.99 0.44 10.36 0.44 13.72C0.44 17.08 0.46 17.45 0.52 18.67C0.58 19.88 0.77 20.71 1.05 21.43C1.34 22.16 1.72 22.78 2.33 23.39C2.94 24 3.56 24.38 4.29 24.67C5.01 24.95 5.84 25.14 7.05 25.2C8.27 25.26 8.64 25.28 12 25.28C15.36 25.28 15.73 25.26 16.95 25.2C18.16 25.14 18.99 24.95 19.71 24.67C20.44 24.38 21.06 24 21.67 23.39C22.28 22.78 22.66 22.16 22.95 21.43C23.23 20.71 23.42 19.88 23.48 18.67C23.54 17.45 23.56 17.08 23.56 13.72C23.56 10.36 23.54 9.99 23.48 8.77C23.42 7.56 23.23 6.73 22.95 6.01C22.66 5.28 22.28 4.66 21.67 4.05C21.06 3.44 20.44 3.06 19.71 2.77C18.99 2.49 18.16 2.3 16.95 2.24C15.73 2.18 15.36 2.16 12 2.16ZM12 3.84C15.29 3.84 15.62 3.85 16.82 3.91C17.94 3.97 18.58 4.15 19.04 4.33C19.58 4.54 19.96 4.78 20.37 5.19C20.78 5.6 21.02 5.98 21.23 6.52C21.41 6.98 21.59 7.62 21.65 8.74C21.71 9.94 21.72 10.27 21.72 13.56C21.72 16.85 21.71 17.18 21.65 18.38C21.59 19.5 21.41 20.14 21.23 20.6C21.02 21.14 20.78 21.52 20.37 21.93C19.96 22.34 19.58 22.58 19.04 22.79C18.58 22.97 17.94 23.15 16.82 23.21C15.62 23.27 15.29 23.28 12 23.28C8.71 23.28 8.38 23.27 7.18 23.21C6.06 23.15 5.42 22.97 4.96 22.79C4.42 22.58 4.04 22.34 3.63 21.93C3.22 21.52 2.98 21.14 2.77 20.6C2.59 20.14 2.41 19.5 2.35 18.38C2.29 17.18 2.28 16.85 2.28 13.56C2.28 10.27 2.29 9.94 2.35 8.74C2.41 7.62 2.59 6.98 2.77 6.52C2.98 5.98 3.22 5.6 3.63 5.19C4.04 4.78 4.42 4.54 4.96 4.33C5.42 4.15 6.06 3.97 7.18 3.91C8.38 3.85 8.71 3.84 12 3.84ZM12 7.2C9.35 7.2 7.2 9.35 7.2 12C7.2 14.65 9.35 16.8 12 16.8C14
+                            14.65 16.8 16.8 14.65 16.8 12C16.8 9.35 14.65 7.2 12 7.2ZM12 15.12C10.41 15.12 9.12 13.83 9.12 12C9.12 10.17 10.41 8.88 12 8.88C13.59 8.88 14.88 10.17 14.88 12C14.88 13.83 13.59 15.12 12 15.12ZM19.68 6.72C19.68 7.47 19.07 8.08 18.32 8.08C17.57 8.08 16.96 7.47 16.96 6.72C16.96 5.97 17.57 5.36 18.32 5.36C19.07 5.36 19.68 5.97 19.68 6.72Z" fill="white"/>
+                        </svg>
+                        Instagram
+                    </span>
+                </a>
+                
+                <!-- Facebook -->
+                <a class="button-media button-media-facebook" href="#"
+                   style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #1877f2, #166fe5); 
+                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                          box-shadow: 0 4px 8px rgba(24, 119, 242, 0.2);">
+                    <span style="display: flex; align-items: center; gap: 8px;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                            <path d="M22 12C22 6.48 17.52 2 12 2C6.48 2 2 6.48 2 12C2 16.84 5.44 20.87 10 21.8V15H8V12H10V9.5C10 7.57 11.57 6 13.5 6H16V9H14C13.45 9 13 9.45 13 10V12H16V15H13V21.95C18.05 21.45 22 17.19 22 12Z" fill="white"/>
+                        </svg>
+                        Facebook
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-classic-dark" style="background-color: black; color: white; padding: 40px 0;">
+    <div class="container">
+        <div class="footer-text" style="margin-top: 40px; border-top: 1px solid #333; padding-top: 20px;">
+            <p style="margin: 0; text-align: center; font-size: 14px; color: #bbb;">
+                &copy; 2023 FC Kovalam. All Rights Reserved. | Designed with passion for football
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/core.min.js"></script>
+<script src="js/script.js"></script>
+
+<!-- Mobile Menu Script -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const closeMenu = document.getElementById('closeMenu');
+        const sideMenu = document.getElementById('sideMenu');
+        
+        hamburger.addEventListener('click', function() {
+            sideMenu.style.left = '0';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', function() {
+            sideMenu.style.left = '-100%';
+            document.body.style.overflow = 'auto';
+        });
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+            if (!sideMenu.contains(e.target) && e.target !== hamburger) {
+                sideMenu.style.left = '-100%';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Add smooth scroll to all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header-container');
+            if (window.scrollY > 50) {
+                header.style.padding = '10px 0';
+                header.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+            } else {
+                header.style.padding = '15px 0';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+            }
+        });
+    });
+</script>
+
+</div>
+</body>
+</html>
