@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
     <style>
       .adj-size {
         font-size: 20px;
@@ -508,6 +509,145 @@
         display: block;
       }
     </style>
+    <style>
+      /* Root variables */
+:root {
+  --primary-color: #2d6e5c;
+  --secondary-color: #f8b400;
+  --dark-color: #1e4d3e;
+  --light-color: #f8f9fa;
+}
+
+/* Main nav link styles */
+.main-nav a {
+  color: white !important;
+}
+
+.main-nav a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Nav item underline effect */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Hamburger button styles */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+#hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Side menu (mobile) styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  padding-top: 80px;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* Optional overlay behind side-menu */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+#overlay.active {
+  display: block;
+}
+
+/* Responsive Nav Behavior */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-container {
+    padding: 10px 0 !important;
+  }
+
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
+    </style>
   </head>
   <body>
     <div class="ie-panel">
@@ -522,56 +662,63 @@
       </div>
     </div>
     
-    <!-- Page -->
     <div class="page" style="background-color: #2d6e5c;">
-      <!-- Header -->
-      <header class="header-container">
-        <div class="container">
-          <div class="logo-nav-wrapper">
+      <div id="overlay"></div>  
+      <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000;background-color: #2d6e5c;">
+        <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; background-color:#2d6e5c;padding: 2cap;">
+          <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 15px 0;">
             <!-- Hamburger Menu Button -->
             <button class="hamburger" id="hamburger" aria-label="Menu">
               <span></span>
               <span></span>
               <span></span>
             </button>
-            
-            <a class="navbar-brand" href="index.html">
-              <img class="brand-logo" src="images/logo.png" alt="FC Kovalam">
-            </a>
-            
-            <nav class="main-nav">
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Teams.html">Teams</a></li>
-                <li><a href="Events.html">Events</a></li>
-                <li><a href="Staff.html">Staff</a></li>
-                <li><a href="Achievement.html">Achievements</a></li>
-                <li><a href="Contact-us.html">Contact us</a></li>
-              </ul>
-              
-              <div class="social-icons">
-              </div>
+    
+            <div class="mobile-logo">
+              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 60px;"/></a>
+            </div> 
+      
+            <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
+                <ul id="navList" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; width: 100%;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-grow: 1;">
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="index.html" class="nav-item" style="color: white;">Home</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="About.html" class="nav-item" style="color: white;">About</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Teams.html" class="nav-item" style="color: white;">Teams</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Events.html" class="nav-item" style="color: white;">Events</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Staff.html" class="nav-item" style="color: white;">Staff</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
+                    </div>
+                  
+                    <li style="margin-left: auto;">
+                      <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
+                        Register now!
+                      </button>
+                    </li>
+                  </ul>
+                  
             </nav>
           </div>
         </div>
       </header>
-
-      <!-- Side Menu -->
-      <div class="side-menu" id="sideMenu">
-        <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="About.html">About</a></li>
-          <li><a href="Teams.html">Teams</a></li>
-          <li><a href="Events.html">Events</a></li>
-          <li><a href="Staff.html">Staff</a></li>
-          <li><a href="Achievement.html">Achievements</a></li>
-          <li><a href="Contact-us.html">Contact</a></li>
-        </ul>
-      </div>   
       
+      <!-- Mobile Menu -->
+      <div class="side-menu" id="sideMenu" style="background-color: #2d6e5c;">
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
 
+        <ul style="list-style: none; padding: 20px;">
+          <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
+          <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About</a></li>
+          <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
+          <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
+          <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
+          <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
+          <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
+          <li>
+            <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
+          </li>
+        </ul>
+      </div>
 <section class="about-section" style="background-color: #2d6e5c;margin-top: 15cap;text-align: center;">
   <div class="container">
     <div class="row justify-content-center">
@@ -685,63 +832,30 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // Hamburger menu toggle
-        const hamburger = document.getElementById('hamburger');
-        const sideMenu = document.getElementById('sideMenu');
-        const closeMenu = document.getElementById('closeMenu');
-        
-        hamburger.addEventListener('click', function() {
-          sideMenu.classList.add('active');
-          document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
-        });
-        
-        closeMenu.addEventListener('click', function() {
-          sideMenu.classList.remove('active');
-          document.body.style.overflow = ''; // Re-enable scrolling
-        });
-        
-        // Close menu when clicking on links
-        const menuLinks = document.querySelectorAll('.side-menu a');
-        menuLinks.forEach(function(link) {
-          link.addEventListener('click', function() {
-            sideMenu.classList.remove('active');
-            document.body.style.overflow = ''; // Re-enable scrolling
-          });
-        });
-        
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-          const header = document.querySelector('.header-container');
-          if (window.scrollY > 50) {
-            header.classList.add('scrolled');
-          } else {
-            header.classList.remove('scrolled');
-          }
-        });
-        
-        // Intersection Observer for scroll animations
-        const animateOnScroll = function() {
-          const elements = document.querySelectorAll('.about-section, .timeline-item');
-          
-          const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-              }
-            });
-          }, { threshold: 0.1 });
-          
-          elements.forEach(element => {
-            observer.observe(element);
-          });
-        };
-        
-        // Initialize animations
-        animateOnScroll();
-      });
+      hamburger.addEventListener('click', () => {
+  const isMenuOpen = sideMenu.classList.contains('active');
+
+  if (isMenuOpen) {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    hamburger.classList.remove('active');
+  } else {
+    sideMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('menu-open');
+    hamburger.classList.add('active');
+  }
+});
+
+overlay.addEventListener('click', () => {
+  sideMenu.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+  hamburger.classList.remove('active');
+});
+
     </script>
-  </body>
+    
+    
 </html>
