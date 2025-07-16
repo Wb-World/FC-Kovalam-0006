@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>Contact Us - FC Kovalam</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* Header/Navbar Styles */
+      .header-container {
+        background: rgba(0,0,0,0.9);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+        top: 0;
+        left: 0;
+      }
+      
+      .logo-nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .brand-logo {
+        height: 60px;
+        width: auto;
+        transition: all 0.3s ease;
+        margin-right: 30px;
+      }
+      
+      .main-nav {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+      }
+      
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+      }
+      
+      .main-nav li {
+        margin: 0 15px;
+        position: relative;
+      }
+      
+      .main-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        padding: 8px 0;
+        position: relative;
+      }
+      
+      .main-nav a:hover {
+        color: #2a7fef;
+      }
+      
+      .main-nav a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: #2a7fef;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      
+      .main-nav a:hover:after {
+        width: 100%;
+      }
+      
+      .main-nav .active a {
+        color: #2a7fef;
+      }
+      
+      .main-nav .active a:after {
+        width: 100%;
+      }
+      
+      /* Page content padding to account for fixed header */
+      .page {
+        padding-top: 80px;
+      }
+      
+      /* Hamburger menu for mobile */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1000;
+      }
+      
+      .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+      
+      /* Side menu for mobile */
+      .side-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background: #111;
+        z-index: 2000;
+        padding: 80px 30px 30px;
+        transition: right 0.4s ease;
+      }
+      
+      .side-menu.active {
+        right: 0;
+        display: block;
+      }
+      
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+      
+      .side-menu li {
+        margin: 20px 0;
+      }
+      
+      .side-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
+        display: block;
+        padding: 8px 0;
+      }
+      
+      .side-menu .active a {
+        color: #2a7fef;
+      }
+      
+      .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      
+      /* Responsive styles */
+      @media (max-width: 992px) {
+        .main-nav ul {
+          display: none;
+        }
+        
+        .hamburger {
+          display: flex;
+        }
+        
+        .brand-logo {
+          height: 50px;
+          margin-right: 20px;
+        }
+        
+        .page {
+          padding-top: 70px;
+        }
+      }
+      
+      /* Contact Page Specific Styles */
+      .contact-hero {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+      }
+      
+      .contact-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+      }
+      
+      .contact-content {
+        padding: 60px 0;
+      }
+      
+      .contact-info-card {
+        background: white;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        height: 100%;
+      }
+      
+      .contact-form {
+        background: white;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      .map-container {
+        height: 400px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin-top: 30px;
+      }
+      
+      /* Footer */
+      .footer {
+        background: #000;
+        color: #fff;
+        padding: 30px 0;
+        text-align: center;
+      }
+      
+      /* Preloader */
+      .preloader {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .preloader-item {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #f3f3f3;
+        border-top: 5px solid #2a7fef;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      
+      /* IE Panel */
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
+      
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+      </a>
+    </div>
+    
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
+      </div>
+    </div>
+    
+    <!-- Page -->
+    <div class="page">
+      <!-- Header -->
+      <header class="header-container">
+        <div class="container">
+          <div class="logo-nav-wrapper">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            
+            <a class="navbar-brand" href="index.html">
+              <img class="brand-logo" src="images/logo.png" alt="FC Kovalam">
+            </a>
+            
+            <nav class="main-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Teams.html">Teams</a></li>
+                <li><a href="Events.html">Events</a></li>
+                <li><a href="Staff.html">Staff</a></li>
+                <li><a href="Achievement.html">Achievements</a></li>
+                <li class="active"><a href="Contact-us.html">Contact us</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <!-- Side Menu for Mobile -->
+      <div class="side-menu" id="sideMenu">
+        <button class="close-btn" id="closeMenu" aria-label="Close menu">&times;</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="Teams.html">Teams</a></li>
+          <li><a href="Events.html">Events</a></li>
+          <li><a href="Staff.html">Staff</a></li>
+          <li><a href="Achievement.html">Achievements</a></li>
+          <li class="active"><a href="Contact-us.html">Contact us</a></li>
+        </ul>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="contact-hero">
+        <div class="container">
+          <h1>Contact FC Kovalam</h1>
+          <p>Reach out to us for inquiries, partnerships, or any questions you may have</p>
+        </div>
+      </section>
+
+      <!-- Contact Content -->
+      <section class="contact-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="contact-info-card">
+                <h3><i class="fa fa-map-marker"></i> Location</h3>
+                <p>Kovalam Football Ground<br>Chennai, Tamil Nadu<br>India</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="contact-info-card">
+                <h3><i class="fa fa-phone"></i> Phone</h3>
+                <p>+91 98765 43210<br>+91 44 1234 5678</p>
+                <p>Monday - Friday: 9am - 5pm</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="contact-info-card">
+                <h3><i class="fa fa-envelope"></i> Email</h3>
+                <p>info@fckovalam.com<br>support@fckovalam.com</p>
+                <p>We respond within 24 hours</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row mt-5">
+            <div class="col-lg-6">
+              <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject">
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" rows="5" placeholder="Your Message"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.041399268311!2d80.2547223153459!3d12.90804051991264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525c7e25f4a3d5%3A0x5a3e5a3e5a3e5a3e!2sKovalam%20Beach!5e0!3m2!1sen!2sin!4v1623456789012!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="social-links mb-3">
+            <a href="#" class="text-white mx-2"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fa fa-instagram"></i></a>
+            <a href="#" class="text-white mx-2"><i class="fa fa-youtube"></i></a>
+          </div>
+          <p>&copy; 2023 FC Kovalam. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        
+        hamburger.addEventListener('click', function() {
+          sideMenu.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        });
+        
+        closeMenu.addEventListener('click', function() {
+          sideMenu.classList.remove('active');
+          document.body.style.overflow = '';
+        });
+        
+        // Close menu when clicking on links
+        const menuLinks = document.querySelectorAll('.side-menu a');
+        menuLinks.forEach(function(link) {
+          link.addEventListener('click', function() {
+            sideMenu.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+        
+        // Hide preloader when page loads
+        window.addEventListener('load', function() {
+          document.querySelector('.preloader').style.display = 'none';
+        });
+      });
+    </script>
+  </body>
+</html>
