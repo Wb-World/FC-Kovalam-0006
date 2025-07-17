@@ -1,9 +1,7 @@
-
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
-    <!-- Site Title-->
-    <title>Staffs</title>
+    <title>Staff - FC Kovalam</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,456 +12,822 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+      .adj-size {
+        font-size: 20px;
+      }
+      /* Animation Keyframes */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes slideInRight {
+        from { transform: translateX(20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .footer {
+          background-color: #000;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          animation: fadeIn 1s ease-out;
+      }
+
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+      
+      .hamburger:hover {
+        transform: scale(1.1);
+      }
+
+      .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* Side Menu */
+      .side-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        height: 100vh;
+        width: 250px;
+        background: #111;
+        color: white;
+        z-index: 2000;
+        padding: 60px 20px;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.5);
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .side-menu.active {
+        right: 0;
+        display: block;
+      }
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-menu ul li {
+        margin: 20px 0;
+        transform: translateX(20px);
+        opacity: 0;
+        animation: slideInRight 0.5s forwards;
+      }
+      
+      .side-menu ul li:nth-child(1) { animation-delay: 0.1s; }
+      .side-menu ul li:nth-child(2) { animation-delay: 0.2s; }
+      .side-menu ul li:nth-child(3) { animation-delay: 0.3s; }
+      .side-menu ul li:nth-child(4) { animation-delay: 0.4s; }
+      .side-menu ul li:nth-child(5) { animation-delay: 0.5s; }
+      .side-menu ul li:nth-child(6) { animation-delay: 0.6s; }
+      .side-menu ul li:nth-child(7) { animation-delay: 0.7s; }
+
+      .side-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      
+      .side-menu ul li a:hover {
+        color: #2a7fef;
+        transform: translateX(5px);
+      }
+
+      .side-menu .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+        transition: transform 0.3s ease;
+      }
+      
+      .side-menu .close-btn:hover {
+        transform: rotate(90deg);
+      }
+
+      /* Header Styles */
+      .header-container {
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+      
+      .header-container.scrolled {
+        background: rgba(0,0,0,0.95);
+        padding: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .logo-nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .brand-logo {
+        height: 60px;
+        width: auto;
+        transition: all 0.3s ease;
+      }
+      
+      .scrolled .brand-logo {
+        height: 50px;
+      }
+      
+      .main-nav {
+        display: flex;
+        align-items: center;
+      }
+      
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .main-nav li {
+        margin: 0 15px;
+        position: relative;
+      }
+      
+      .main-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        padding: 5px 0;
+        position: relative;
+      }
+      
+      .main-nav a:hover {
+        color: yellow;
+      }
+      
+      .main-nav a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: yellow;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      
+      .main-nav a:hover:after {
+        width: 100%;
+      }
+      
+      .social-icons {
+        display: flex;
+        margin-left: 30px;
+      }
+      
+      .social-icons a {
+        color: white;
+        font-size: 18px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        color: #2a7fef;
+        transform: translateY(-3px);
+      }
+      
+      /* Staff Hero */
+      .staff-hero {
+        height: 60vh;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/staff-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding-top: 80px;
+        animation: fadeIn 1s ease-out;
+      }
+      
+      .staff-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-out 0.2s both;
+      }
+      
+      .staff-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+      
+      /* Staff Content Sections */
+      .staff-section {
+        padding: 80px 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      
+      .staff-section:nth-child(1) { animation-delay: 0.2s; }
+      .staff-section:nth-child(2) { animation-delay: 0.4s; }
+      .staff-section:nth-child(3) { animation-delay: 0.6s; }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .section-title h2 {
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .section-title h2:after {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 3px;
+        background: #2a7fef;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: pulse 2s infinite;
+      }
+      
+      .staff-card {
+        background: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+      }
+      
+      .staff-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      }
+      
+      .staff-card h3 {
+        color: #2a7fef;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+      
+      .staff-card p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+      
+      /* Staff Grid */
+      .staff-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
+      }
+      
+      .staff-member {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .staff-member:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      }
+      
+      .staff-img {
+        height: 300px;
+        overflow: hidden;
+      }
+      
+      .staff-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+      
+      .staff-member:hover .staff-img img {
+        transform: scale(1.1);
+      }
+      
+      .staff-info {
+        text-align: center;
+      }
+      
+      .staff-info h3 {
+        margin-bottom: 10px;
+        color: #0dd49b;
+      }
+      
+      .staff-info p.position {
+        color: #666;
+        font-weight: 500;
+        margin-bottom: 15px;
+      }
+      
+      .staff-info p.bio {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
+      
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      
+      .social-links a {
+        color: #2a7fef;
+        font-size: 18px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-links a:hover {
+        color: #1a5fb4;
+        transform: translateY(-3px);
+      }
+      
+      /* Call to Action */
+      .section-md {
+        animation: pulse 2s infinite 1s;
+      }
+      
+      .button {
+        transition: all 0.3s ease;
+      }
+      
+      .button:hover {
+        animation: pulse 1s infinite;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .main-nav ul {
+          display: none !important;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+        
+        .staff-hero h1 {
+          font-size: 2.5rem;
+        }
+        
+        .staff-grid {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .staff-hero {
+          height: auto !important;
+          padding-top: 200px !important;
+          padding-bottom: 60px;
+        }
+
+        .staff-hero h1 {
+          font-size: 2rem;
+        }
+
+        .staff-hero p {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .brand-logo {
+          height: 50px;
+        }
+        
+        .staff-hero {
+          height: 40vh;
+          padding-top: 70px;
+        }
+        
+        .staff-card {
+          padding: 20px;
+        }
+        
+        .side-menu ul li {
+          animation: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+      
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      } 
+      
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+    </style>
+    <style>
+      /* Root variables */
+:root {
+  --primary-color: #2d6e5c;
+  --secondary-color: #f8b400;
+  --dark-color: #1e4d3e;
+  --light-color: #f8f9fa;
+}
+
+/* Main nav link styles */
+.main-nav a {
+  color: white !important;
+}
+
+.main-nav a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Nav item underline effect */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Hamburger button styles */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+#hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Side menu (mobile) styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  padding-top: 80px;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* Optional overlay behind side-menu */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+#overlay.active {
+  display: block;
+}
+
+/* Responsive Nav Behavior */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-container {
+    padding: 10px;
+  }
+
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
+    </style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+      </a>
+    </div>
+    
     <div class="preloader">
       <div class="preloader-body">
         <div class="preloader-item"></div>
       </div>
     </div>
-    <!-- Page-->
-    <div class="page"><a class="d-none d-xl-block" href="https://www.templatemonster.com/website-templates/allstar-multi-sports-website-template-63853.html" target="blank"></a>
-      <!-- Page Header-->
-      <header class="section page-header rd-navbar-dark">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="166px" data-xl-stick-up-offset="166px" data-xxl-stick-up-offset="166px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-            <div class="rd-navbar-panel">
-              <!-- RD Navbar Toggle-->
-              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-main"><span></span></button>
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel-inner container">
-                <div class="rd-navbar-collapse rd-navbar-panel-item rd-navbar-panel-item-left">
-                  <!-- Owl Carousel-->
-                  <div class="owl-carousel-navbar owl-carousel-inline-outer">
-                    <div class="owl-carousel-inline-wrap">
+    
+    <div class="page" style="background-color:  #2d6e5c;">
+      <div id="overlay"></div>  
+      <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000;background-color: #000;">
+        <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; background-color:black">
+          <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 15px 0;">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu" style="padding-bottom: 4cap;">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+    
+            <div class="mobile-logo">
+              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 60px;"/></a>
+            </div> 
+      
+            <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
+                <ul id="navList" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; width: 100%;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-grow: 1;justify-content:space-evenly;">
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="index.html" class="nav-item" style="color: white;">Home</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="About.html" class="nav-item" style="color: white;">About</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Teams.html" class="nav-item" style="color: white;">Teams</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Events.html" class="nav-item" style="color: white;">Events</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Staff.html" class="nav-item" style="color: white;">Staff</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
                     </div>
-                  </div>
-                </div>
-                <div class="rd-navbar-panel-item rd-navbar-panel-item-right">
-
-                </div>
-                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-              </div>
-            </div>
-            <div class="rd-navbar-main">
-              <div class="rd-navbar-main-top">
-                <div class="rd-navbar-main-container container">
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="./"><img class="brand-logo " src="images/logo.png" alt="" width="95" height="126"/></a>
-                  </div>
-                  <!-- RD Navbar List-->
-                  <ul class="rd-navbar-list">
-                    <li class="rd-navbar-list-item"></li>
-                    <li class="rd-navbar-list-item"></li>
-                    <li class="rd-navbar-list-item"></li>
-                  </ul>
-                  <!-- RD Navbar Search-->
-                  <div class="rd-navbar-search">
-                    <button class="rd-navbar-search-toggle" data-rd-navbar-toggle=".rd-navbar-search"><span></span></button>
-
-                  </div>
-                </div>
-              </div>
-              <div class="rd-navbar-main-bottom rd-navbar-darker">
-                <div class="rd-navbar-main-container container">
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="index">Home</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="About">About us</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Teams">Teams</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Events">Events</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Staff">Staff</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Achievements">Achievements</a>
-                    </li>
-                    <li class="rd-nav-item"><a class="rd-nav-link" href="Contact-us">Contact us</a>
+                  
+                    <li style="margin-left: auto;">
+                      <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
+                        Register now!
+                      </button>
                     </li>
                   </ul>
-                  <div class="rd-navbar-main-element">
-                    <ul class="list-inline list-inline-sm">
-                      <li><a class="icon icon-xs icon-light fa fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-light fa fa-twitter" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-light fa fa-google-plus" href="#"></a></li>
-                      <li><a class="icon icon-xs icon-light fa fa-instagram" href="#"></a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </nav>
+                  
+            </nav>
+          </div>
         </div>
       </header>
       
-      <!-- Staff Section-->
-      <section class="section section-md bg-gray-100">
+      <!-- Mobile Menu -->
+      <div class="side-menu" id="sideMenu" style="background-color:black;">
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+
+        <ul style="list-style: none; padding: 20px;">
+          <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
+          <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About</a></li>
+          <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
+          <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
+          <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
+          <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
+          <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
+          <li>
+            <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Coaching Staff Section -->
+      <section class="staff-section" style="background-color: #2d6e5c;margin-top: 5cap;">
         <div class="container">
-          <div class="row row-50">
-            <div class="col-lg-12">
-              <div class="main-component">
-                <!-- Heading Component-->
-                <article class="heading-component">
-                  <div class="heading-component-inner">
-                    <h5 class="heading-component-title">Our Team Staff
-                    </h5>
-                    <p>Meet the dedicated professionals behind Sportland's success</p>
-                  </div>
-                </article>
+          <div class="section-title">
+            <h2 style="color: white;">Chairman & Founder</h2>
+          </div>
+          <div class="staff-grid" style="display: flex; justify-content: center;">
 
-                <!-- Staff Grid -->
-                <div class="row row-30">
-                  <!-- Coaching Staff Section -->
-                  <div class="col-12">
-                    <h4 class="text-primary mb-4">Coaching Staff</h4>
-                  </div>
-
-                  <!-- Head Coach -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="staff-member bg-white p-4 rounded shadow-sm">
-                      <div class="staff-image text-center mb-3">
-                        <img src="images/Skills/Coach.webp" alt="Head Coach" class="rounded-circle" width="200" height="200" style="object-fit: cover; border: 3px solid #35ad79;">
-                      </div>
-                      <div class="staff-info text-center">
-                        <h5 class="staff-name">K Ansari</h5>
-                        <p class="staff-position text-primary font-weight-bold">Head Coach</p>
-                        <p class="staff-experience">10 years of experience</p>
-                        <p class="staff-description">Passionate, professional, and highly qualified — Mr Ansari stands out as Kovalam’s only AFID Certified Football Coach, bringing world-class training standards right to the heart of Chennai, Tamil Nadu.</p>
-                        <div class="staff-contact">
-                          <p><strong>Email:</strong> m.rodriguez@sportland.com</p>
-                          <p><strong>Phone:</strong> +1 (555) 123-4567</p>
-                        </div>
-                        <div class="staff-social mt-3">
-                          <a href="#" class="icon icon-xs icon-primary fa fa-linkedin mr-2"></a>
-                          <a href="#" class="icon icon-xs icon-primary fa fa-twitter"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Assistant Coach -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="staff-member bg-white p-4 rounded shadow-sm">
-                      <div class="staff-image text-center mb-3">
-                        <img src="images/card2.webp" alt="Assistant Coach" class="rounded-circle" width="200" height="200" style="object-fit: cover; border: 3px solid #35ad79;">
-                      </div>
-                      <div class="staff-info text-center">
-                        <h5 class="staff-name">Sarah Thompson</h5>
-                        <p class="staff-position text-primary font-weight-bold">Assistant Coach</p>
-                        <p class="staff-experience">8 years of experience</p>
-                        <p class="staff-description">Specialized in tactical analysis and player development. Former national team assistant coach with proven track record.</p>
-                        <div class="staff-contact">
-                          <p><strong>Email:</strong> s.thompson@sportland.com</p>
-                          <p><strong>Phone:</strong> +1 (555) 123-4568</p>
-                        </div>
-                        <div class="staff-social mt-3">
-                          <a href="#" class="icon icon-xs icon-primary fa fa-linkedin mr-2"></a>
-                          <a href="#" class="icon icon-xs icon-primary fa fa-twitter"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Fitness Coach -->
-                  <div class="col-lg-4 col-md-6">
-                    <div class="staff-member bg-white p-4 rounded shadow-sm">
-                      <div class="staff-image text-center mb-3">
-                        <img src="images/card3.webp" alt="Fitness Coach" class="rounded-circle" width="200" height="200" style="object-fit: cover; border: 3px solid #35ad79;">
-                      </div>
-                      <div class="staff-info text-center">
-                        <h5 class="staff-name">David Chen</h5>
-                        <p class="staff-position text-primary font-weight-bold">Fitness Coach</p>
-                        <p class="staff-experience">10 years of experience</p>
-                        <p class="staff-description">Certified sports scientist specializing in performance optimization and injury prevention for professional athletes.</p>
-                        <div class="staff-contact">
-                          <p><strong>Email:</strong> d.chen@sportland.com</p>
-                          <p><strong>Phone:</strong> +1 (555) 123-4569</p>
-                        </div>
-                        <div class="staff-social mt-3">
-                          <a href="#" class="icon icon-xs icon-primary fa fa-linkedin mr-2"></a>
-                          <a href="#" class="icon icon-xs icon-primary fa fa-twitter"></a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Management Staff Section -->
-                  <div class="col-12 mt-5">
-                    <h4 class="text-primary mb-4">Management Team</h4>
-                  </div>
-
-                  <!-- General Manager -->
-                  <div class="col-lg-6 col-md-6">
-                    <div class="staff-member-horizontal bg-white p-4 rounded shadow-sm d-flex">
-                      <div class="staff-image mr-4">
-                        <img src="images/" alt="General Manager" class="rounded-circle" width="200" height="100" style="object-fit: cover;">
-                      </div>
-                      <div class="staff-info">
-                        <h5 class="staff-name">Robert Williams</h5>
-                        <p class="staff-position text-primary font-weight-bold">General Manager</p>
-                        <p class="staff-experience">20 years in sports management</p>
-                        <p class="staff-description">Oversees all team operations and strategic planning. Former player agent with extensive network in professional soccer.</p>
-                        <div class="staff-contact">
-                          <p><strong>Email:</strong> r.williams@sportland.com</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Team Doctor -->
-                  <div class="col-lg-6 col-md-6">
-                    <div class="staff-member-horizontal bg-white p-4 rounded shadow-sm d-flex">
-                      <div class="staff-image mr-4">
-                        <img src="images/" alt="Team Doctor" class="rounded-circle" width="200" height="100" style="object-fit: cover;">
-                      </div>
-                      <div class="staff-info">
-                        <h5 class="staff-name">Dr. Elena Martinez</h5>
-                        <p class="staff-position text-primary font-weight-bold">Team Doctor</p>
-                        <p class="staff-experience">12 years in sports medicine</p>
-                        <p class="staff-description">Board-certified sports medicine physician specializing in athletic injuries and performance health.</p>
-                        <div class="staff-contact">
-                          <p><strong>Email:</strong> e.martinez@sportland.com</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Support Staff Section -->
-                  <div class="col-12 mt-5">
-                    <h4 class="text-primary mb-4">Support Staff</h4>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6">
-                    <div class="staff-card bg-white p-3 rounded shadow-sm text-center">
-                      <h6 class="text-primary">Equipment Manager</h6>
-                      <p class="font-weight-bold">James Wilson</p>
-                      <p class="small">Ensures all equipment and facilities are maintained to the highest standards.</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6">
-                    <div class="staff-card bg-white p-3 rounded shadow-sm text-center">
-                      <h6 class="text-primary">Video Analyst</h6>
-                      <p class="font-weight-bold">Lisa Park</p>
-                      <p class="small">Provides detailed video analysis for tactical improvements and opponent scouting.</p>
-                    </div>
-                  </div>
-
-                  <div class="col-lg-4 col-md-6">
-                    <div class="staff-card bg-white p-3 rounded shadow-sm text-center">
-                      <h6 class="text-primary">Nutritionist</h6>
-                      <p class="font-weight-bold">Dr. Mark Johnson</p>
-                      <p class="small">Develops personalized nutrition plans for optimal player performance and recovery.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Contact Information -->
-                <div class="row mt-5">
-                  <div class="col-12">
-                    <div class="bg-primary text-white p-4 rounded">
-                      <h5 class="text-center mb-3">Contact Our Staff</h5>
-                      <div class="row">
-                        <div class="col-md-4 text-center">
-                          <h6>General Inquiries</h6>
-                          <p>info@sportland.com<br>+1 (555) 123-4500</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                          <h6>Coaching Department</h6>
-                          <p>coaching@sportland.com<br>+1 (555) 123-4501</p>
-                        </div>
-                        <div class="col-md-4 text-center">
-                          <h6>Medical Team</h6>
-                          <p>medical@sportland.com<br>+1 (555) 123-4502</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!-- Staff Member 2 -->
+            <div class="staff-member">
+              <div class="staff-img" style="height: 150cap;">
+                <img src="images/staffs/s3.jpg" alt="Head Coach" style="object-fit:cover;">
+              </div>
+              <div class="staff-info">
+                <h3>J.Janakiraman sunder</h3>
               </div>
             </div>
-      <!-- Page Footer--><a class="d-block" href="https://www.templatemonster.com/website-templates/allstar-multi-sports-website-template-63853.html" target="blank"></a>
-      <footer class="section footer-classic footer-classic-dark context-dark">
-        <div class="footer-classic-main">
-          <div class="container">
-            <p class="heading-7">Subscribe to our Newsletter</p>
-            <!-- RD Mailform-->
-            <form class="rd-mailform rd-form rd-inline-form-creative" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-              <div class="form-wrap">
-                <div class="form-input-wrap">
-                  <input class="form-input" id="footer-form-email" type="email" name="email" data-constraints="@Required">
-                  <label class="form-label" for="footer-form-email">Enter your E-mail</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="staff-section" style="background-color: #2d6e5c;">
+        <div class="container">
+          <div class="section-title">
+            <h2 style="color: white;">Head Coach</h2>
+          </div>
+          <div style="display: flex; justify-content: center;"> <!-- Added this wrapper -->
+            <div class="staff-grid">
+              <!-- Staff Member 5 -->
+              <div class="staff-member" style="width: 300px;">
+                <div class="staff-img" style="height: 50cap;">
+                  <img src="images/staffs/s2.jpg" alt="Head Coach" 
+                       style="width:100%; height:100%; object-fit:cover; object-position:center;">
                 </div>
-              </div>
-              <div class="form-button">
-                <button class="button button-primary-outline" type="submit" aria-label="Send"><span class="icon fl-budicons-launch-right164"></span></button>
-              </div>
-            </form>
-            <div class="row row-50">
-              <div class="col-lg-5 text-center text-sm-left">
-                <article class="unit unit-sm-horizontal unit-middle justify-content-center justify-content-sm-start footer-classic-info">
-                  <div class="unit-left"><a class="brand brand-md" href="./"><img class="brand-logo " src="images/logo-soccer-default-95x126.png" alt="" width="95" height="126"/></a>
-                  </div>
-                  <div class="unit-body">
-                    <p>Sportland website offers you the latest news about our team as well as updates on our matches and other events.</p>
-                  </div>
-                </article>
-                <ul class="list-inline list-inline-bordered list-inline-bordered-lg">
-                  <li>
-                    <div class="unit unit-horizontal unit-middle">
-                      <div class="unit-left">
-                        <svg class="svg-color-primary svg-sizing-35" x="0px" y="0px" width="27px" height="27px" viewbox="0 0 27 27" preserveAspectRatio="none">
-                          <path d="M2,26c0,0.553,0.447,1,1,1h5c0.553,0,1-0.447,1-1v-8.185c-0.373-0.132-0.711-0.335-1-0.595V19 H6v-1v-1v-1H5v1v2H3v-9H2v1H1V9V8c0-0.552,0.449-1,1-1h1h1h3h0.184c0.078-0.218,0.173-0.426,0.297-0.617C8.397,5.751,9,4.696,9,3.5 C9,1.567,7.434,0,5.5,0S2,1.567,2,3.5C2,4.48,2.406,5.364,3.056,6H3H2C0.895,6,0,6.895,0,8v7c0,1.104,0.895,2,2,2V26z M8,26H6v-6h2 V26z M5,26H3v-6h2V26z M3,3.5C3,2.121,4.121,1,5.5,1S8,2.121,8,3.5S6.879,6,5.5,6S3,4.879,3,3.5 M1,15v-3h1v4 C1.449,16,1,15.552,1,15"></path>
-                          <path d="M11.056,6H11h-1C8.895,6,8,6.895,8,8v7c0,1.104,0.895,2,2,2v9c0,0.553,0.447,1,1,1h5 c0.553,0,1-0.447,1-1v-9c1.104,0,2-0.896,2-2V8c0-1.105-0.896-2-2-2h-1h-0.056C16.594,5.364,17,4.48,17,3.5 C17,1.567,15.434,0,13.5,0S10,1.567,10,3.5C10,4.48,10.406,5.364,11.056,6 M10,15v1c-0.551,0-1-0.448-1-1v-3h1V15z M11,20h2v6h-2 V20z M16,26h-2v-6h2V26z M17,16v-1v-3h1v3C18,15.552,17.551,16,17,16 M17,7c0.551,0,1,0.448,1,1v1v1v1h-1v-1h-1v5v4h-2v-1v-1v-1h-1 v1v1v1h-2v-4v-5h-1v1H9v-1V9V8c0-0.552,0.449-1,1-1h1h1h3h1H17z M13.5,1C14.879,1,16,2.121,16,3.5C16,4.879,14.879,6,13.5,6 S11,4.879,11,3.5C11,2.121,12.121,1,13.5,1"></path>
-                          <polygon points="15,13 14,13 14,9 13,9 12,9 12,10 13,10 13,13 12,13 12,14 13,14 14,14 15,14 	"></polygon>
-                          <polygon points="7,14 7,13 5,13 5,12 6,12 7,12 7,10 7,9 6,9 4,9 4,10 6,10 6,11 5,11 4,11 4,12 4,13 4,14 5,14"></polygon>
-                          <polygon points="20,10 22,10 22,11 21,11 21,12 22,12 22,13 20,13 20,14 22,14 23,14 23,13 23,12 23,11 23,10 23,9 22,9 20,9 	"></polygon>
-                          <path d="M19.519,6.383C19.643,6.574,19.738,6.782,19.816,7H20h3h1h1c0.551,0,1,0.448,1,1v3h-1v-1h-1v9 h-2v-2v-1h-1v1v2h-2v-1.78c-0.289,0.26-0.627,0.463-1,0.595V26c0,0.553,0.447,1,1,1h5c0.553,0,1-0.447,1-1v-9c1.104,0,2-0.896,2-2 V8c0-1.105-0.896-2-2-2h-1h-0.056C24.594,5.364,25,4.48,25,3.5C25,1.567,23.434,0,21.5,0S18,1.567,18,3.5 c0,0.736,0.229,1.418,0.617,1.981C18.861,5.834,19.166,6.14,19.519,6.383 M19,20h2v6h-2V20z M24,26h-2v-6h2V26z M26,15 c0,0.552-0.449,1-1,1v-4h1V15z M21.5,1C22.879,1,24,2.121,24,3.5C24,4.879,22.879,6,21.5,6C20.121,6,19,4.879,19,3.5 C19,2.121,20.121,1,21.5,1"></path>
-                        </svg>
-                      </div>
-                      <div class="unit-body">
-                        <h6>Join Our Team</h6><a class="link" href="mailto:#">info@demolink.org</a>
-                      </div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="unit unit-horizontal unit-middle">
-                      <div class="unit-left">
-                        <svg class="svg-color-primary svg-sizing-35" x="0px" y="0px" width="72px" height="72px" viewbox="0 0 72 72">
-                          <path d="M36.002,0c-0.41,0-0.701,0.184-0.931,0.332c-0.23,0.149-0.4,0.303-0.4,0.303l-9.251,8.18H11.58 c-1.236,0-1.99,0.702-2.318,1.358c-0.329,0.658-0.326,1.3-0.326,1.3v11.928l-8.962,7.936V66c0,0.015-0.038,1.479,0.694,2.972 C1.402,70.471,3.006,72,5.973,72h30.03h30.022c2.967,0,4.571-1.53,5.306-3.028c0.736-1.499,0.702-2.985,0.702-2.985V31.338 l-8.964-7.936V11.475c0,0,0.004-0.643-0.324-1.3c-0.329-0.658-1.092-1.358-2.328-1.358H46.575l-9.251-8.18 c0,0-0.161-0.154-0.391-0.303C36.703,0.184,36.412,0,36.002,0z M36.002,3.325c0.49,0,0.665,0.184,0.665,0.184l6,5.306h-6.665 h-6.665l6-5.306C35.337,3.51,35.512,3.325,36.002,3.325z M12.081,11.977h23.92H59.92v9.754v2.121v14.816L48.511,48.762 l-10.078-8.911c0,0,0.307-0.279-0.747-0.2The images in the Staff section are being updated to be more compact and visually appealing by adjusting image sizes, adding borders, and improving layout.
-```268-0.747,0.548-0.747,0.548l-10.078,8.911L12.082,38.668V23.852v-2.121v-9.754H12.081z M8.934,26.867v9.015 l-5.091-4.507L8.934,26.867z M63.068,26.867l5.091,4.509l-5.091,4.507V26.867z M69.031,34.44v31.559 c0,0.328-0.103,0.52-0.162,0.771L50.685,50.684L69.031,34.44z M2.971,34.448l18.348,16.235L3.133,66.77 c-0.059-0.251-0.162-0.439-0.162-0.769C2.971,66.001,2.971,34.448,2.971,34.448z M36.002,41.956c0.264,0,0.437,0.057,0.546,0.104 c0.108,0.047,0.119,0.059,0.119,0.059l30.147,26.675c-0.3,0.054-0.79,0.207-0.79,0.207H36.002H5.98H5.972 c-0.003,0-0.488-0.154-0.784-0.207l30.149-26.675c0,0,0.002-0.011,0.109-0.059C35.555,42.013,35.738,41.956,36.002,41.956z"></path>
-                        </svg>
-                      </div>
-                      <div class="unit-body">
-                        <h6>Contact Us</h6><a class="link" href="mailto:#">info@demolink.org</a>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <div class="group-md group-middle">
-                  <div class="group-item">
-                    <ul class="list-inline list-inline-xs">
-                      <li><a class="icon icon-corporate fa fa-facebook" href="#"></a></li>
-                      <li><a class="icon icon-corporate fa fa-twitter" href="#"></a></li>
-                      <li><a class="icon icon-corporate fa fa-google-plus" href="#"></a></li>
-                      <li><a class="icon icon-corporate fa fa-instagram" href="#"></a></li>
-                    </ul>
-                  </div><a class="button button-sm button-gray-outline" href="contact-us.html">Get in Touch</a>
-                </div>
-              </div>
-              <div class="col-lg-7">
-                <h5>Popular News</h5>
-                <div class="divider-small divider-secondary"></div>
-                <div class="row row-20">
-                  <div class="col-sm-6">
-                          <!-- Post Classic-->
-                          <article class="post-classic">
-                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-1-93x87.jpg" alt="" width="93" height="87"/></a></div>
-                            <div class="post-classic-main">
-                              <!-- Badge-->
-                              <div class="badge badge-secondary">The Team
-                              </div>
-                              <p class="post-classic-title"><a href="#">Bundy stymies Blue Jays and Orioles hit 2 HRs</a></p>
-                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                <time datetime="2020">April 15, 2020</time>
-                              </div>
-                            </div>
-                          </article>
-                  </div>
-                  <div class="col-sm-6">
-                          <!-- Post Classic-->
-                          <article class="post-classic">
-                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-2-93x87.jpg" alt="" width="93" height="87"/></a></div>
-                            <div class="post-classic-main">
-                              <!-- Badge-->
-                              <div class="badge badge-red">Hot<span class="icon material-icons-whatshot"></span>
-                              </div>
-                              <p class="post-classic-title"><a href="#">Good vibes back at struggling Schalke</a></p>
-                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                <time datetime="2020">April 15, 2020</time>
-                              </div>
-                            </div>
-                          </article>
-                  </div>
-                  <div class="col-sm-6">
-                          <!-- Post Classic-->
-                          <article class="post-classic">
-                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-3-93x87.jpg" alt="" width="93" height="87"/></a></div>
-                            <div class="post-classic-main">
-                              <!-- Badge-->
-                              <div class="badge badge-primary">The League
-                              </div>
-                              <p class="post-classic-title"><a href="#">Prem in 90 seconds: Chelsea's crisis is over!</a></p>
-                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                <time datetime="2020">April 15, 2020</time>
-                              </div>
-                            </div>
-                          </article>
-                  </div>
-                  <div class="col-sm-6">
-                          <!-- Post Classic-->
-                          <article class="post-classic">
-                            <div class="post-classic-aside"><a class="post-classic-figure" href="#"><img src="images/footer-soccer-post-4-93x87.jpg" alt="" width="93" height="87"/></a></div>
-                            <div class="post-classic-main">
-                              <!-- Badge-->
-                              <div class="badge badge-primary">The League
-                              </div>
-                              <p class="post-classic-title"><a href="#">Liverpool in desperate need of backup players</a></p>
-                              <div class="post-classic-time"><span class="icon mdi mdi-clock"></span>
-                                <time datetime="2020">April 15, 2020</time>
-                              </div>
-                            </div>
-                          </article>
-                  </div>
+                <div class="staff-info">
+                  <h3>K.Ansari</h3>
+                  <p><b>Head Coach</b></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="footer-classic-aside footer-classic-darken">
-          <div class="container">
-            <div class="layout-justify">
-              <!-- Rights-->
-              <p class="rights"><span>Sportland</span><span>&nbsp;&copy;&nbsp;</span><span class="copyright-year"></span><span>.&nbsp;</span><span>Designed by <a href="https://www.templatemonster.com/products/author/zemez/">Zemez.</a></span></p>
-              <nav class="nav-minimal">
-                <ul class="nav-minimal-list">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Statistics</a></li>
-                  <li><a href="#">Team</a></li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Shop</a></li>
-                </ul>
-              </nav>
+      </section>
+
+      <section class="staff-section" style="background-color: #2d6e5c;">
+        <div class="container">
+          <div class="section-title">
+            <h2 style="color: white;justify-content: center;">Coach</h2>
+          </div>
+          <div class="staff-grid" style="flex-wrap: wrap; justify-content: center; gap: 3cap;">
+            <!-- Staff Member 4 -->
+            <div class="staff-member">
+              <div class="staff-img" style="height: 50cap;">
+                <img src="images/staffs/s1.jpg" alt="Head Coach" 
+                style="width:100%; height:100%; object-fit:cover; object-position:center;">
+              </div>
+              <div class="staff-info">
+                <h3>S.Jeevanandham</h3>
+              </div>
+            </div>
+
+            <!-- Staff Member 6 -->
+            <div class="staff-member">
+              <div class="staff-img" style="height: 50cap;">
+                <img src="images/staffs/s5.png" alt="Head Coach" 
+                style="width:100%; height:100%; object-fit:cover; object-position:center;">
+              </div>
+              <div class="staff-info">
+                <h3>A. Umar farook</h3>
+                <p><b>Assistant coach</b></p>
+              </div>
+            </div>
+
+            <div class="staff-member">
+              <div class="staff-img" style="height: 50cap;">
+                <img src="images/staffs/s4.jpg" alt="Head Coach" 
+                style="width:100%; height:100%; object-fit:cover; object-position:center;">
+              </div>
+              <div class="staff-info">
+                <h3>V.Subash</h3>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 FC Kovalam. All rights reserved.</p>
         </div>
       </footer>
-      <!-- Modal Video-->
-      <div class="modal modal-video fade" id="modal1" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            </div>
-            <div class="modal-body">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" width="560" height="315" data-src="https://www.youtube.com/embed/uSzNA2_y46c"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
+    
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
-  </body>
+    <script>
+      hamburger.addEventListener('click', () => {
+  const isMenuOpen = sideMenu.classList.contains('active');
+
+  if (isMenuOpen) {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    hamburger.classList.remove('active');
+  } else {
+    sideMenu.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('menu-open');
+    hamburger.classList.add('active');
+  }
+});
+
+overlay.addEventListener('click', () => {
+  sideMenu.classList.remove('active');
+  overlay.classList.remove('active');
+  document.body.classList.remove('menu-open');
+  hamburger.classList.remove('active');
+});
+
+    </script>
+    
+    <!-- Font Awesome for social icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </html>
