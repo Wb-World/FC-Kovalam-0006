@@ -712,6 +712,71 @@
   }
 }
 
+/* Improved content boxes */
+.content-box {
+  background-color: #01A66F;
+  color: #e8f5e9;
+  line-height: 1.6;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  width: 90%;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.event-banner {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.event-banner div {
+  flex: 1;
+  min-height: 300px;
+  overflow: hidden;
+}
+
+.event-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.event-banner:hover img {
+  transform: scale(1.05);
+}
+
+.single-image {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 300px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .event-banner {
+    flex-direction: column;
+  }
+  
+  .content-box {
+    padding: 1.5rem;
+    width: 95%;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -793,109 +858,92 @@
           <div class="row">
             <div class="col-lg-12">
               <!-- Combined image display -->
-              <div class="event-banner" style="display: flex; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.2); overflow: hidden;">
-                <div style="flex: 1; min-height: 300px;">
-                  <img src="images/events/e1.jpg" alt="Kovalam Beach Cup" 
-                       style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+              <div class="event-banner">
+                <div>
+                  <img src="images/events/e1.jpg" alt="Kovalam Beach Cup">
                 </div>
-                <div style="flex: 1; min-height: 300px;">
-                  <img src="images/events/e2.jpg" alt="Independence Day Football Camp" 
-                       style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;">
+                <div>
+                  <img src="images/events/e2.jpg" alt="Independence Day Football Camp">
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div style="font-size: 1.2rem; padding: 2rem; 
-               background-color: #01A66F; 
-               color: #e8f5e9; line-height: 1.6;
-               border-radius: 8px; width: 100%; max-width: 1000cap;">
-            <b>
-              🌴⚽ KOVALAM FEST 2024 ⚽🌴<br>
-              A Beachside Battle of Talent and Team Spirit!<br>
-              📍 Location: Kovalam Beach, Tamil Nadu<br>
-              📅 Date: May 25 & 26, 2024<br>
-              🎉 Part of: Kovalam Fest 2024 Celebrations
-              <br><br>
-              The Kovalam Fest Football Tournament 2024 brought the heat to the sands of Kovalam Beach, blending the thrill of beach soccer with the cultural spirit of Kerala's iconic seaside festival.
-              <br><br>
-              ⚽ About the Tournament<br>
-              Held as a major sporting event of Kovalam Fest 2024, the tournament featured high-energy 6-a-side beach football matches, showcasing agility, teamwork, and pure love for the game. Players from across Kerala and beyond came together to compete on one of India's most picturesque coastlines.
-              <br><br>
-              🌟 Highlights<br>
-              • Participation of 69+ teams representing clubs, academies, and beach soccer enthusiasts<br>
-              • Electrifying beachside crowd and festive atmosphere<br>
-              • Beach football format with rules adapted for sand<br>
-              • DJ music, food stalls, and traditional Kerala art displays<br>
-              • Special exhibition matches & guest appearances
-              <br><br>
-              🏆 Celebrating Football, Culture & Community<br>
-              This event was not just a tournament—it was a celebration of football culture, community engagement, and youth empowerment. It served as a platform for aspiring beach footballers to shine and for fans to enjoy the beautiful game in a unique setting.
-              <br><br>
-              🙏 Acknowledgements<br>
-              We thank our sponsors, volunteers, local authorities, and the football-loving community for their incredible support. Your energy and dedication made Kovalam Fest Football Tournament 2024 a phenomenal success!
-            </b>
-          </div>
         
+        <div class="content-box">
+          <b>
+            <h4>🌴⚽ KOVALAM FEST  2024 ⚽🌴</h4>
+            <br>
+A Beachside Battle of Talent and Team Spirit!
+📍 Location: Kovalam Beach, Tamil Nadu
+📅 Date:  May 25 & 26 , 2024
+🎉 Part of: Kovalam Fest 2024 Celebrations
+<br><br>
+The Kovalam Fest Football Tournament 2024 brought the heat to the sands of Kovalam Beach, blending the thrill of beach soccer with the cultural spirit of Kerala’s iconic seaside festival.
+<br><br>
+⚽ About the Tournament
+Held as a major sporting event of Kovalam Fest 2024, the tournament featured high-energy 6-a-side beach football matches, showcasing agility, teamwork, and pure love for the game. Players from across Kerala and beyond came together to compete on one of India’s most picturesque coastlines.
+<br><br>
+🌟 Highlights
+Participation of [69]+ teams representing clubs, academies, and beach soccer enthusiasts
+<br><br>
+Electrifying beachside crowd and festive atmosphere
+<br><br>
+Beach football format with rules adapted for sand
+<br><br>
+DJ music, food stalls, and traditional Kerala art displays
+<br><br>
+Special exhibition matches & guest appearances
+<br><br>
+🏆 Celebrating Football, Culture & Community
+This event was not just a tournament—it was a celebration of football culture, community engagement, and youth empowerment. It served as a platform for aspiring beach footballers to shine and for fans to enjoy the beautiful game in a unique setting.
+<br><br>
+🙏 Acknowledgements
+We thank our sponsors, volunteers, local authorities, and the football-loving community for their incredible support. Your energy and dedication made Kovalam Fest Football Tournament 2024 a phenomenal success!
+          </b>
+        </div>
     </section>
     <hr style="margin-top: 2cap;">
+    
     <div class="container" style="margin-top: 5rem; background-color: #2d6e5c; padding: 2rem 0;">
       <div class="row">
         <div class="col-lg-12" style="display: flex; flex-direction: column; align-items: center;">
           <!-- Image Section -->
-          <div style="width: 100%; max-width: 1000px; min-height: 300px; margin-bottom: 2rem;">
-            <img src="images/events/e3.jpg" alt="Independence Day Football Camp" 
-                 style="width: 100%; height: 100%; object-fit: cover; border-radius: 8px;">
+          <div class="single-image">
+            <img src="images/events/e3.jpg" alt="Independence Day Football Camp">
           </div>
           
           <!-- Content Box -->
-          <div style="font-size: 1.2rem; margin-top: 4rem; padding: 2rem; 
-            background-color: #01A66F; 
-            color: #e8f5e9; line-height: 1.6;width: 100cap;margin-left: 18cap;border-radius: 1cap;">
-        <b>
-          🌊⚽  Beach Soccer League 2023 ⚽🌊
-          Organized by [FC Kovalam/STS Foundation]
-          <br><br>
-          📍 Location: Kovalam Beach, Tamil Nadu
-          📅 Date: May 27 & 28 , 2023
-          The Kovalam Beach Soccer Tournament 2023 was a spectacular celebration of sport, sand, and spirit! Held on the stunning shores of Kovalam Beach, the tournament brought together talented footballers, enthusiastic crowds, and the vibrant energy of beach culture into one electrifying event.
-          <br><br>
-          🌟 Event Highlights
-          Over [48] teams from across the region participated
-          <br><br>          
-          Fast-paced matches in an exciting 5-a-side beach football format
-          <br><br>
-          Special exhibition match featuring local football legends
-          <br><br>
-          Live DJ, food stalls, and beach activities for fans and families
-          <br><br>
-          Evening prize ceremony with trophies, medals, and cultural performances
-          <br><br>
-          🏆 Purpose of the Event
-          This tournament wasn’t just about football—it was about promoting sportsmanship, encouraging youth participation, and showcasing Kovalam as a hub for beach sports in India. It also aimed to inspire the next generation of athletes with a thrilling beach soccer experience.
-          <br><br>
-          🙌 Thanks to Our Supporters
-          We extend our heartfelt gratitude to our sponsors, local authorities, volunteers, and the football community who made this event an unforgettable success. Your support helped turn our vision into a sandy reality!
-        </b>
-      </div>
+          <div class="content-box">
+            <b>
+              <h4>🌊⚽  Beach Soccer League 2023 ⚽🌊</h4>
+                Organized by [FC Kovalam/STS Foundation]
+                <br><br>
+                📍 Location: Kovalam Beach, Tamil Nadu
+                📅 Date: May 27 & 28 , 2023
+                The Kovalam Beach Soccer Tournament 2023 was a spectacular celebration of sport, sand, and spirit! Held on the stunning shores of Kovalam Beach, the tournament brought together talented footballers, enthusiastic crowds, and the vibrant energy of beach culture into one electrifying event.
+                <br><br>
+                🌟 Event Highlights
+                Over [48] teams from across the region participated
+                <br><br>
+                Fast-paced matches in an exciting 5-a-side beach football format
+                <br><br>
+                Special exhibition match featuring local football legends
+                <br><br>
+                Live DJ, food stalls, and beach activities for fans and families
+                <br><br>
+                Evening prize ceremony with trophies, medals, and cultural performances
+                <br><br>
+                🏆 Purpose of the Event
+                This tournament wasn’t just about football—it was about promoting sportsmanship, encouraging youth participation, and showcasing Kovalam as a hub for beach sports in India. It also aimed to inspire the next generation of athletes with a thrilling beach soccer experience.
+                <br><br>
+                🙌 Thanks to Our Supporters
+                We extend our heartfelt gratitude to our sponsors, local authorities, volunteers, and the football community who made this event an unforgettable success. Your support helped turn our vision into a sandy reality!
+            </b>
+          </div>
         </div>
       </div>
     </div>
-      
-      <style>
-        .event-banner:hover img {
-          transform: scale(1.05);
-        }
-        
-        @media (max-width: 768px) {
-          .event-banner {
-            flex-direction: column;
-          }
-          .event-banner div {
-            min-height: 200px;
-          }
-        }
-      </style>
       
       <!-- Footer -->
       <footer class="footer">
