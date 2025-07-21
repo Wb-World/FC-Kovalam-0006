@@ -352,18 +352,15 @@ section {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-
 html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  background: linear-gradient(to top, 
-              rgba(107, 205, 177, 0.8) 60%, 
-              rgba(45, 110, 92, 0.3) 92%, 
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, 
+              rgba(45,110,92,0.8) 0%, 
+              rgba(45,110,92,0.3) 50%, 
               transparent 100%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  box-sizing: border-box;
 }
 
 /* Main content section */
@@ -535,12 +532,12 @@ img {
       </div>
       
       <!-- Single Main Section -->
-      <section class="main-content-section" style="
+      <section style="
                       width: 100%;
                       height: 22%;
                       background: linear-gradient(to top, 
-                                rgba(45,110,92,0.8) 56%,
-                                rgba(45,110,92,0.3) 22%, 
+                                rgba(45,110,92,0.8) 0%,
+                                rgba(45,110,92,0.3) 100%, 
                                 transparent 100%);
                       backdrop-filter: blur(3px);
                       -webkit-backdrop-filter: blur(6px);
@@ -569,34 +566,22 @@ img {
         
         <!-- Hero Content -->
         <div class="content-container">
-          <div class="hero-section">
-            <div style="text-align: center; width: 90%; max-width: 1000px; padding: 0 20px;">
-              <h1 style="color: white; font-size: 5rem; font-weight: 700; margin: 0 0 10px 0;">
-                <span style="display: block;color: green;">WE ARE</span>
+          <div class="hero-section" style="padding-top: 90cap;">
+            <div style="text-align: center; width: 90%; max-width: 1000px;">
+              <h1 style="color: white; font-size: 5rem; font-weight: 700;">
+                <span style="display: block; color: green;">WE ARE</span>
                 <span style="color: #f8b400; display: block;">FC KOVALAM</span>
               </h1>
               <p style="font-size: 4cap;"><b>Will write our slogan</b></p>
             </div>
           </div>
+        </div>
+        
           
-          <!-- Cards Section -->
-          <div class="cards-section">
+          <div class="cards-section" >
             <div class="row row-30 p-4">
-              <!-- Card 1 -->
-              <div class="col-12 mb-4">
-                <article class="post-future h-100" style="max-width: 200cap;">
-                  <a class="post-future-figure" href="#">
-                    <img src="images/card1.webp" alt="FC Kovalam Team Training" class="img-fluid w-100" />
-                  </a>
-                  <div class="post-future-content p-4">
-                    <h4 class="post-future-title">Intensive Training Sessions</h4>
-                    <p class="post-future-text">Our players undergo rigorous training sessions to hone their skills and tactical understanding. Each drill is designed to improve technical ability, physical fitness, and team coordination.</p>
-                    <a href="#" class="btn btn-sm btn-primary">View Schedule</a>
-                  </div>
-                </article>
-              </div>
-              
-              <!-- Card 2 -->
+              <div class="col-12" style="padding:50cap"></div>
+
               <div class="col-12 mb-4">
                 <article class="post-future h-100" style="max-width: 200cap;">
                   <a class="post-future-figure" href="#">
@@ -610,13 +595,26 @@ img {
                 </article>
               </div>
             </div>
+
+            <div class="col-12 mb-4">
+              <article class="post-future h-100" style="max-width: 200cap;">
+                <a class="post-future-figure" href="#">
+                  <img src="images/card1.webp" alt="FC Kovalam Team Training" class="img-fluid w-100" />
+                </a>
+                <div class="post-future-content p-4">
+                  <h4 class="post-future-title">Intensive Training Sessions</h4>
+                  <p class="post-future-text">Our players undergo rigorous training sessions to hone their skills and tactical understanding. Each drill is designed to improve technical ability, physical fitness, and team coordination.</p>
+                  <a href="#" class="btn btn-sm btn-primary">View Schedule</a>
+                </div>
+              </article>
+            </div>
           </div>
           
-          <!-- Social Section -->
+  
           <div class="social-section">
             <div style="padding: 5cap;">
               <div class="aside-component" style="max-width: 800px; margin: 0 auto; padding: 30px 20px; background: #f8f9fa; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding-bottom: 5cap; margin-bottom: 50px;">
-                <!-- Heading Component -->
+              
                 <article style="text-align: center;">
                     <h5 style="font-size: 24px; color: #2a2a2a; font-weight: 600; letter-spacing: 0.5px; margin: 0; padding-bottom: 8px; position: relative; display: inline-block;">
                         Follow Us
@@ -625,9 +623,9 @@ img {
                     <p style="margin-top: 12px; color: #666; font-size: 16px;">Stay connected with our latest updates</p>
                 </article>
                 
-                <!-- Social Media Buttons -->
+
                 <div class="group-sm group-flex" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; justify-items: center; padding: 20px 0;">
-                    <!-- YouTube -->
+
                     <a class="button-media button-media-youtube" href="#"
                       style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
                               font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #ff0000, #cc0000); 
@@ -642,7 +640,6 @@ img {
                         </span>
                     </a>
                     
-                    <!-- Twitter -->
                     <a class="button-media button-media-twitter" href="#"
                       style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
                               font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #1da1f2, #1a8cd8); 
@@ -656,7 +653,6 @@ img {
                         </span>
                     </a>
                     
-                    <!-- Instagram -->
                     <a class="button-media button-media-instagram" href="#"
                       style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
                               font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); 
