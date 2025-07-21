@@ -4,7 +4,6 @@
     <!-- Site Title-->
     <title>Home - FC Kovalam</title>
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -17,12 +16,27 @@
     <link rel="icon" href="images/logo.png" type="image/png">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
     <style>
+      body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: transparent;
+}
+
+.page {
+  background: linear-gradient(to top, 
+                            rgba(45,110,92,0.8) 60%,  
+                            rgba(45,110,92,0.3) 92%, 
+                            transparent 100%) !important;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
 
       .footer-text {
     margin: 0;
     text-align: center;
     font-size: 16px;
-    color: #fff; /* assuming dark background */
+    color: #fff;
   }
 
   @media (max-width: 768px) {
@@ -31,192 +45,188 @@
       padding: 10px 15px;
     }
   }
-      /* Added theme styles without changing your structure */
-      :root {
-        --primary-color: #2d6e5c;
-        --secondary-color: #f8b400;
-        --dark-color: #1e4d3e;
-        --light-color: #f8f9fa;
-      }
-      
-      /* Background colors */
-      .page {
-        background-color: var(--light-color) !important;
-      }
-    
-      
-      .section-md {
-        background-color: white;
-      }
-      
-      .bg-gray-100 {
-        background-color: var(--light-color) !important;
-      }
-      
-      /* Text colors */
-      .main-nav a {
-        color: white !important;
-      }
-      
-      .main-nav a:hover {
-        color: var(--secondary-color) !important;
-      }
-      
-      /* Buttons */
-      button[style*="background-color: orange"] {
-        background-color: var(--secondary-color) !important;
-        color: black !important;
-      }
-      
-      button[style*="background-color: orange"]:hover {
-        background-color: #e0a800 !important;
-      }
-      
-      /* Footer */
-      .footer-classic-dark {
-        background-color: var(--primary-color) !important;
-        color: white !important;
-      }
-      
-      /* Mobile menu */
-      .side-menu {
-        background-color: black;
-      }
-      
-      /* Link hover effects */
-      .main-nav a::after {
-        background-color: var(--secondary-color) !important;
-      }
-      
-      /* Keep all your original responsive styles */
-      @media (max-width: 992px) {
-        .slogan-left,
-        .slogan-right {
-          transform: none !important;
-          padding: 0 !important;
-        }
+  :root {
+  --primary-color: #2d6e5c;
+  --primary-color-rgb: 45, 110, 92;
+  --secondary-color: #f8b400;
+  --dark-color: #1e4d3e;
+  --light-color: #f8f9fa;
+}
 
-        .slogan-left {
-          order: 1;
-        }
+.page {
+  background: linear-gradient(
+    to bottom,
+    rgba(var(--primary-color-rgb), 0.9),
+    rgba(var(--primary-color-rgb), 0.7)
+  ) !important;
+  min-height: 100vh;
+}
 
-        .logo-center {
-          order: 2;
-        }
+.section-md {
+  background-color: white;
+}
 
-        .slogan-right {
-          order: 3;
-        }
-      }
+.bg-gray-100 {
+  background-color: var(--light-color) !important;
+}
 
-      /* Responsive utility fix */
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-    
-      .post-future {
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-      }
-    
-      @media (max-width: 768px) {
-        .rd-navbar-main-top > .rd-navbar-main-container {
-          flex-direction: column;
-          align-items: center;
-        }
-    
-        .rd-navbar-main-top h3 {
-          font-size: 18px;
-          padding: 10px;
-          text-align: center;
-          transform: none !important;
-        }
-    
-        .rd-navbar-main-top > .rd-navbar-main-container > div {
-          transform: none !important;
-          padding: 10px !important;
-        }
-    
-        .brand-logo {
-          width: 80px !important;
-          margin: 0 auto;
-        }
-    
-        .group-sm.group-flex {
-          flex-direction: column;
-          gap: 15px;
-          align-items: center;
-        }
-    
-        .button-media {
-          width: 90% !important;
-          max-width: 300px;
-          font-size: 18px !important;
-        }
-    
-        .aside-component article {
-          margin-left: 0 !important;
-          text-align: center;
-        }
-    
-        .swiper-container {
-          height: 50vh !important;
-        }
-      }
-    
-      @media (max-width: 480px) {
-        .rd-navbar-main-top h3 {
-          font-size: 16px;
-        }
-    
-        .button-media {
-          height: 60px !important;
-          font-size: 16px !important;
-        }
-    
-        .post-future {
-          max-width: 90%;
-        }
-      }
-      
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateX(-20px); }
-        to { opacity: 1; transform: translateX(0); }
-      }
-      .nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    padding: 0;
+.main-nav a {
+  color: white !important;
+}
+
+.main-nav a:hover {
+  color: var(--secondary-color) !important;
+}
+
+button[style*="background-color: orange"] {
+  background-color: var(--secondary-color) !important;
+  color: black !important;
+}
+
+button[style*="background-color: orange"]:hover {
+  background-color: #e0a800 !important;
+}
+
+.footer-classic-dark {
+  background-color: var(--primary-color) !important;
+  color: white !important;
+}
+
+.side-menu {
+  background-color: black;
+}
+
+.main-nav a::after {
+  background-color: var(--secondary-color) !important;
+}
+
+@media (max-width: 992px) {
+  .slogan-left,
+  .slogan-right {
+    transform: none !important;
+    padding: 0 !important;
   }
 
-  .nav-item {
-    position: relative;
-    text-decoration: none;
-    color: #000;
-    font-weight: 500;
-    padding-bottom: 5px;
+  .slogan-left {
+    order: 1;
   }
 
-  .nav-item::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: 0;
-    background-color: green;
-    transition: width 0.3s ease;
+  .logo-center {
+    order: 2;
   }
 
-  .nav-item:hover::after {
-    width: 100%;
+  .slogan-right {
+    order: 3;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.post-future {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .rd-navbar-main-top > .rd-navbar-main-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-/* Navigation fixes */
+  .rd-navbar-main-top h3 {
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    transform: none !important;
+  }
+
+  .rd-navbar-main-top > .rd-navbar-main-container > div {
+    transform: none !important;
+    padding: 10px !important;
+  }
+
+  .brand-logo {
+    width: 80px !important;
+    margin: 0 auto;
+  }
+
+  .group-sm.group-flex {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .button-media {
+    width: 90% !important;
+    max-width: 300px;
+    font-size: 18px !important;
+  }
+
+  .aside-component article {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .swiper-container {
+    height: 50vh !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .rd-navbar-main-top h3 {
+    font-size: 16px;
+  }
+
+  .button-media {
+    height: 60px !important;
+    font-size: 16px !important;
+  }
+
+  .post-future {
+    max-width: 90%;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
 #hamburger {
   display: none;
   background: none;
@@ -261,19 +271,16 @@
     height: auto;
   }
   
-  /* Adjust header padding on mobile */
   .header-container {
     padding: 10px 0 !important;
   }
   
-  /* Make sure logo is properly centered */
   .logo-nav-wrapper {
     justify-content: space-between !important;
     padding: 0 15px !important;
   }
 }
 
-/* Side menu base styles */
 .side-menu {
   position: fixed;
   top: 0;
@@ -286,15 +293,13 @@
   transition: transform 0.3s ease;
   overflow-y: auto;
   padding-top: 80px;
-  transform: translateX(-100%); /* hidden by default */
+  transform: translateX(-100%);
 }
 
-/* Show menu */
 .side-menu.active {
   transform: translateX(0);
 }
 
-/* Keyframes for sliding and fading */
 @keyframes slideFadeIn {
   0% {
     opacity: 0;
@@ -306,18 +311,15 @@
   }
 }
 
-/* List items default state */
 .side-menu ul li {
   opacity: 0;
   transform: translateX(30px);
 }
 
-/* Animate list items when menu is active */
 .side-menu.active ul li {
   animation: slideFadeIn 0.5s forwards;
 }
 
-/* Staggered animation delays */
 .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
 .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
 .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
@@ -326,7 +328,6 @@
 .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
 .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
 
-
 #overlay {
   display: none;
   position: fixed;
@@ -334,12 +335,127 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7); /* Or fully black */
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
 
 #overlay.active {
   display: block;
+}
+
+section {
+  background: linear-gradient(to top, rgba(45,110,92,0.8) 60%, rgba(45,110,92,0.3) 92%, transparent 100%);
+}
+
+.footer-classic-dark {
+  background: rgba(10, 147, 108, 0.8) !important;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: linear-gradient(to top, 
+              rgba(107, 205, 177, 0.8) 60%, 
+              rgba(45, 110, 92, 0.3) 92%, 
+              transparent 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+/* Main content section */
+.main-content-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Video container */
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Content container */
+.content-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+/* Hero section */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 5%;
+}
+
+/* Cards section */
+.cards-section {
+  padding: 40px 0;
+  background: linear-gradient(to top, 
+              rgba(45,110,92,0.8) 60%,  
+              rgba(45,110,92,0.3) 92%, 
+              transparent 100%);
+}
+
+/* Social section */
+.social-section {
+  padding: 60px 0;
+  background: linear-gradient(to top, 
+              rgba(45,110,92,0.8) 100%,  
+              rgba(45,110,92,0.3) 92%, 
+              transparent 100%);
+}
+
+/* Reset browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Make sure body and html cover entire page without gaps */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for all sections */
+section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Ensure images stretch full width and don’t create white lines */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* Optional: remove spacing from Bootstrap-style containers if used */
+.container,
+.row {
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
     </style>
@@ -394,8 +510,7 @@
                         Register now!
                       </button>
                     </li>
-                  </ul>
-                  
+                </ul>
             </nav>
           </div>
         </div>
@@ -419,144 +534,149 @@
         </ul>
       </div>
       
-    
-      <section class="section" style="position: relative; width: 100%; height: 100vh; overflow: hidden; margin: 0; padding: 0;">
-  
+      <!-- Single Main Section -->
+      <section class="main-content-section" style="
+                      width: 100%;
+                      height: 22%;
+                      background: linear-gradient(to top, 
+                                rgba(45,110,92,0.8) 56%,
+                                rgba(45,110,92,0.3) 22%, 
+                                transparent 100%);
+                      backdrop-filter: blur(3px);
+                      -webkit-backdrop-filter: blur(6px);
+                      z-index: 1;">
         <!-- Video Background -->
-        <video autoplay muted loop playsinline
-               style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-          <source src="videos/DJI_0730.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-        
-        <!-- Adjusted Blur Shade -->
-        <div style="position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 22%; /* Reduced height */
-                    background: linear-gradient(to top, 
-                              rgba(45,110,92,0.8) 60%,  /* #2d6e5c color */
-                              rgba(45,110,92,0.3) 92%, 
-                              transparent 100%);
-                    backdrop-filter: blur(3px);  /* Reduced blur */
-                    -webkit-backdrop-filter: blur(6px);
-                    z-index: 1;"></div>
-        
-        <!-- Content Container -->
-        <div style="position: absolute;
-                    bottom: 3%; /* Adjusted for new blur height */
-                    left: 50%;
-                    transform: translateX(-50%);
-                    width: 90%;
-                    max-width: 1000px;
-                    text-align: center;
-                    z-index: 2;
-                    padding: 0 20px;">
+        <div class="video-container">
+          <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+            <source src="videos/DJI_0730.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           
-          <!-- Your content remains unchanged -->
-          <h1 style="color: white; font-size: 5rem; font-weight: 700; margin: 0 0 10px 0;">
-            <span style="display: block;color: green;">WE ARE</span>
-            <span style="color: #f8b400; display: block;">FC KOVALAM</span>
-          </h1>
-          <p style="font-size: 4cap;"><b>Will write our slogan</b></p>
-  
+          <!-- Blur Shade -->
+          <div style="position: absolute;
+                      bottom: 0;
+                      left: 0;
+                      width: 100%;
+                      height: 22%;
+                      background: linear-gradient(to top, 
+                                rgba(45,110,92,0.8) 60%,
+                                rgba(45,110,92,0.3) 92%, 
+                                transparent 100%);
+                      backdrop-filter: blur(3px);
+                      -webkit-backdrop-filter: blur(6px);
+                      z-index: 1;"></div>
         </div>
-      </section>
-      <section class="section section-md bg-gray-100">
-      <div>
-        <div class="row row-30 p-4" style="background-color: #2d6e5c;">
-          <!-- Card 1 -->
-          <div class="col-12 mb-4">
-            <article class="post-future h-100" style="max-width: 200cap;">
-              <a class="post-future-figure" href="#">
-                <img src="images/card1.webp" alt="FC Kovalam Team Training" class="img-fluid w-100" />
-              </a>
-              <div class="post-future-content p-4">
-                <h4 class="post-future-title">Intensive Training Sessions</h4>
-                <p class="post-future-text">Our players undergo rigorous training sessions to hone their skills and tactical understanding. Each drill is designed to improve technical ability, physical fitness, and team coordination.</p>
-                <a href="#" class="btn btn-sm btn-primary">View Schedule</a>
-              </div>
-            </article>
+        
+        <!-- Hero Content -->
+        <div class="content-container">
+          <div class="hero-section">
+            <div style="text-align: center; width: 90%; max-width: 1000px; padding: 0 20px;">
+              <h1 style="color: white; font-size: 5rem; font-weight: 700; margin: 0 0 10px 0;">
+                <span style="display: block;color: green;">WE ARE</span>
+                <span style="color: #f8b400; display: block;">FC KOVALAM</span>
+              </h1>
+              <p style="font-size: 4cap;"><b>Will write our slogan</b></p>
+            </div>
           </div>
           
-          <!-- Card 2 -->
-          <div class="col-12 mb-4">
-            <article class="post-future h-100" style="max-width: 200cap;">
-              <a class="post-future-figure" href="#">
-                <img src="images/card1.webp" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
-              </a>
-              <div class="post-future-content p-4">
-                <h4 class="post-future-title">Youth Development Program</h4>
-                <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
-                <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+          <!-- Cards Section -->
+          <div class="cards-section">
+            <div class="row row-30 p-4">
+              <!-- Card 1 -->
+              <div class="col-12 mb-4">
+                <article class="post-future h-100" style="max-width: 200cap;">
+                  <a class="post-future-figure" href="#">
+                    <img src="images/card1.webp" alt="FC Kovalam Team Training" class="img-fluid w-100" />
+                  </a>
+                  <div class="post-future-content p-4">
+                    <h4 class="post-future-title">Intensive Training Sessions</h4>
+                    <p class="post-future-text">Our players undergo rigorous training sessions to hone their skills and tactical understanding. Each drill is designed to improve technical ability, physical fitness, and team coordination.</p>
+                    <a href="#" class="btn btn-sm btn-primary">View Schedule</a>
+                  </div>
+                </article>
               </div>
-            </article>
+              
+              <!-- Card 2 -->
+              <div class="col-12 mb-4">
+                <article class="post-future h-100" style="max-width: 200cap;">
+                  <a class="post-future-figure" href="#">
+                    <img src="images/card1.webp" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
+                  </a>
+                  <div class="post-future-content p-4">
+                    <h4 class="post-future-title">Youth Development Program</h4>
+                    <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
+                    <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+                  </div>
+                </article>
+              </div>
+            </div>
           </div>
-        
-        </div>
-      </div>
-    </section> 
-        <div style="padding: 5cap;background-color: #2d6e5c;">
-          <div class="aside-component" style="max-width: 800px; margin: 0 auto; padding: 30px 20px; background: #f8f9fa; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding-bottom: 5cap; margin-bottom: 50px;">
-            <!-- Heading Component -->
-            <article style="text-align: center;">
-                <h5 style="font-size: 24px; color: #2a2a2a; font-weight: 600; letter-spacing: 0.5px; margin: 0; padding-bottom: 8px; position: relative; display: inline-block;">
-                    Follow Us
-                    <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: #2a7fef;"></span>
-                </h5>
-                <p style="margin-top: 12px; color: #666; font-size: 16px;">Stay connected with our latest updates</p>
-            </article>
-            
-            <!-- Social Media Buttons Grid with added padding -->
-            <div class="group-sm group-flex" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; justify-items: center; padding: 20px 0;">
-        
-                <!-- YouTube -->
-                <a class="button-media button-media-youtube" href="#"
-                  style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
-                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #ff0000, #cc0000); 
-                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
-                          box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); margin-bottom: 20px;">
-                    <span style="display: flex; align-items: center; gap: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
-                            <path d="M22.54 6.42C22.42 5.98 22.18 5.58 21.84 5.26C21.51 4.94 21.09 4.71 20.64 4.59C18.88 4.16 12 4.16 12 4.16C12 4.16 5.12 4.16 3.36 4.59C2.91 4.71 2.49 4.94 2.16 5.26C1.82 5.58 1.58 5.98 1.46 6.42C1.02 8.18 1.02 12 1.02 12C1.02 12 1.02 15.82 1.46 17.58C1.58 18.02 1.82 18.42 2.16 18.74C2.49 19.06 2.91 19.29 3.36 19.41C5.12 19.84 12 19.84 12 19.84C12 19.84 18.88 19.84 20.64 19.41C21.09 19.29 21.51 19.06 21.84 18.74C22.18 18.42 22.42 18.02 22.54 17.58C22.98 15.82 22.98 12 22.98 12C22.98 12 22.98 8.18 22.54 6.42Z" fill="white"/>
-                            <path d="M9.75 15.02L15.5 12L9.75 8.98V15.02Z" fill="#FF0000"/>
-                        </svg>
-                        YouTube
-                    </span>
-                </a>
+          
+          <!-- Social Section -->
+          <div class="social-section">
+            <div style="padding: 5cap;">
+              <div class="aside-component" style="max-width: 800px; margin: 0 auto; padding: 30px 20px; background: #f8f9fa; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding-bottom: 5cap; margin-bottom: 50px;">
+                <!-- Heading Component -->
+                <article style="text-align: center;">
+                    <h5 style="font-size: 24px; color: #2a2a2a; font-weight: 600; letter-spacing: 0.5px; margin: 0; padding-bottom: 8px; position: relative; display: inline-block;">
+                        Follow Us
+                        <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 50px; height: 3px; background: #2a7fef;"></span>
+                    </h5>
+                    <p style="margin-top: 12px; color: #666; font-size: 16px;">Stay connected with our latest updates</p>
+                </article>
                 
-                <!-- Twitter -->
-                <a class="button-media button-media-twitter" href="#"
-                  style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
-                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #1da1f2, #1a8cd8); 
-                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
-                          box-shadow: 0 4px 8px rgba(29, 161, 242, 0.2); margin-bottom: 20px;">
-                    <span style="display: flex; align-items: center; gap: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
-                            <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" fill="white"/>
-                        </svg>
-                        Twitter
-                    </span>
-                </a>
-                
-                <!-- Instagram -->
-                <a class="button-media button-media-instagram" href="#"
-                  style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
-                          font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); 
-                          color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
-                          box-shadow: 0 4px 8px rgba(225, 48, 108, 0.2); margin-bottom: 20px;">
-                    <span style="display: flex; align-items: center; gap: 8px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
-                            <path d="M12 2.16C8.64 2.16 8.27 2.18 7.05 2.24C5.84 2.3 5.01 2.49 4.29 2.77C3.56 3.06 2.94 3.44 2.33 4.05C1.72 4.66 1.34 5.28 1.05 6.01C0.77 6.73 0.58 7.56 0.52 8.77C0.46 9.99 0.44 10.36 0.44 13.72C0.44 17.08 0.46 17.45 0.52 18.67C0.58 19.88 0.77 20.71 1.05 21.43C1.34 22.16 1.72 22.78 2.33 23.39C2.94 24 3.56 24.38 4.29 24.67C5.01 24.95 5.84 25.14 7.05 25.2C8.27 25.26 8.64 25.28 12 25.28C15.36 25.28 15.73 25.26 16.95 25.2C18.16 25.14 18.99 24.95 19.71 24.67C20.44 24.38 21.06 24 21.67 23.39C22.28 22.78 22.66 22.16 22.95 21.43C23.23 20.71 23.42 19.88 23.48 18.67C23.54 17.45 23.56 17.08 23.56 13.72C23.56 10.36 23.54 9.99 23.48 8.77C23.42 7.56 23.23 6.73 22.95 6.01C22.66 5.28 22.28 4.66 21.67 4.05C21.06 3.44 20.44 3.06 19.71 2.77C18.99 2.49 18.16 2.3 16.95 2.24C15.73 2.18 15.36 2.16 12 2.16ZM12 3.84C15.29 3.84 15.62 3.85 16.82 3.91C17.94 3.97 18.58 4.15 19.04 4.33C19.58 4.54 19.96 4.78 20.37 5.19C20.78 5.6 21.02 5.98 21.23 6.52C21.41 6.98 21.59 7.62 21.65 8.74C21.71 9.94 21.72 10.27 21.72 13.56C21.72 16.85 21.71 17.18 21.65 18.38C21.59 19.5 21.41 20.14 21.23 20.6C21.02 21.14 20.78 21.52 20.37 21.93C19.96 22.34 19.58 22.58 19.04 22.79C18.58 22.97 17.94 23.15 16.82 23.21C15.62 23.27 15.29 23.28 12 23.28C8.71 23.28 8.38 23.27 7.18 23.21C6.06 23.15 5.42 22.97 4.96 22.79C4.42 22.58 4.04 22.34 3.63 21.93C3.22 21.52 2.98 21.14 2.77 20.6C2.59 20.14 2.41 19.5 2.35 18.38C2.29 17.18 2.28 16.85 2.28 13.56C2.28 10.27 2.29 9.94 2.35 8.74C2.41 7.62 2.59 6.98 2.77 6.52C2.98 5.98 3.22 5.6 3.63 5.19C4.04 4.78 4.42 4.54 4.96 4.33C5.42 4.15 6.06 3.97 7.18 3.91C8.38 3.85 8.71 3.84 12 3.84ZM12 7.2C9.35 7.2 7.2 9.35 7.2 12C7.2 14.65 9.35 16.8 12 16.8C14.65 16.8 16.8 14.65 16.8 12C16.8 9.35 14.65 7.2 12 7.2ZM12 15.12C10.34 15.12 8.88 13.66 8.88 12C8.88 10.34 10.34 8.88 12 8.88C13.66 8.88 15.12 10.34 15.12 12C15.12 13.66 13.66 15.12 12 15.12ZM19.68 6.48C19.68 7.21 19.08 7.8 18.36 7.8C17.63 7.8 17.04 7.21 17.04 6.48C17.04 5.76 17.63 5.16 18.36 5.16C19.08 5.16 19.68 5.76 19.68 6.48Z" fill="white"/>
-                        </svg>
-                        Instagram
-                    </span>
-                </a>
+                <!-- Social Media Buttons -->
+                <div class="group-sm group-flex" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; justify-items: center; padding: 20px 0;">
+                    <!-- YouTube -->
+                    <a class="button-media button-media-youtube" href="#"
+                      style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                              font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #ff0000, #cc0000); 
+                              color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                              box-shadow: 0 4px 8px rgba(255, 0, 0, 0.2); margin-bottom: 20px;">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                                <path d="M22.54 6.42C22.42 5.98 22.18 5.58 21.84 5.26C21.51 4.94 21.09 4.71 20.64 4.59C18.88 4.16 12 4.16 12 4.16C12 4.16 5.12 4.16 3.36 4.59C2.91 4.71 2.49 4.94 2.16 5.26C1.82 5.58 1.58 5.98 1.46 6.42C1.02 8.18 1.02 12 1.02 12C1.02 12 1.02 15.82 1.46 17.58C1.58 18.02 1.82 18.42 2.16 18.74C2.49 19.06 2.91 19.29 3.36 19.41C5.12 19.84 12 19.84 12 19.84C12 19.84 18.88 19.84 20.64 19.41C21.09 19.29 21.51 19.06 21.84 18.74C22.18 18.42 22.42 18.02 22.54 17.58C22.98 15.82 22.98 12 22.98 12C22.98 12 22.98 8.18 22.54 6.42Z" fill="white"/>
+                                <path d="M9.75 15.02L15.5 12L9.75 8.98V15.02Z" fill="#FF0000"/>
+                            </svg>
+                            YouTube
+                        </span>
+                    </a>
+                    
+                    <!-- Twitter -->
+                    <a class="button-media button-media-twitter" href="#"
+                      style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                              font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #1da1f2, #1a8cd8); 
+                              color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                              box-shadow: 0 4px 8px rgba(29, 161, 242, 0.2); margin-bottom: 20px;">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                                <path d="M22.46 6C21.69 6.35 20.86 6.58 20 6.69C20.88 6.16 21.56 5.32 21.88 4.31C21.05 4.81 20.13 5.16 19.16 5.36C18.37 4.5 17.26 4 16 4C13.65 4 11.73 5.92 11.73 8.29C11.73 8.63 11.77 8.96 11.84 9.27C8.28 9.09 5.11 7.38 3 4.79C2.63 5.42 2.42 6.16 2.42 6.94C2.42 8.43 3.17 9.75 4.33 10.5C3.62 10.5 2.96 10.3 2.38 10C2.38 10 2.38 10 2.38 10.03C2.38 12.11 3.86 13.85 5.82 14.24C5.46 14.34 5.08 14.39 4.69 14.39C4.42 14.39 4.15 14.36 3.89 14.31C4.43 16 6 17.26 7.89 17.29C6.43 18.45 4.58 19.13 2.56 19.13C2.22 19.13 1.88 19.11 1.54 19.07C3.44 20.29 5.7 21 8.12 21C16 21 20.33 14.46 20.33 8.79C20.33 8.6 20.33 8.42 20.32 8.23C21.16 7.63 21.88 6.87 22.46 6Z" fill="white"/>
+                            </svg>
+                            Twitter
+                        </span>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a class="button-media button-media-instagram" href="#"
+                      style="width: 100%; max-width: 220px; height: 100px; display: flex; justify-content: center; align-items: center; 
+                              font-size: 20px; font-weight: 600; background: linear-gradient(135deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D); 
+                              color: white; text-decoration: none; border-radius: 10px; transition: all 0.3s ease;
+                              box-shadow: 0 4px 8px rgba(225, 48, 108, 0.2); margin-bottom: 20px;">
+                        <span style="display: flex; align-items: center; gap: 8px;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="margin-right: 8px;">
+                                <path d="M12 2.16C8.64 2.16 8.27 2.18 7.05 2.24C5.84 2.3 5.01 2.49 4.29 2.77C3.56 3.06 2.94 3.44 2.33 4.05C1.72 4.66 1.34 5.28 1.05 6.01C0.77 6.73 0.58 7.56 0.52 8.77C0.46 9.99 0.44 10.36 0.44 13.72C0.44 17.08 0.46 17.45 0.52 18.67C0.58 19.88 0.77 20.71 1.05 21.43C1.34 22.16 1.72 22.78 2.33 23.39C2.94 24 3.56 24.38 4.29 24.67C5.01 24.95 5.84 25.14 7.05 25.2C8.27 25.26 8.64 25.28 12 25.28C15.36 25.28 15.73 25.26 16.95 25.2C18.16 25.14 18.99 24.95 19.71 24.67C20.44 24.38 21.06 24 21.67 23.39C22.28 22.78 22.66 22.16 22.95 21.43C23.23 20.71 23.42 19.88 23.48 18.67C23.54 17.45 23.56 17.08 23.56 13.72C23.56 10.36 23.54 9.99 23.48 8.77C23.42 7.56 23.23 6.73 22.95 6.01C22.66 5.28 22.28 4.66 21.67 4.05C21.06 3.44 20.44 3.06 19.71 2.77C18.99 2.49 18.16 2.3 16.95 2.24C15.73 2.18 15.36 2.16 12 2.16ZM12 3.84C15.29 3.84 15.62 3.85 16.82 3.91C17.94 3.97 18.58 4.15 19.04 4.33C19.58 4.54 19.96 4.78 20.37 5.19C20.78 5.6 21.02 5.98 21.23 6.52C21.41 6.98 21.59 7.62 21.65 8.74C21.71 9.94 21.72 10.27 21.72 13.56C21.72 16.85 21.71 17.18 21.65 18.38C21.59 19.5 21.41 20.14 21.23 20.6C21.02 21.14 20.78 21.52 20.37 21.93C19.96 22.34 19.58 22.58 19.04 22.79C18.58 22.97 17.94 23.15 16.82 23.21C15.62 23.27 15.29 23.28 12 23.28C8.71 23.28 8.38 23.27 7.18 23.21C6.06 23.15 5.42 22.97 4.96 22.79C4.42 22.58 4.04 22.34 3.63 21.93C3.22 21.52 2.98 21.14 2.77 20.6C2.59 20.14 2.41 19.5 2.35 18.38C2.29 17.18 2.28 16.85 2.28 13.56C2.28 10.27 2.29 9.94 2.35 8.74C2.41 7.62 2.59 6.98 2.77 6.52C2.98 5.98 3.22 5.6 3.63 5.19C4.04 4.78 4.42 4.54 4.96 4.33C5.42 4.15 6.06 3.97 7.18 3.91C8.38 3.85 8.71 3.84 12 3.84ZM12 7.2C9.35 7.2 7.2 9.35 7.2 12C7.2 14.65 9.35 16.8 12 16.8C14.65 16.8 16.8 14.65 16.8 12C16.8 9.35 14.65 7.2 12 7.2ZM12 15.12C10.34 15.12 8.88 13.66 8.88 12C8.88 10.34 10.34 8.88 12 8.88C13.66 8.88 15.12 10.34 15.12 12C15.12 13.66 13.66 15.12 12 15.12ZM19.68 6.48C19.68 7.21 19.08 7.8 18.36 7.8C17.63 7.8 17.04 7.21 17.04 6.48C17.04 5.76 17.63 5.16 18.36 5.16C19.08 5.16 19.68 5.76 19.68 6.48Z" fill="white"/>
+                            </svg>
+                            Instagram
+                        </span>
+                    </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      <!-- Page Footer--><a class="d-block" href="https://www.templatemonster.com/website-templates/allstar-multi-sports-website-template-63853.html" target="blank"></a>
+      </section>
+      
+      <!-- Footer -->
       <footer class="section footer-classic footer-classic-dark context-dark">
         <div class="footer-classic-aside footer-classic-darken">
           <div class="container">
@@ -569,8 +689,6 @@
         </div>
       </footer>
       
-      <!-- Modal Video-->
-      
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
@@ -578,27 +696,24 @@
     <script src="js/script.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-  const hamburger = document.getElementById('hamburger');
-  const sideMenu = document.getElementById('sideMenu');
-  const overlay = document.getElementById('overlay');
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const overlay = document.getElementById('overlay');
 
-  hamburger.addEventListener('click', () => {
-    sideMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-    hamburger.classList.toggle('active'); // for hamburger X animation
-  });
+        hamburger.addEventListener('click', () => {
+          sideMenu.classList.toggle('active');
+          overlay.classList.toggle('active');
+          document.body.classList.toggle('menu-open');
+          hamburger.classList.toggle('active');
+        });
 
-  overlay.addEventListener('click', () => {
-    sideMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.classList.remove('menu-open');
-    hamburger.classList.remove('active');
-  });
-});
-
-      </script>
-      
-    
+        overlay.addEventListener('click', () => {
+          sideMenu.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          hamburger.classList.remove('active');
+        });
+      });
+    </script>
   </body>
 </html>
