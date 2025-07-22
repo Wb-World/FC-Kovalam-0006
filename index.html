@@ -42,7 +42,7 @@
   @media (max-width: 768px) {
     .footer-text {
       font-size: 14px;
-      padding: 10px 15px;
+      padding: 70px 15px;
     }
   }
   :root {
@@ -86,6 +86,17 @@ button[style*="background-color: orange"] {
 button[style*="background-color: orange"]:hover {
   background-color: #e0a800 !important;
 }
+
+ /* Footer */
+ .footer {
+          background-color: #000;
+          color: #fff;
+          padding: 20px 0;
+          text-align: -webkit-center;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          animation: fadeIn 1s ease-out;
+      }
 
 .footer-classic-dark {
   background-color: var(--primary-color) !important;
@@ -231,7 +242,7 @@ img {
   }
 
   .video-container {
-    height: 50vh !important;
+    height: 150vh !important;
   }
 
   .hero-section {
@@ -320,6 +331,30 @@ img {
 
 #hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .header-container {
+    padding: 10px 0 !important;
+  }
+  
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
 }
 
 .side-menu {
@@ -622,7 +657,7 @@ img {
     <div class="page" style="background-color:black">
       <!-- Overlay to close side menu -->
       <div id="overlay"></div>
-
+      
       <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000;background-color:black;">
         <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; background-color:black;padding:1cap;">
           <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 15px 0;">
@@ -632,11 +667,11 @@ img {
               <span></span>
               <span></span>
             </button>
-
+    
             <div class="mobile-logo">
-              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 80px;padding-left: 2cap;"/></a>
+              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 60px;padding-left: 2cap;"/></a>
             </div> 
-
+      
             <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
                 <ul id="navList" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; width: 100%;">
                     <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; flex-grow: 1;">
@@ -648,7 +683,7 @@ img {
                       <li style="margin: 0 10px;font-size: 2cap;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
                       <li style="margin: 0 10px;font-size: 2cap;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
                     </div>
-
+                  
                     <li style="margin-left: auto;">
                       <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
                         Register now!
@@ -659,7 +694,7 @@ img {
           </div>
         </div>
       </header>
-
+      
       <!-- Mobile Menu -->
       <div class="side-menu" id="sideMenu" style="background-color: black;">
         <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
@@ -677,11 +712,10 @@ img {
           </li>
         </ul>
       </div>
-
       <!-- Single Main Section -->
       <section style="
                       width: 100%;
-                      height: 22%;
+                      height: 10%;
                       background: linear-gradient(to top, 
                                 rgba(45,110,92,0.8) 100%,
                                 rgba(45,110,92,0.3) 50%, 
@@ -719,7 +753,7 @@ img {
                 <span style="display: block; color: white;">WE ARE</span>
                 <span style="color: #f8b400; display: block;">FC KOVALAM</span>
               </h1>
-              <p style="font-size: 4cap;"><b>“Football is market goal is our target”</b></p>
+              <p style="font-size: 4cap;"><b>“Football is market, goal is our target”</b></p>
             </div>
           </div>
         </div>
@@ -902,15 +936,9 @@ img {
       </section>
 
       <!-- Footer -->
-      <footer class="section footer-classic footer-classic-dark context-dark">
-        <div class="footer-classic-aside footer-classic-darken">
-          <div class="container">
-            <div class="layout-justify" style="display: flex; justify-content: center; align-items: center; padding:15px;">
-              <p style="margin-bottom: 2cap; text-align: center; font-size: 16px; color: #fff;margin-left: 55cap;">
-                &copy; 2025 FC Kovalam. All rights reserved.
-              </p>
-            </div>
-          </div>
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 FC Kovalam. All rights reserved.</p>
         </div>
       </footer>
 
