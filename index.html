@@ -129,7 +129,7 @@ img {
 .post-future {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto;
+  
 }
 
 @media (max-width: 768px) {
@@ -455,6 +455,92 @@ img {
   padding: 0 !important;
 }
 
+.teams-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 20px 50px;
+        background: #2d6e5c;
+      }
+
+      .teams-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 3rem;
+        font-family: "Kanit", sans-serif;
+      }
+
+      .teams-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-bottom: 2rem;
+      }
+
+      .team-card {
+        position: relative;
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease;
+        cursor: pointer;
+      }
+
+      .team-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .team-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .team-card:hover .team-image {
+        transform: scale(1.05);
+      }
+
+      .team-info {
+        padding: 20px;
+        background: white;
+      }
+
+      .team-name {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 0.5rem;
+        font-family: "Kanit", sans-serif;
+      }
+
+      .team-category {
+        font-size: 1rem;
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+        font-weight: 500;
+        display: block;
+      }
+
+      .team-description {
+        font-size: 0.9rem;
+        color: #555;
+        line-height: 1.4;
+        margin-bottom: 15px;
+      }
+
+      .team-coach {
+        font-size: 0.85rem;
+        color: #777;
+        font-style: italic;
+      }
+
+      .team-coach strong {
+        color: var(--primary-color);
+      }
     </style>
   </head>
   
@@ -487,7 +573,7 @@ img {
             </button>
     
             <div class="mobile-logo">
-              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 60px;"/></a>
+              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 80px;padding-left: 2cap;"/></a>
             </div> 
       
             <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
@@ -536,8 +622,8 @@ img {
                       width: 100%;
                       height: 22%;
                       background: linear-gradient(to top, 
-                                rgba(45,110,92,0.8) 0%,
-                                rgba(45,110,92,0.3) 100%, 
+                                rgba(45,110,92,0.8) 100%,
+                                rgba(45,110,92,0.3) 50%, 
                                 transparent 100%);
                       backdrop-filter: blur(3px);
                       -webkit-backdrop-filter: blur(6px);
@@ -569,48 +655,130 @@ img {
           <div class="hero-section" style="padding-top: 90cap;">
             <div style="text-align: center; width: 90%; max-width: 1000px;">
               <h1 style="color: white; font-size: 5rem; font-weight: 700;">
-                <span style="display: block; color: green;">WE ARE</span>
+                <span style="display: block; color: white;">WE ARE</span>
                 <span style="color: #f8b400; display: block;">FC KOVALAM</span>
               </h1>
-              <p style="font-size: 4cap;"><b>Will write our slogan</b></p>
+              <p style="font-size: 4cap;"><b>“Football is market goal is our target”</b></p>
             </div>
           </div>
         </div>
         
-          
-          <div class="cards-section" >
-            <div class="row row-30 p-4">
-              <div class="col-12" style="padding:50cap"></div>
-
-              <div class="col-12 mb-4">
-                <article class="post-future h-100" style="max-width: 200cap;">
-                  <a class="post-future-figure" href="#">
-                    <img src="images/card1.webp" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
-                  </a>
-                  <div class="post-future-content p-4">
-                    <h4 class="post-future-title">Youth Development Program</h4>
-                    <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
-                    <a href="#" class="btn btn-sm btn-primary">Learn More</a>
-                  </div>
-                </article>
-              </div>
-            </div>
+        
+          <div class="row row-30 p-4">
+            <div class="col-12" style="padding:50cap"></div>
 
             <div class="col-12 mb-4">
               <article class="post-future h-100" style="max-width: 200cap;">
                 <a class="post-future-figure" href="#">
-                  <img src="images/card1.webp" alt="FC Kovalam Team Training" class="img-fluid w-100" />
+                  <img src="images/card1.webp" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
                 </a>
                 <div class="post-future-content p-4">
-                  <h4 class="post-future-title">Intensive Training Sessions</h4>
-                  <p class="post-future-text">Our players undergo rigorous training sessions to hone their skills and tactical understanding. Each drill is designed to improve technical ability, physical fitness, and team coordination.</p>
-                  <a href="#" class="btn btn-sm btn-primary">View Schedule</a>
+                  <h4 class="post-future-title">Youth Development Program</h4>
+                  <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
+                  <a href="#" class="btn btn-sm btn-primary">Learn More</a>
                 </div>
               </article>
             </div>
           </div>
+
+      
+            <div class="angled-image-wrapper" style="padding:1cap;">
+              <div class="angled-image first">
+                <img src="images/temples/CARMELCHURCH.jpg" alt="Image 1" style="border-top-left-radius: 2cap;width: 100%; height: 900px;" />
+              </div>
+              <div class="angled-image middle">
+                <img src="images/temples/DARGHA.jpg" alt="Image 2"  />
+              </div>
+              <div class="angled-image last">
+                <img src="images/temples/KAILASANATHARKOVIL.jpg" alt="Image 3" style="border-top-right-radius: 2cap;" />
+              </div>
+            </div>
           
-  
+            <!-- Text Content Under the Image -->
+            <div class="post-future-content p-4" style="background-color: #2d6e5c; border-radius: 0 0 20px 20px;">
+              <h3 class="post-future-title mt-4" style="font-size: 2cap; color: white;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus maiores, architecto voluptas porro ex voluptatem laudantium, molestias, atque repellendus quidem obcaecati ad dolorum nobis dignissimos illum perspiciatis quaerat animi officiis.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti neque deserunt ab voluptates nulla, suscipit quas natus quisquam impedit quasi harum officiis recusandae libero cumque? Ipsam quia temporibus veritatis minus!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque magni, quidem eligendi est asperiores mollitia saepe magnam in adipisci obcaecati id! Illum et itaque, quo explicabo eos iure iusto cum.
+              </h3>
+            </div>
+        
+            <!-- Styling -->
+            <style>
+              .angled-image-wrapper {
+                display: flex;
+                overflow: hidden;
+                background: #2d6e5c;
+                border-radius: 20px 20px 0 0;
+              }
+        
+              .angled-image {
+                position: relative;
+                flex: 1;
+                overflow: hidden;
+              }
+        
+              .angled-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+                transition: transform 0.3s ease;
+              }
+        
+              .angled-image.first img {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.angled-image.middle img {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+}
+
+.angled-image.last img {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+            </style>
+          
+            
+          <div class="col-12 mb-4">
+            <article class="post-future h-100" style="max-width: 200cap;">
+              <a class="post-future-figure" href="#">
+                <img src="images/teams/t18.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
+              </a>
+              <div class="post-future-content p-4">
+                <h4 class="post-future-title">Youth Development Program</h4>
+                <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
+                <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 mb-4">
+            <article class="post-future h-100" style="max-width: 200cap;">
+              <a class="post-future-figure" href="#">
+                <img src="images/achievements/for-home.png" alt="FC Kovalam Youth Academy" class="img-fluid w-100" />
+              </a>
+              <div class="post-future-content p-4">
+                <h4 class="post-future-title">Youth Development Program</h4>
+                <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
+                <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+              </div>
+            </article>
+          </div>
+          <div class="col-12 mb-4">
+            <article class="post-future h-100" style="max-width: 100%; max-height: 100%;border-top-left-radius: 2cap;border-top-right-radius: 2cap;">
+              <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
+                <img src="images/teams/t6.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" />
+                <img src="images/teams/t7.jpg" alt="2" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; transition: none; transform: none;" />
+                <img src="images/teams/t12.jpg" alt="3" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-right-radius: 2cap; transition: none; transform: none;" />
+              </div>              
+              <div class="post-future-content p-4">
+                <h4 class="post-future-title">Youth Development Program</h4>
+                <p class="post-future-text">Our academy nurtures young talent aged 6-18 with professional coaching. We focus on technical development, sportsmanship, and academic balance for holistic growth.</p>
+                <a href="#" class="btn btn-sm btn-primary">Learn More</a>
+              </div>
+            </article>
+          </div>
+          
           <div class="social-section">
             <div style="padding: 5cap;">
               <div class="aside-component" style="max-width: 800px; margin: 0 auto; padding: 30px 20px; background: #f8f9fa; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); padding-bottom: 5cap; margin-bottom: 50px;">
@@ -676,8 +844,8 @@ img {
       <footer class="section footer-classic footer-classic-dark context-dark">
         <div class="footer-classic-aside footer-classic-darken">
           <div class="container">
-            <div class="layout-justify" style="display: flex; justify-content: center; align-items: center; padding: 15px 0;">
-              <p style="margin-bottom: 2cap; text-align: center; font-size: 16px; color: #fff;">
+            <div class="layout-justify" style="display: flex; justify-content: center; align-items: center; padding:15px;">
+              <p style="margin-bottom: 2cap; text-align: center; font-size: 16px; color: #fff;margin-left: 55cap;">
                 &copy; 2025 FC Kovalam. All rights reserved.
               </p>
             </div>
