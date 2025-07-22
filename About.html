@@ -7,6 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -14,9 +18,91 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <style>
+      /* Beautiful Typography */
+      body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.7;
+        color: #333;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      
       .adj-size {
         font-size: 20px;
+        font-family: 'Poppins', sans-serif;
       }
+      
+      /* Responsive Font Sizes */
+      @media (max-width: 768px) {
+        .adj-size {
+          font-size: 18px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .adj-size {
+          font-size: 16px;
+        }
+      }
+      
+      /* Responsive Layout Adjustments */
+      @media (max-width: 1200px) {
+        [style*="width: 70%"] {
+          width: 80% !important;
+        }
+      }
+      
+      @media (max-width: 992px) {
+        [style*="width: 70%"] {
+          width: 90% !important;
+        }
+        
+        [style*="font-size: 5cap"] {
+          font-size: 3.5rem !important;
+        }
+        
+        [style*="font-size: 2cap"] {
+          font-size: 1.5rem !important;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        [style*="margin-top: 10cap"] {
+          margin-top: 8rem !important;
+        }
+        
+        [style*="padding: 5cap 0"] {
+          padding: 3rem 0 !important;
+        }
+        
+        [style*="padding: 3cap"] {
+          padding: 2rem !important;
+        }
+        
+        [style*="font-size: 5cap"] {
+          font-size: 2.5rem !important;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        [style*="border-top-right-radius: 5cap"] {
+          border-top-right-radius: 3rem !important;
+        }
+        
+        [style*="font-size: 5cap"] {
+          font-size: 2rem !important;
+        }
+        
+        [style*="font-size: 2cap"] {
+          font-size: 1.2rem !important;
+        }
+      }
+      
+      /* Original Styles Below - Unchanged */
       /* Animation Keyframes */
       @keyframes fadeIn {
         from { opacity: 0; transform: translateY(20px); }
@@ -718,35 +804,37 @@
           </li>
         </ul>
       </div>
-      <div style="text-align: center;padding-top: 10cap;">
-        <img src="images/achievements/11.png" style="width: 800px; height: auto; display: inline-block;border-radius: 2cap;">
-      </div>
+      <!-- Image at the top (outside the card) -->
+      <div style="background-color: #2d6e5c; padding: 5cap 0; display: flex; justify-content: center; margin-top: 10cap; width: 100%;">
+        <div style="width: 70%; max-width: 100%; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.2); background-color: #01A66F;border-top-right-radius: 5cap;">
+        
+          <!-- Image: Full width, no gap -->
+          <img src="images/teams/t16.jpg" style="width: 100%; display: block;">
       
-<section class="about-section" style="background-color: #2d6e5c;margin-top: 15cap;text-align: center;">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="about-card" style="background-color: #0dd49b">
-          <h2 class="section-title" style="text-align: center;font-size: 5cap;color:white"><b>About Us</b></h2>
-          <p class="adj-size" style="color: whitesmoke;"><strong>
-            FC Kovalam Club was established in the year 2019 out of love for the beautiful game called football (soccer). Nestled in the picturesque coastal town of Kovalam (often referred to as Mini Goa), Chennai, Tamil Nadu, FC Kovalam is dedicated to nurturing young talent, instilling discipline, and igniting a lifelong passion for football.
-          </strong></p>
-          <p class="adj-size" style="color: whitesmoke;"><strong>
-            At FCK, our primary mission is to develop well-rounded, skilled, and confident footballers who excel both on the pitch and in life. We are a premier youth football club focused on grassroots football development.
-          </strong></p>
+          <!-- Content -->
+          <div style="padding: 3cap; text-align: center;">
+            <h2 style="font-size: 5cap; color: white;"><b>About Us</b></h2>
+            <p style="color: whitesmoke; font-size: 2cap;">
+              <strong>
+                FC Kovalam Club was established in the year 2019 out of love for the beautiful game called football (soccer). Nestled in the picturesque coastal town of Kovalam (Mini Goa), Chennai, Tamil Nadu, FC Kovalam is dedicated to nurturing young talent and igniting a lifelong passion for football.
+              </strong>
+            </p>
+            <p style="color: whitesmoke; font-size: 2cap;">
+              <strong>
+                At FCK, our mission is to develop well-rounded, confident footballers who excel both on the pitch and in life.
+              </strong>
+            </p>
+          </div>
+      
         </div>
       </div>
-    </div>
-  </div>
-</section>
       
-<<<<<<< HEAD
+      
+      
+
+      </section>
       
       <section class="about-section" style="background-color:  #2d6e5c;max-width: 800cap;">
-=======
-      <!-- Mission Section -->
-      <section class="about-section" style="background-color: #0dd49b;max-width: 800cap;">
->>>>>>> e2f0ed3 (Update About.html)
         <div class="container">
           <div class="section-title">
             
@@ -778,7 +866,7 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-lg-12">
-              <div class="about-card" style="background-color:#0dd49b;max-width: 1400cap; margin: 0 auto;">
+              <div class="about-card" style="background-color: #01A66F;max-width: 1400cap; margin: 0 auto;">
                 <h3 style="font-size: 5cap;color: white"><b>FC Kovalam Vision Statement</b></h3>
                 <p class="adj-size" style="color: white;"><strong>“To build a respected and successful football club that inspires young talent, fosters community pride, and consistently competes at the highest level, both on and off the field.”</strong></p>
       
@@ -864,6 +952,5 @@ overlay.addEventListener('click', () => {
 });
 
     </script>
-    
-    
+  </body>
 </html>
