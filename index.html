@@ -4,7 +4,7 @@
     <!-- Site Title-->
     <title>Home - FC Kovalam</title>
     <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
@@ -133,6 +133,45 @@ img {
 }
 
 @media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-container {
+    padding: 5px 0 !important;
+  }
+
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 10px !important;
+  }
+
+  .angled-image-wrapper {
+    flex-direction: column !important;
+  }
+
+  .angled-image {
+    width: 100% !important;
+  }
+
+  .angled-image img {
+    clip-path: none !important;
+    border-radius: 0 !important;
+  }
+
+  .post-future-content {
+    padding: 2cap !important;
+  }
+
   .rd-navbar-main-top > .rd-navbar-main-container {
     flex-direction: column;
     align-items: center;
@@ -189,6 +228,32 @@ img {
 
   .post-future {
     max-width: 90%;
+  }
+
+  .video-container {
+    height: 50vh !important;
+  }
+
+  .hero-section {
+    padding-bottom: 10% !important;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem !important;
+  }
+
+  .hero-section p {
+    font-size: 3cap !important;
+  }
+
+  .row {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
 
@@ -255,30 +320,6 @@ img {
 
 #hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
-}
-
-@media (max-width: 768px) {
-  #hamburger {
-    display: block;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .mobile-logo img {
-    max-width: 120px;
-    height: auto;
-  }
-  
-  .header-container {
-    padding: 10px 0 !important;
-  }
-  
-  .logo-nav-wrapper {
-    justify-content: space-between !important;
-    padding: 0 15px !important;
-  }
 }
 
 .side-menu {
@@ -406,14 +447,32 @@ html, body {
               transparent 100%);
 }
 
-/* Social section */
 .social-section {
-  padding: 60px 0;
-  background: linear-gradient(to top, 
-              rgba(45,110,92,0.8) 100%,  
-              rgba(45,110,92,0.3) 92%, 
-              transparent 100%);
-}
+        padding: 60px 0;
+        background: linear-gradient(to top, 
+                    rgba(45,110,92,0.8) 100%,  
+                    rgba(45,110,92,0.3) 92%, 
+                    transparent 100%);
+      }
+
+      /* Touch-friendly improvements */
+      @media (max-width: 768px) {
+        .button-media {
+          min-height: 44px !important;
+          touch-action: manipulation;
+        }
+
+        a, button {
+          min-height: 44px;
+          touch-action: manipulation;
+        }
+
+        .side-menu ul li a {
+          min-height: 44px !important;
+          display: flex !important;
+          align-items: center !important;
+        }
+      }
 
 /* Reset browser defaults */
 * {
@@ -428,6 +487,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 /* Style for all sections */
@@ -765,7 +825,7 @@ img {
             </article>
           </div>
           <div class="col-12 mb-4">
-            <article class="post-future h-100" style="max-width: 100%; max-height: 100%;border-top-left-radius: 2cap;border-top-right-radius: 2cap;">
+            <article class="post-future h-100" style="max-width: 100%; max_height: 100%;border-top-left-radius: 2cap;border-top-right-radius: 2cap;">
               <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
                 <img src="images/teams/t6.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" />
                 <img src="images/teams/t7.jpg" alt="2" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; transition: none; transform: none;" />
