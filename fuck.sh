@@ -1,4 +1,3 @@
-git add .
-git reset fuck.sh    
+git add .   
 git commit -m "fucked"
-git push
+git push origin HEAD:main
