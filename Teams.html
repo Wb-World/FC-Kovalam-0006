@@ -289,6 +289,18 @@
         left: 0;
       }
 
+      .side-menu.active ul li {
+        animation: slideFadeIn 0.5s forwards;
+}
+
+      .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+      .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+      .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+      .side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+      .side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+      .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+      .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+
       #overlay {
         display: none;
         position: fixed;
@@ -558,9 +570,9 @@
 
       <!-- Mobile Menu -->
       <div class="side-menu" id="sideMenu" style="background-color: black;">
-        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 15px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 30px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
 
-        <ul style="list-style: none; padding: 15px;">
+        <ul style="list-style: none; padding: 30px;">
           <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
           <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
           <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
