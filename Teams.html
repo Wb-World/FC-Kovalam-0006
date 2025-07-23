@@ -289,18 +289,6 @@
         left: 0;
       }
 
-      .side-menu.active ul li {
-        animation: slideFadeIn 0.5s forwards;
-}
-
-      .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
-      .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
-      .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
-      .side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
-      .side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
-      .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
-      .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
-
       #overlay {
         display: none;
         position: fixed;
@@ -391,7 +379,7 @@
         transform: scale(1.05);
       }
 
-      .team-info {
+      .about-description {
         padding: 20px;
         background: white;
       }
@@ -512,6 +500,24 @@
           text-align: center;
         }
       }
+      .about-heading {
+  font-family: 'Anton', sans-serif; /* Bold, compressed font */
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Description Paragraph Font */
+.about-description {
+  font-family: 'Inter', sans-serif; /* Clean, modern sans-serif */
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: #ffffff;
+  font: bold;
+}
     </style>
   </head>
 
@@ -570,9 +576,9 @@
 
       <!-- Mobile Menu -->
       <div class="side-menu" id="sideMenu" style="background-color: black;">
-        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 30px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 15px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
 
-        <ul style="list-style: none; padding: 30px;">
+        <ul style="list-style: none; padding: 15px;">
           <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
           <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
           <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
@@ -632,7 +638,7 @@
           <div class="team-card" data-category="senior">
   
             <img src="images/teams/t1.jpg" alt="Senior Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">First Team</h3>
               <span class="team-category">Men's Senior Team</span>
               <p class="team-description">Our flagship team competing in regional and national leagues. The pride of FC Kovalam with a rich history and passionate fan base.</p>
@@ -644,7 +650,7 @@
           <div class="team-card" data-category="women">
 
             <img src="images/teams/t10.jpg" alt="Women's Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Women's Team</h3>
               <span class="team-category">Women's Senior Team</span>
               <p class="team-description">Our women's team making waves in the state championships with skillful play and determination.</p>
@@ -655,7 +661,7 @@
           <!-- U-18 Team -->
           <div class="team-card" data-category="youth">
             <img src="images/teams/t3.jpg" alt="U-18 Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Under-18 Team</h3>
               <span class="team-category">Youth Development</span>
               <p class="team-description">The bridge between youth and senior football, preparing players for professional careers.</p>
@@ -666,7 +672,7 @@
           <!-- U-16 Team -->
           <div class="team-card" data-category="youth">
             <img src="images/teams/t16.jpg" alt="U-16 Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Under-16 Team</h3>
               <span class="team-category">Youth Development</span>
               <p class="team-description">Developing technical skills and tactical understanding in our promising young talents.</p>
@@ -677,7 +683,7 @@
           <!-- U-14 Team -->
           <div class="team-card" data-category="youth">
             <img src="images/teams/t13.jpg" alt="U-14 Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Under-14 Team</h3>
               <span class="team-category">Youth Development</span>
               <p class="team-description">Building strong fundamentals and love for the game in our youngest competitive team.</p>
@@ -689,7 +695,7 @@
           <div class="team-card" data-category="academy">
     
             <img src="images/teams/t17.jpg" alt="Academy Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Football Academy</h3>
               <span class="team-category">Grassroots Development</span>
               <p class="team-description">For ages 6-12, our academy focuses on fun, fundamentals and falling in love with football.</p>
@@ -701,7 +707,7 @@
           <div class="team-card" data-category="senior">
       
             <img src="images/teams/t14.jpg" alt="Reserve Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Reserve Team</h3>
               <span class="team-category">Men's Senior Team</span>
               <p class="team-description">Developing players ready to step up to the first team when called upon.</p>
@@ -713,7 +719,7 @@
           <div class="team-card" data-category="women youth">
           
             <img src="images/teams/t15.jpg" alt="Women's U-18 Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Women's Under-18</h3>
               <span class="team-category">Youth Development</span>
               <p class="team-description">Developing the next generation of women footballers for our senior team.</p>
@@ -723,7 +729,7 @@
           <div class="team-card" data-category="women youth">
           
             <img src="images/teams/t8.jpg" alt="Women's U-18 Team" class="team-image">
-            <div class="team-info">
+            <div class="about-description">
               <h3 class="team-name">Women's Under-18</h3>
               <span class="team-category">Youth Development</span>
               <p class="team-description">Developing the next generation of women footballers for our senior team.</p>
