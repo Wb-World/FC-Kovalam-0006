@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -113,6 +113,17 @@
         from { transform: translateX(20px); opacity: 0; }
         to { transform: translateX(0); opacity: 1; }
       }
+
+      @keyframes slideFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
       
       @keyframes pulse {
         0% { transform: scale(1); }
@@ -166,23 +177,21 @@
 
       /* Side Menu */
       .side-menu {
-        display: none;
         position: fixed;
-        top: 0;
-        right: -250px;
+        top: -10;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
         height: 100vh;
-        width: 250px;
-        background: #111;
-        color: white;
-        z-index: 2000;
-        padding: 60px 20px;
-        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.5);
-        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        background-color: var(--primary-color);
+        z-index: 1001;
+        transition: all 0.3s ease;
+        overflow-y: auto;
+        padding-top: 10px;
       }
 
       .side-menu.active {
-        right: 0;
-        display: block;
+        transform: translateX(0);
       }
 
       .side-menu ul {
@@ -192,18 +201,30 @@
 
       .side-menu ul li {
         margin: 20px 0;
-        transform: translateX(20px);
         opacity: 0;
-        animation: slideInRight 0.5s forwards;
+        transform: translateX(30px);
+        transition: none;
+      }
+
+      .side-menu.active ul li {
+        animation: slideFadeIn 0.5s ease-out forwards;
       }
       
-      .side-menu ul li:nth-child(1) { animation-delay: 0.1s; }
-      .side-menu ul li:nth-child(2) { animation-delay: 0.2s; }
-      .side-menu ul li:nth-child(3) { animation-delay: 0.3s; }
-      .side-menu ul li:nth-child(4) { animation-delay: 0.4s; }
-      .side-menu ul li:nth-child(5) { animation-delay: 0.5s; }
-      .side-menu ul li:nth-child(6) { animation-delay: 0.6s; }
-      .side-menu ul li:nth-child(7) { animation-delay: 0.7s; }
+      .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+      .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+      .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+      .side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+      .side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+      .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+      .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+      .side-menu.active ul li:nth-child(8) { animation-delay: 0.8s; }
+
+      /* Reset animation when menu is closed */
+      .side-menu:not(.active) ul li {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: none;
+      }
 
       .side-menu ul li a {
         color: white;
@@ -388,6 +409,7 @@
         position: absolute;
         width: 50px;
         height: 3px;
+        background: #2a7fef;
         bottom: -15px;
         left: 50%;
         transform: translateX(-50%);
@@ -558,24 +580,107 @@
       }
       
       @media (max-width: 576px) {
-        .brand-logo {
-          height: 50px;
-        }
         
-        .about-hero {
-          height: 40vh;
-          padding-top: 70px;
-        }
-        
-        .about-card {
-          padding: 20px;
-        }
-        
-        .side-menu ul li {
-          animation: none !important;
-          transform: none !important;
-          opacity: 1 !important;
-        }
+/* Side menu (mobile) styles */
+.side-menu {
+  position: fixed;
+  top: -10;
+  left: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.side-menu ul li {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: none;
+}
+
+.side-menu.active ul li {
+  animation: slideFadeIn 0.5s ease-out forwards;
+}
+
+.side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+.side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+.side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+.side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+.side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+.side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+.side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+.side-menu.active ul li:nth-child(8) { animation-delay: 0.8s; }
+
+/* Reset animation when menu is closed */
+.side-menu:not(.active) ul li {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: none;
+}
+
+/* Optional overlay behind side-menu */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive Nav Behavior */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-container {
+    padding: 10px;
+  }
+
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
       }
       
       .ie-panel {
@@ -675,16 +780,16 @@
 /* Side menu (mobile) styles */
 .side-menu {
   position: fixed;
-  top: 0;
-  left: -100%;
-  width: 80%;
-  max-width: 300px;
-  height: 100vh;
-  background-color: black;
-  z-index: 1001;
-  transition: all 0.3s ease;
-  overflow-y: auto;
-  padding-top: 80px;
+        top: -10;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 1001;
+        transition: all 0.3s ease;
+        overflow-y: auto;
+        padding-top: 10px;
 }
 
 .side-menu.active {
@@ -701,9 +806,12 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 #overlay.active {
   display: block;
+  opacity: 1;
 }
 
 /* Responsive Nav Behavior */
@@ -806,23 +914,23 @@
         </div>
       </header>
       
-      <!-- Mobile Menu -->
-      <div class="side-menu" id="sideMenu" style="background-color:black;">
-        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+     <!-- Mobile Menu -->
+     <div class="side-menu" id="sideMenu" style="background-color: black;">
+      <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 35px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
 
-        <ul style="list-style: none; padding: 20px;">
-          <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
-          <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
-          <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
-          <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
-          <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
-          <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
-          <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
-          <li>
-            <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
-          </li>
-        </ul>
-      </div>
+      <ul style="list-style: none; padding: 40px;">
+        <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
+        <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
+        <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
+        <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
+        <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
+        <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
+        <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
+        <li>
+          <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
+        </li>
+      </ul>
+    </div>
       <!-- Image at the top (outside the card) -->
       <div style="background-color: #2d6e5c; padding: 5cap 0; display: flex; justify-content: center; margin-top: 10cap; width: 100%;">
         <div style="width: 70%; max-width: 100%; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.2); background-color: #0dd49b;border-top-right-radius: 5cap;">
@@ -849,7 +957,7 @@
       <div class="container">
         <div class="section-title">            
         </div>
-        <!-- <div class="row justify-content-center" style="background-color: #0dd49b;"> -->
+<!-- <div class="row justify-content-center" style="background-color: #0dd49b;"> -->
         <!-- <div> -->
           <div class="about-card" style="background-color: #0dd49b;max-width: 1400cap; margin: 0 auto;">
             <h2 class="about-heading" style="text-align: center;"><b>FC Kovalam Mission Statement</b></h2>
@@ -893,12 +1001,12 @@
       <!-- History Section -->
       <section class="about-section bg-gray-100" style="background-color: #2d6e5c;">
         <div class="container">
+          <div class="section-title">
+            <h2>History of Kovalam</h2>
+          </div>
           <div class="row justify-content-center">
             <div class="col-lg-10">
               <div class="about-card">
-                <div class="section-title">
-                  <h2>History of Kovalam</h2>
-                </div>
                 <b style="font-size: 2cap;">
                 <p>
                   In 2019, on the golden sands of India's coastline, a dream was born. With no backing, no sponsors, and limited resources—just a ball, the open beach, and a burning passion for the game—a man with unmatched talent took the first step in building what would become one of India's most inspiring football teams.
@@ -935,29 +1043,43 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      hamburger.addEventListener('click', () => {
-  const isMenuOpen = sideMenu.classList.contains('active');
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const overlay = document.getElementById('overlay');
 
-  if (isMenuOpen) {
-    sideMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.classList.remove('menu-open');
-    hamburger.classList.remove('active');
-  } else {
-    sideMenu.classList.add('active');
-    overlay.classList.add('active');
-    document.body.classList.add('menu-open');
-    hamburger.classList.add('active');
-  }
-});
+        function openMenu() {
+          sideMenu.classList.add('active');
+          overlay.classList.add('active');
+          document.body.classList.add('menu-open');
+          hamburger.classList.add('active');
+        }
 
-overlay.addEventListener('click', () => {
-  sideMenu.classList.remove('active');
-  overlay.classList.remove('active');
-  document.body.classList.remove('menu-open');
-  hamburger.classList.remove('active');
-});
+        function closeMenu() {
+          sideMenu.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          hamburger.classList.remove('active');
+          
+          // Reset animation on all menu items
+          const menuItems = sideMenu.querySelectorAll('ul li');
+          menuItems.forEach(item => {
+            item.style.animation = 'none';
+            item.offsetHeight; // Trigger reflow
+            item.style.animation = '';
+          });
+        }
 
+        hamburger.addEventListener('click', () => {
+          if (sideMenu.classList.contains('active')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener('click', closeMenu);
+      });
     </script>
   </body>
 </html>
