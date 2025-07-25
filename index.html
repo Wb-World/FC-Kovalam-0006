@@ -663,7 +663,7 @@ img {
 /* Navbar Font Styles */
 .main-nav a {
   color: white !important;
-  font-weight: 500;
+  font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -679,7 +679,7 @@ img {
   position: relative;
   text-decoration: none;
   color: #000;
-  font-weight: 500;
+  font-weight: bold;
   padding-bottom: 5px;
 }
 
@@ -750,44 +750,45 @@ img {
       
             <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
                 <ul id="navList" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; width: 100%;">
-                    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; flex-grow: 1;">
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="index.html" class="nav-item" style="color: white;">Home</a></li>
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="About.html" class="nav-item" style="color: white;">About Us</a></li>
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Teams.html" class="nav-item" style="color: white;">Teams</a></li>
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Events.html" class="nav-item" style="color: white;">Events</a></li>
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Staff.html" class="nav-item" style="color: white;">Staff</a></li>
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
-                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
-                    </div>
-                  
-                    <li style="margin-left: auto;">
-                      <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
-                        Register now!
-                      </button>
-                    </li>
-                </ul>
-            </nav>
-          </div>
+                  <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; flex-grow: 1;">
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="index.html" class="nav-item" style="color: white;">Home</a></li>
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="About.html" class="nav-item" style="color: white;">About Us</a></li>
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="Teams.html" class="nav-item" style="color: white;">Teams</a></li>
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="Events.html" class="nav-item" style="color: white;">Events</a></li>
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="Staff.html" class="nav-item" style="color: white;">Staff</a></li>
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
+                    <li style="margin: 0 10px;font-size: 2cap;font-weight: bold;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
+                  </div>
+                
+                  <li style="margin-left: auto;">
+                    <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
+                      Register now!
+                    </button>
+                  </li>
+              </ul>
+          </nav>
         </div>
-      </header>
-      
-      <!-- Mobile Menu -->
-      <div class="side-menu" id="sideMenu" style="background-color: black;">
-        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
-
-        <ul style="list-style: none; padding: 20px;">
-          <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
-          <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
-          <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
-          <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
-          <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
-          <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
-          <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
-          <li>
-            <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
-          </li>
-        </ul>
       </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="side-menu" id="sideMenu" style="background-color: black;">
+      <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+
+      <ul style="list-style: none; padding: 20px;">
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
+        <li style="margin-bottom: 15px;font-weight: bold;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
+        <li>
+          <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
+        </li>
+      </ul>
+    </div>
+
       <!-- Single Main Section -->
       <section style="
                       width: 100%;
@@ -800,7 +801,7 @@ img {
                       -webkit-backdrop-filter: blur(6px);
                       z-index: 1;">
         <!-- Video Background -->
-        <div class="video-container" style="margin-bottom: 50rem;">
+        <div class="video-container" style="margin-bottom: 20rem;">
           <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
             <source src="videos/DJI_0730.mp4" type="video/mp4" />
             Your browser does not support the video tag.

@@ -179,6 +179,196 @@
         }
       }
 
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+      
+      .hamburger:hover {
+        transform: scale(1.1);
+      }
+
+      .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* Side Menu */
+      .side-menu {
+        position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding-top: 80px;
+  transform: translateX(-100%);
+      }
+
+      .side-menu.active {
+        transform: translateX(0);
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-menu ul li {
+        margin: 20px 0;
+        transform: translateX(20px);
+        opacity: 0;
+        animation: slideInRight 0.5s forwards;
+      }
+      
+      .side-menu ul li:nth-child(1) { animation-delay: 0.1s; }
+      .side-menu ul li:nth-child(2) { animation-delay: 0.2s; }
+      .side-menu ul li:nth-child(3) { animation-delay: 0.3s; }
+      .side-menu ul li:nth-child(4) { animation-delay: 0.4s; }
+      .side-menu ul li:nth-child(5) { animation-delay: 0.5s; }
+      .side-menu ul li:nth-child(6) { animation-delay: 0.6s; }
+      .side-menu ul li:nth-child(7) { animation-delay: 0.7s; }
+
+      .side-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      
+      .side-menu ul li a:hover {
+        color: #2a7fef;
+        transform: translateX(5px);
+      }
+
+      .side-menu .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+        transition: transform 0.3s ease;
+      }
+      
+      .side-menu .close-btn:hover {
+        transform: rotate(90deg);
+      }
+
+      /* Header Styles */
+      .header-container {
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+      
+      .header-container.scrolled {
+        background: rgba(0,0,0,0.95);
+        padding: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .logo-nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .brand-logo {
+        height: 60px;
+        width: auto;
+        transition: all 0.3s ease;
+      }
+      
+      .scrolled .brand-logo {
+        height: 50px;
+      }
+      
+      .main-nav {
+        display: flex;
+        align-items: center;
+      }
+      
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .main-nav li {
+        margin: 0 15px;
+        position: relative;
+      }
+      
+      .main-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        padding: 5px 0;
+        position: relative;
+      }
+      
+      .main-nav a:hover {
+        color: yellow;
+      }
+      
+      .main-nav a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: yellow;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      
+      .main-nav a:hover:after {
+        width: 100%;
+      }
+
       @keyframes fadeIn {
         from { opacity: 0; transform: translateX(-20px); }
         to { opacity: 1; transform: translateX(0); }
@@ -195,7 +385,7 @@
         position: relative;
         text-decoration: none;
         color: #000;
-        font-weight: 500;
+        font-weight: bold;
         padding-bottom: 5px;
       }
 
