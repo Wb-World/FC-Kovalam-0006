@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -59,212 +59,6 @@
           animation: fadeIn 1s ease-out;
       }
 
-      /* Hamburger Menu */
-      .hamburger {
-        display: none;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 30px;
-        height: 21px;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        padding: 0;
-        z-index: 1000;
-        transition: transform 0.3s ease;
-      }
-      
-      .hamburger:hover {
-        transform: scale(1.1);
-      }
-
-      .hamburger span {
-        display: block;
-        width: 100%;
-        height: 3px;
-        background: white;
-        border-radius: 2px;
-        transition: all 0.3s ease;
-      }
-
-      /* Side Menu */
-      .side-menu {
-        position: fixed;
-  top: 0;
-  left: 0;
-  width: 80%;
-  max-width: 300px;
-  height: 100vh;
-  background-color: black;
-  z-index: 1001;
-  transition: transform 0.3s ease;
-  overflow-y: auto;
-  padding-top: 80px;
-  transform: translateX(-100%);
-      }
-
-      .side-menu.active {
-        transform: translateX(0);
-}
-
-@keyframes slideFadeIn {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-
-      .side-menu ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .side-menu ul li {
-        margin: 20px 0;
-        transform: translateX(20px);
-        opacity: 0;
-        animation: slideInRight 0.5s forwards;
-      }
-      
-      .side-menu ul li:nth-child(1) { animation-delay: 0.1s; }
-      .side-menu ul li:nth-child(2) { animation-delay: 0.2s; }
-      .side-menu ul li:nth-child(3) { animation-delay: 0.3s; }
-      .side-menu ul li:nth-child(4) { animation-delay: 0.4s; }
-      .side-menu ul li:nth-child(5) { animation-delay: 0.5s; }
-      .side-menu ul li:nth-child(6) { animation-delay: 0.6s; }
-      .side-menu ul li:nth-child(7) { animation-delay: 0.7s; }
-
-      .side-menu ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        display: inline-block;
-      }
-      
-      .side-menu ul li a:hover {
-        color: #2a7fef;
-        transform: translateX(5px);
-      }
-
-      .side-menu .close-btn {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        font-size: 24px;
-        cursor: pointer;
-        background: transparent;
-        border: none;
-        color: white;
-        transition: transform 0.3s ease;
-      }
-      
-      .side-menu .close-btn:hover {
-        transform: rotate(90deg);
-      }
-
-      /* Header Styles */
-      .header-container {
-        background: rgba(0,0,0,0.8);
-        position: fixed;
-        width: 100%;
-        z-index: 1000;
-        transition: all 0.3s ease;
-      }
-      
-      .header-container.scrolled {
-        background: rgba(0,0,0,0.95);
-        padding: 10px 0;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-      }
-      
-      .logo-nav-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-      }
-      
-      .brand-logo {
-        height: 60px;
-        width: auto;
-        transition: all 0.3s ease;
-      }
-      
-      .scrolled .brand-logo {
-        height: 50px;
-      }
-      
-      .main-nav {
-        display: flex;
-        align-items: center;
-      }
-      
-      .main-nav ul {
-        display: flex;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      
-      .main-nav li {
-        margin: 0 15px;
-        position: relative;
-      }
-      
-      .main-nav a {
-        color: white;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 16px;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-        padding: 5px 0;
-        position: relative;
-      }
-      
-      .main-nav a:hover {
-        color: yellow;
-      }
-      
-      .main-nav a:after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background: yellow;
-        bottom: 0;
-        left: 0;
-        transition: width 0.3s ease;
-      }
-      
-      .main-nav a:hover:after {
-        width: 100%;
-      }
-      
-      .social-icons {
-        display: flex;
-        margin-left: 30px;
-      }
-      
-      .social-icons a {
-        color: white;
-        font-size: 18px;
-        margin: 0 10px;
-        transition: all 0.3s ease;
-      }
-      
-      .social-icons a:hover {
-        color: #2a7fef;
-        transform: translateY(-3px);
-      }
       
       /* Staff Hero */
       .staff-hero {
@@ -499,12 +293,6 @@
         .staff-card {
           padding: 20px;
         }
-        
-        .side-menu ul li {
-          animation: none !important;
-          transform: none !important;
-          opacity: 1 !important;
-        }
       }
       
       .ie-panel {
@@ -531,16 +319,11 @@
   --light-color: #f8f9fa;
 }
 
-/* Main nav link styles */
-.main-nav a {
-  color: white !important;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
-.main-nav a:hover {
-  color: var(--secondary-color) !important;
-}
-
-/* Nav item underline effect */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -571,7 +354,6 @@
   width: 100%;
 }
 
-/* Hamburger button styles */
 #hamburger {
   display: none;
   background: none;
@@ -590,49 +372,89 @@
   transition: all 0.3s ease;
 }
 
-/* Hamburger animation when active */
 #hamburger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
+
 #hamburger.active span:nth-child(2) {
   opacity: 0;
 }
+
 #hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Side menu (mobile) styles */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .header-container {
+    padding: 10px 0 !important;
+  }
+  
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
 .side-menu {
   position: fixed;
   top: 0;
-  left: -100%;
+  left: 0;
   width: 80%;
   max-width: 300px;
   height: 100vh;
   background-color: black;
   z-index: 1001;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
   overflow-y: auto;
   padding-top: 80px;
+  transform: translateX(-100%);
 }
 
 .side-menu.active {
-  left: 0;
+  transform: translateX(0);
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.side-menu ul li {
+  opacity: 0;
+  transform: translateX(30px);
 }
 
 .side-menu.active ul li {
-        animation: slideFadeIn 0.5s forwards;
+  animation: slideFadeIn 0.5s forwards;
 }
 
-      .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
-      .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
-      .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
-      .side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
-      .side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
-      .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
-      .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+.side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+.side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+.side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+.side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+.side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+.side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+.side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
 
-/* Optional overlay behind side-menu */
 #overlay {
   display: none;
   position: fixed;
@@ -643,6 +465,7 @@
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 1000;
 }
+
 #overlay.active {
   display: block;
 }
@@ -676,7 +499,8 @@
   </head>
   <body>
     <div class="ie-panel">
-      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/
+">
         <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
       </a>
     </div>
@@ -747,58 +571,12 @@
         </ul>
       </div>
 
-
-      <section class="staff-section" style="background-color: white; padding: 3rem 0;">
-        <!-- <div style="padding: 10cap;background-color: #2d6e5c;">
+      <section class="staff-section" style="background-color: white; margin-top: 5cap; padding: 3rem 0;">
+        <div style="padding: 10cap;background-color: #2d6e5c;">
           <center>
            <h1 class="staff-title" style="margin-top: 2cap;"><u>Our Staffs</u></h1>
           </center>
-        </div> -->
-
-        <div style="background-color: #2d6e5c; position: relative; text-align: center; padding-top: 100px; padding-bottom: 40px;">
-          
-          <div style="position: absolute;
-                      top: 0;
-                      left: 0;
-                      width: 100%;
-                      height: 120px;
-                      overflow: hidden;">
-            
-            <!-- Left Diagonal -->
-            <div style="position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 50%;
-                        height: 100%;
-                        background: white;
-                        transform: skewY(3deg);
-                        transform-origin: bottom right;">
-            </div>
-            
-            <!-- Right Diagonal -->
-            <div style="position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        width: 50%;
-                        height: 100%;
-                        background: white;
-                        transform: skewY(-3deg);
-                        transform-origin: bottom left;">
-            </div>
-          </div>
-          <div style="position: absolute;
-              top: 60px; /* Adjust this to move up/down */
-              left: 50%;
-              transform: translateX(-50%);
-              color:#0dd49b;
-              font-size: 35px;
-              font-weight: bold;
-              z-index: 2;
-              text-decoration: underline;">
-    Our Staff
-  </div>
         </div>
-
         <div class="container">
           <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
             <img src="images/staffs/s1.png" alt="J. Janakiraman Sundar" 
@@ -841,8 +619,9 @@
           <div class="staff-grid" style="flex-wrap: wrap; justify-content: center; gap: 3cap;">
             <!-- Staff Member 4 -->
             <div class="staff-grid">
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;margin-top: 5cap;">
-                <img src="images/staffs/s3.png" alt="J. Janakiraman Sundar">
+              <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+                <img src="images/staffs/s3.png" alt="J. Janakiraman Sundar" 
+                     style="width: 100%;; height: 100%">
                 <div style="text-align: center;">
                   <h3 style="color: #0dd49b;">
                     <b>
@@ -855,7 +634,8 @@
             </div>
             <div class="staff-grid">
               <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                <img src="images/staffs/s4.png" alt="J. Janakiraman Sundar">
+                <img src="images/staffs/s4.png" alt="J. Janakiraman Sundar" 
+                     style="width: 100%;; height: 100%">
                      <div style="text-align: center;">
                       <h3 style="color: #0dd49b;">
                         <b>
@@ -868,7 +648,9 @@
             </div>
             <div class="staff-grid">
               <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                <img src="images/staffs/s6.png" alt="image be add">
+                <img
+                 src="images/staffs/s6.png" alt="J. Janakiraman Sundar" 
+                     style="width: 100%;; height: 100%">
                      <div style="text-align: center;">
                       <h3 style="color: #0dd49b;">
                         <b>
@@ -881,7 +663,8 @@
             </div>
             <div class="staff-grid">
               <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                <img src="images/staffs/s5.png" alt="J. Janakiraman Sundar">
+                <img src="images/staffs/s5.png" alt="J. Janakiraman Sundar" 
+                     style="width: 100%;; height: 100%">
                      <div style="text-align: center;">
                       <h3 style="color: #0dd49b;">
                         <b>
@@ -909,28 +692,43 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-      hamburger.addEventListener('click', () => {
-  const isMenuOpen = sideMenu.classList.contains('active');
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const overlay = document.getElementById('overlay');
 
-  if (isMenuOpen) {
-    sideMenu.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.classList.remove('menu-open');
-    hamburger.classList.remove('active');
-  } else {
-    sideMenu.classList.add('active');
-    overlay.classList.add('active');
-    document.body.classList.add('menu-open');
-    hamburger.classList.add('active');
-  }
-});
+        function openMenu() {
+          sideMenu.classList.add('active');
+          overlay.classList.add('active');
+          document.body.classList.add('menu-open');
+          hamburger.classList.add('active');
+        }
 
-overlay.addEventListener('click', () => {
-  sideMenu.classList.remove('active');
-  overlay.classList.remove('active');
-  document.body.classList.remove('menu-open');
-  hamburger.classList.remove('active');
-});
+        function closeMenu() {
+          sideMenu.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          hamburger.classList.remove('active');
+          
+          // Reset animation on all menu items
+          const menuItems = sideMenu.querySelectorAll('ul li');
+          menuItems.forEach(item => {
+            item.style.animation = 'none';
+            item.offsetHeight; // Trigger reflow
+            item.style.animation = '';
+          });
+        }
+
+        hamburger.addEventListener('click', () => {
+          if (sideMenu.classList.contains('active')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener('click', closeMenu);
+      });
 
     </script>
     
