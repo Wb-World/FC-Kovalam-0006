@@ -179,168 +179,156 @@
       }
 
       @keyframes fadeIn {
-        from { opacity: 0; transform: translateX(-20px); }
-        to { opacity: 1; transform: translateX(0); }
-      }
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
 
-      .nav-menu {
-        list-style: none;
-        display: flex;
-        gap: 30px;
-        padding: 0;
-      }
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
 
-      .nav-item {
-        position: relative;
-        text-decoration: none;
-        color: #000;
-        font-weight: 500;
-        padding-bottom: 5px;
-      }
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  padding-bottom: 5px;
+}
 
-      .nav-item::after {
-        content: '';
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        left: 0;
-        bottom: 0;
-        background-color: green;
-        transition: width 0.3s ease;
-      }
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
 
-      .nav-item:hover::after {
-        width: 100%;
-      }
+.nav-item:hover::after {
+  width: 100%;
+}
 
-      /* Navigation fixes */
-      #hamburger {
-        display: none;
-        background: none;
-        border: none;
-        cursor: pointer;
-        padding: 10px;
-        z-index: 1001;
-      }
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
 
-      #hamburger span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: white;
-        margin: 5px 0;
-        transition: all 0.3s ease;
-      }
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
 
-      #hamburger.active span:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
+#hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
 
-      #hamburger.active span:nth-child(2) {
-        opacity: 0;
-      }
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
 
-      #hamburger.active span:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
-      @media (max-width: 768px) {
-        #hamburger {
-          display: block;
-        }
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
 
-        .main-nav {
-          display: none;
-        }
+  .main-nav {
+    display: none;
+  }
 
-        .mobile-logo img {
-          max-width: 120px;
-          height: auto;
-        }
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  .header-container {
+    padding: 0 !important;
+  }
+  
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
 
-        /* Adjust header padding on mobile */
-        .header-container {
-          padding: 0 !important;
-        }
+  }
+}
 
-        /* Make sure logo is properly centered */
-        .logo-nav-wrapper {
-          justify-content: space-between !important;
-          padding: 0 0px !important;
-        }
-      }
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding-top: 80px;
+  transform: translateX(-100%);
+}
 
-      /* Side menu styles */
-      .side-menu {
-        position: fixed;
-        top: -10;
-        left: -100%;
-        width: 80%;
-        max-width: 300px;
-        height: 100vh;
-        background-color: var(--primary-color);
-        z-index: 1001;
-        transition: all 0.3s ease;
-        overflow-y: auto;
-        padding-top: 10px;
-      }
+.side-menu.active {
+  transform: translateX(0);
+}
 
-      .side-menu.active {
-        left: 0;
-      }
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 
-      @keyframes slideFadeIn {
-        0% {
-          opacity: 0;
-          transform: translateX(30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      }
+.side-menu ul li {
+  opacity: 0;
+  transform: translateX(30px);
+}
 
-      .side-menu ul li {
-        margin: 20px 0;
-        opacity: 0;
-        transform: translateX(30px);
-        transition: none;
-      }
+.side-menu.active ul li {
+  animation: slideFadeIn 0.5s forwards;
+}
 
-      .side-menu.active ul li {
-        animation: slideFadeIn 0.5s ease-out forwards;
-      }
+.side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+.side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+.side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+.side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+.side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+.side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+.side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
 
-      .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
-      .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
-      .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
-      .side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
-      .side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
-      .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
-      .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
-      .side-menu.active ul li:nth-child(8) { animation-delay: 0.8s; }
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
 
-      /* Reset animation when menu is closed */
-      .side-menu:not(.active) ul li {
-        opacity: 0;
-        transform: translateX(30px);
-        animation: none;
-      }
+#overlay.active {
+  display: block;
+}
 
-      #overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 0.7);
-        z-index: 1000;
-      }
-
-      #overlay.active {
-        display: block;
-      }
 
       .image-container {
         position: absolute;
@@ -558,7 +546,7 @@
       <div id="overlay"></div>  
       <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000;">
         <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; background-color:black">
-          <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 15px 0;">
+          <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
             <!-- Hamburger Menu Button -->
             <button class="hamburger" id="hamburger" aria-label="Menu">
               <span></span>
@@ -596,9 +584,9 @@
 
       <!-- Mobile Menu -->
       <div class="side-menu" id="sideMenu" style="background-color: black;">
-        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 30px; right: 10px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
 
-        <ul style="list-style: none; padding: 30px;">
+        <ul style="list-style: none; padding: 20px;">
           <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
           <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
           <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
@@ -655,7 +643,7 @@
           <!-- Senior Team -->
           <div class="team-card" data-category="senior">
   
-            <img src="images/teams/t1.jpg" alt="Senior Team" class="team-image">
+            <img src="images/teams/t01.jpg" alt="Senior Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">First Team</h3>
               <span class="team-category">Men's Senior Team</span>
@@ -678,7 +666,7 @@
 
           <!-- U-18 Team -->
           <div class="team-card" data-category="youth">
-            <img src="images/teams/t3.jpg" alt="U-18 Team" class="team-image">
+            <img src="images/teams/t1.jpg" alt="U-18 Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Under-18 Team</h3>
               <span class="team-category">Youth Development</span>
@@ -689,7 +677,7 @@
 
           <!-- U-16 Team -->
           <div class="team-card" data-category="youth">
-            <img src="images/teams/t16.jpg" alt="U-16 Team" class="team-image">
+            <img src="images/teams/t17.jpg" alt="U-16 Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Under-16 Team</h3>
               <span class="team-category">Youth Development</span>
@@ -700,7 +688,7 @@
 
           <!-- U-14 Team -->
           <div class="team-card" data-category="youth">
-            <img src="images/teams/t13.jpg" alt="U-14 Team" class="team-image">
+            <img src="images/teams/t16.jpg" alt="U-14 Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Under-14 Team</h3>
               <span class="team-category">Youth Development</span>
@@ -712,7 +700,7 @@
           <!-- Academy Team -->
           <div class="team-card" data-category="academy">
     
-            <img src="images/teams/t17.jpg" alt="Academy Team" class="team-image">
+            <img src="images/teams/t13.jpg" alt="Academy Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Football Academy</h3>
               <span class="team-category">Grassroots Development</span>
@@ -724,7 +712,7 @@
           <!-- Reserve Team -->
           <div class="team-card" data-category="senior">
       
-            <img src="images/teams/t14.jpg" alt="Reserve Team" class="team-image">
+            <img src="images/teams/t3.jpg" alt="Reserve Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Reserve Team</h3>
               <span class="team-category">Men's Senior Team</span>
@@ -736,7 +724,7 @@
           <!-- Women's U-18 Team -->
           <div class="team-card" data-category="women youth">
           
-            <img src="images/teams/t15.jpg" alt="Women's U-18 Team" class="team-image">
+            <img src="images/teams/t14.jpg" alt="Women's U-18 Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Women's Under-18</h3>
               <span class="team-category">Youth Development</span>
@@ -746,7 +734,7 @@
           </div>
           <div class="team-card" data-category="women youth">
           
-            <img src="images/teams/t8.jpg" alt="Women's U-18 Team" class="team-image">
+            <img src="images/teams/t15.jpg" alt="Women's U-18 Team" class="team-image">
             <div class="team-info">
               <h3 class="team-name">Women's Under-18</h3>
               <span class="team-category">Youth Development</span>
