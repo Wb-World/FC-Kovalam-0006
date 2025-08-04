@@ -270,7 +270,7 @@
      .header-banner {
             position: relative;
             width: 100%;
-            height: 330px;
+            height: 280px;
             background: #2d6e5c;
             display: flex;
             align-items: center;
@@ -354,7 +354,7 @@
       
       /* Staff Content Sections */
       .staff-section {
-        padding: 80px 0;
+        padding: 20px;
         opacity: 0;
         transform: translateY(30px);
         animation: fadeIn 0.8s ease-out forwards;
@@ -732,7 +732,27 @@
     height: fit-content;
   }
 }
-        }
+.staff-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+/* For the first large image */
+.staff-section:first-child img {
+  width: 70%;
+  max-width: 500px;
+}
+
+/* For the head coach image */
+.staff-section:nth-child(2) img {
+  width: 100%;
+  max-width: 400px;
+}
+
+}
 
     </style>
   </head>
@@ -815,11 +835,14 @@
         </div>
     </section>
 
-      <section class="staff-section" style="background-color: white; padding: 3rem 0;">
+      <section class="staff-section" style="background-color: white;">
+        <center>
+          <h1 class="banner-title" style="color:#0dd49b;padding: 2cap;">Board Members</h1>
+        </center>
         <div class="container">
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+          <div style="display: flex; flex-direction: column; align-items: center;;">
             <img src="images/staffs/s1.png" alt="J. Janakiraman Sundar" 
-                 style="width: 70%; height: 70%">
+                 style="width: 50%; height: 50%">
             <div style="text-align: center;">
               <h3 style="color: #0dd49b;">
                 <b>
@@ -836,7 +859,7 @@
         <div class="container">
           <div style="display: flex; justify-content: center;"> <!-- Added this wrapper -->
             <div class="staff-grid">
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
+              <div style="display: flex; flex-direction: column; align-items: center; ">
                 <img src="images/staffs/s2.png" alt="K.Ansari" 
                      style="width: 100%;; height: 100%">
                 <div style="text-align: center;">
@@ -859,7 +882,27 @@
             <!-- Staff Member 4 -->
             <div class="staff-grid">
               <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;margin-top: 5cap;">
-                <img src="images/staffs/s6.png" alt="J. Janakiraman Sundar" style="width: 30%;height: 30%;">
+                <style>
+                  /* For Mobile & Tablet (screen width ≤ 768px) */
+                  @media (max-width: 768px) {
+                    .st1 {
+                      width: 90%;
+                      height: auto; /* Maintain aspect ratio */
+                    }
+                  }
+                
+                  /* For Laptop/Desktop (screen width ≥ 1024px) */
+                  @media (min-width: 1024px) {
+                    .st1 {
+                      width: 40%;
+                      height: auto; /* You can use fixed height if needed */
+                      min-width: 180px;
+                      max-width: 400px;
+                    }
+                  }
+                </style>
+                               
+                <img src="images/staffs/s6.png" alt="J. Janakiraman Sundar" class="st1">
                 <div style="text-align: center;">
                   <h3 style="color: #0dd49b;">
                     <b>
@@ -885,7 +928,24 @@
             </div>
             <div class="staff-grid">
               <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
-                <img src="images/staffs/s7.png" alt="image be add" style="padding-left: 2cap;width: 70%;height: 70%;">
+                <style>
+                  /* For Mobile & Tablet (screen width ≤ 768px) */
+                  @media (max-width: 768px) {
+                    .st2 {
+                      width: 100%;
+                      height: 100%; /* Maintain aspect ratio */
+                    }
+                  }
+                
+                  /* For Laptop/Desktop (screen width ≥ 1024px) */
+                  @media (min-width: 1024px) {
+                    .st2 {
+                      width: 90%;
+                      height: 90%; /* You can use fixed height if needed */
+                    }
+                  }
+                </style>
+                <img src="images/staffs/s7.png" alt="image be add" style="padding-left: 0cap;" class="st2">
                      <div style="text-align: center;">
                       <h3 style="color: #0dd49b;">
                         <b>
