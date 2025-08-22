@@ -267,11 +267,11 @@ img {
     padding-right: 10px !important;
   }
 
-        /* Add spacing between hero section and first image section on mobile */
-        .row.row-30.p-4 {
-          padding-top: 60px !important;
-        }
-      }
+  /* Add spacing between hero section and first image section on mobile */
+  .row.row-30.p-4 {
+    padding-top: 60px !important;
+  }
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateX(-20px); }
@@ -898,8 +898,21 @@ img {
           </div>
         </div>
         
+        <style>
+          /* Default (desktop / large screens) */
+          .custom-box {
+            padding: 10cap;
+          }
+        
+          /* Mobile view (max-width 768px or your breakpoint) */
+          @media (max-width: 768px) {
+            .custom-box {
+              padding: 2cap;
+            }
+          }
+        </style>
         <div class="row">
-          <div class="col-12" style="padding: 10cap;">
+          <div class="col-12 custom-box">
             <article style="max-width: 200cap; margin: 0; padding: 0;">
               <img 
                 src="images/teams/t10.jpg" 
@@ -917,8 +930,9 @@ img {
             </article>
           </div>
         </div>
+        
           
-        <div class="col-12" style="padding: 10cap;">
+        <div class="col-12 custom-box">
           <article style="max-width: 200cap; border-top-left-radius: 2cap; border-top-right-radius: 2cap;">
             <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
               <img src="images/temples/CARMELCHURCH.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" name="tmpl1"/>
@@ -935,7 +949,7 @@ img {
           </article>
         </div>
         
-        <div class="col-12" style="padding: 10cap;">
+        <div class="col-12 custom-box">
           <article style="max-width: 100%; max-height: 100%;border-top-left-radius: 2cap;border-top-right-radius: 2cap;">
             <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
               <img src="images/extra/t6.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" />
@@ -953,7 +967,7 @@ img {
           </article>
         </div>
 
-        <div class="col-12" style="padding:10cap;">
+        <div class="col-12 custom-box">
           <article style="max-width: 200cap;">
             <a href="#">
               <img src="images/extra/t18.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" style="border-top-left-radius: 2cap;border-top-right-radius: 2cap;"/>
@@ -971,7 +985,7 @@ This unique celebration wasn't just about the game – it was about giving our y
           </article>
         </div>
 
-        <div class="col-12" style="padding: 10cap;">
+        <div class="col-12 custom-box">
           <article style="max-width: 200cap;">
             <a href="#">
               <img src="images/ABI01344.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" style="border-top-left-radius: 2cap;border-top-right-radius: 2cap;"/>
