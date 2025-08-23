@@ -267,11 +267,11 @@ img {
     padding-right: 10px !important;
   }
 
-        /* Add spacing between hero section and first image section on mobile */
-        .row.row-30.p-4 {
-          padding-top: 60px !important;
-        }
-      }
+  /* Add spacing between hero section and first image section on mobile */
+  .row.row-30.p-4 {
+    padding-top: 60px !important;
+  }
+}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateX(-20px); }
@@ -540,7 +540,7 @@ section {
   border: none;
 }
 
-/* Ensure images stretch full width and don’t create white lines */
+/* Ensure images stretch full width and don't create white lines */
 img {
   display: block;
   width: 100%;
@@ -712,6 +712,69 @@ img {
   }
 }
 
+/* Responsive image grid adjustments */
+@media (max-width: 768px) {
+  .post-future-figure {
+    flex-direction: column;
+    height: auto !important;
+  }
+  
+  .post-future-figure img {
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
+  
+  .post-future-content {
+    padding: 20px !important;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.5rem !important;
+  }
+  
+  .hero-section p {
+    font-size: 1.2rem !important;
+  }
+  
+  .footer > div > div {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer > div > div > div {
+    flex: 1 1 100% !important;
+    margin-bottom: 30px;
+  }
+  
+  .footer .follow-us-section {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  
+  .footer .follow-us-section div {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section h1 {
+    font-size: 2rem !important;
+  }
+  
+  .description {
+    font-size: 1rem !important;
+  }
+  
+  .footer {
+    padding: 30px 15px !important;
+  }
+  
+  .footer .logo-section img {
+    height: 80px !important;
+  }
+}
+
     </style>
   </head>
 
@@ -823,33 +886,40 @@ img {
         </div>
 
         <!-- Hero Content -->
-        <!-- <div class="content-container">
-          <div class="hero-section" style="padding-top: 75cap;">
-            <div style="text-align: center; width: 90%; max-width: 1000px;margin-top: 10cap;">
-              <h1 style="color: white; font-size: 5rem; font-weight: 700;">
-                <span style="display: block; color: white;">WE ARE</span>
-                <span style="color: #f8b400; display: block;">FC KOVALAM</span>
-              </h1>
-              <p style="font-size: 4cap;"><b>“Football is market, goal is our target”</b></p>
-            </div>
-          </div>
-        </div> -->
         <div class="content-container">
           <div class="hero-section" style="padding-top: 75cap;">
-            <div style="text-align: center; width: 90%; max-width: 1000px;"> <!-- Added margin-bottom here -->
+            <div style="text-align: center; width: 90%; max-width: 1000px;">
               <h1 style="color: white; font-size: 5rem; font-weight: 700;">
-                <span style="display: block; color: white;">WE ARE</span>
-                <span style="color: #f8b400; display: block;">FC KOVALAM</span>
+                <span style="display: block; color: white;font-size: 70px;">FC KOVALAM</span>
+                <span style="color: white; display: block;">WELCOMES YOU</span>
               </h1>
-              <p style="font-size: 4cap;"><b>“Football is market, goal is our target”</b></p>
+              <p style="font-size: 4cap;color:#0dd49b"><b>"play the game, to make a name"</b></p>
             </div>
           </div>
         </div>
         
+<<<<<<< HEAD
 
 
         <div class="row">
           <div class="col-12" style="padding: 10cap;">
+=======
+        <style>
+          /* Default (desktop / large screens) */
+          .custom-box {
+            padding: 10cap;
+          }
+        
+          /* Mobile view (max-width 768px or your breakpoint) */
+          @media (max-width: 768px) {
+            .custom-box {
+              padding: 2cap;
+            }
+          }
+        </style>
+        <div class="row">
+          <div class="col-12 custom-box">
+>>>>>>> f58ca24deaad866c78ceeab55053276196f9a639
             <article style="max-width: 200cap; margin: 0; padding: 0;">
               <img 
                 src="images/teams/t10.jpg" 
@@ -865,6 +935,7 @@ img {
                 </div>
               </div>
             </article>
+<<<<<<< HEAD
           </div>
         </div>
           <div class="col-12" style="padding: 10cap;">
@@ -943,10 +1014,38 @@ Inspired by the roaring success of Kerala’s beach football scene, this event i
             </article>
           </div>
           
+=======
+          </div>
+        </div>
+        
+          
+        <div class="col-12 custom-box">
+          <article style="max-width: 200cap; border-top-left-radius: 2cap; border-top-right-radius: 2cap;">
+            <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
+              <img src="images/temples/CARMELCHURCH.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" name="tmpl1"/>
+              <img src="images/temples/DARGHA.jpg" alt="2" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; transition: none; transform: none;" />
+              <img src="images/temples/KAILASANATHARKOVIL.jpg" alt="3" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-right-radius: 2cap; transition: none; transform: none;" />
+            </div>
+      
+            <!-- Text Content Section -->
+            <div class="post-future-content p-4" style="background-color: #0dd49b;border-bottom-left-radius: 2cap;border-bottom-right-radius: 2cap;">
+              <h3 class="post-future-title mt-4 description" style="font-size: 2cap; color: white;">
+                In a beautiful display of unity, a church, mosque, and temple stand together in this coastal town—Our Lady of Mount Carmel Shrine, a serene Dargah, and the sacred Kailasanathar Temple. Together, they reflect the town's rich cultural heritage and peaceful coexistence of faiths, celebrating harmony in diversity.
+              </h3>
+            </div>
+>>>>>>> f58ca24deaad866c78ceeab55053276196f9a639
           </article>
         </div>
-      </div>
+        
+        <div class="col-12 custom-box">
+          <article style="max-width: 100%; max-height: 100%;border-top-left-radius: 2cap;border-top-right-radius: 2cap;">
+            <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
+              <img src="images/extra/t6.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" />
+              <img src="images/extra/t7.jpg" alt="2" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; transition: none; transform: none;" />
+              <img src="images/extra/t12.jpg" alt="3" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-right-radius: 2cap; transition: none; transform: none;" />
+            </div>              
 
+<<<<<<< HEAD
 
             <!-- Styling -->
             <style>
@@ -1059,20 +1158,178 @@ Inspired by the roaring success of Kerala’s beach football scene, this event i
    Reach Us →
 </a>
                     </div>
+=======
+            <div class="post-future-content p-4" style="background-color: #0dd49b;border-bottom-left-radius: 2cap;border-bottom-right-radius: 2cap;">
+              <div class="post-future-content p-4">
+                <h4 class="description">
+                  Mr. J. Janakiraman Sundar, the visionary Chairman and Founder of FC Kovalam, has transformed the club into a powerhouse for grassroots football in India. With passion, discipline, and a deep commitment to youth development, he has created a platform that nurtures talent and builds character. More than just a football club, FC Kovalam under his leadership is a movement for empowerment, unity, and social change.
+                </h4>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 custom-box">
+          <article style="max-width: 200cap;">
+            <a href="#">
+              <img src="images/extra/t18.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" style="border-top-left-radius: 2cap;border-top-right-radius: 2cap;"/>
+            </a>
+
+            <div class="post-future-content p-4" style="background-color: #0dd49b;border-bottom-left-radius: 2cap;border-bottom-right-radius: 2cap;">
+              <h4 class="description">
+                The golden sands of Kovalam Beach came alive with passion, energy, and unstoppable spirit as we hosted a vibrant football event dedicated to the stars of tomorrow – our junior players!
+
+This unique celebration wasn't just about the game – it was about giving our youngest talents the stage they truly deserve. From the joyful cheers of the crowd to the fierce kicks on the sand, the event echoed one message loud and clear: The future of football starts here.
+                🔥 Special Show Match – Juniors Take Center Stage!
+                In between the main events, the excitement peaked with a special juniors' show match – a thrilling display of talent, teamwork, and raw passion. These young players reminded us that greatness has no age – just heart.
+              </h4>
+            </div>
+          </article>
+        </div>
+
+        <div class="col-12 custom-box">
+          <article style="max-width: 200cap;">
+            <a href="#">
+              <img src="images/ABI01344.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" style="border-top-left-radius: 2cap;border-top-right-radius: 2cap;"/>
+            </a>
+            <div class="post-future-content p-4" style="background-color: #0dd49b;border-bottom-left-radius: 2cap;border-bottom-right-radius: 2cap;">
+              <h4 class="description">
+                Tamil Nadu's First & Biggest Beach Football Festival! 
+Bringing the Game to the Sand – Like Never Before!
+
+Get ready, Tamil Nadu! For the first time ever, our beautiful coastline is turning into a battleground of skills, spirit, and celebration. Welcome to Tamil Nadu's Biggest Beach Football Tournament – a festival that blends sport, music, culture, and pure adrenaline!
+
+Inspired by the roaring success of Kerala's beach football scene, this event is more than just a tournament—it's a movement, bringing together local talents, football lovers, families, and party-goers under one vibrant sky.
+              </h4>
+            </div>
+          </article>
+        </div>
+        
+        <!-- Styling -->
+        <style>
+          .angled-image-wrapper {
+            display: flex;
+            overflow: hidden;
+            background: #2d6e5c;
+            border-radius: 20px 20px 0 0;
+          }
+
+          .angled-image {
+            position: relative;
+            flex: 1;
+            overflow: hidden;
+          }
+
+          .angled-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+          }
+
+          .angled-image.first img {
+              clip-path: polygon(0 0, 100% 0, 90% 100%, 0% 100%);
+            }
+
+            .angled-image.middle img {
+              clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+            }
+
+            .angled-image.last img {
+              clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+            }
+        </style>
+        
+        <footer style="background-color: #000000; color: #ffffff; padding: 50px 20px 30px; font-family: 'Inter', Arial, sans-serif;background-color: #2d6e5c">
+          <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Logo and Navigation -->
+            <div style="background-color:#0dd49b; border-radius: 12px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <!-- Logo and Navigation -->
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 30px;">
+                <!-- Logo Section (Left) -->
+                <div style="flex: 0 0 25%; margin-bottom: 20px;">
+                  <div style="margin-bottom: 20px;">
+                    <img src="images/logo.png" alt="FC Kovalam Logo" style="width: auto; height: 120px; max-width: 100%; object-fit: contain;">
+                  </div>
+                  <div>
+                    <b>
+                    <ul style="list-style: none; padding-left: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="index.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Home</a></li>
+                      <li style="margin-bottom: 12px;"><a href="About.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">About Us</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Teams.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Teams</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Staff.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Staff</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Events.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Events</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Contact-us.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Contact us</a></li>
+                    </ul>
+                    </b>
+>>>>>>> f58ca24deaad866c78ceeab55053276196f9a639
                   </div>
                 </div>
-                  
-                </div>
             
-
-                  <p style="margin: 0; color: white; font-size: 14px; text-align: center;font: bold;">
-                    © 2025 FC Kovalam. All rights reserved.
+                <!-- Address Section (Center) -->
+                <div style="flex: 0 0 40%; text-align: center; padding: 0 20px;margin-top: 15cap;">
+                  <p style="margin: 0 0 12px 0; font-weight: 600; font-size: 22px; color: #f8b400;">
+                    FC KOVALAM SPORTS ACADEMY
+                  </p>
+                  <p style="font-size: 20px; line-height: 1.6; color: #ffffff;">
+                    Kovalam Village, New Majeeth Street<br>
+                    Chengalpattu – 603112<br>
+                    Tamil Nadu, India
                   </p>
                 </div>
+            
+                <!-- Follow Us Section (Right) -->
+                <div style="flex: 0 0 25%; text-align: right;margin-top: 15cap;">
+                  <div style="margin-bottom: 25px;">
+                    <p style="margin: 0 0 15px 0; font-weight: 600; font-size: 19px; color: #f8b400;">Follow Us</p>
+                    <div style="display: flex; gap: 20px; justify-content: flex-end;">
+                      <a href="https://instagram.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                      </a>
+                      <a href="https://twitter.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                      </a>
+                      <a href="https://youtube.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="contact-us.html" style="
+     color: #f8b400;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 15px;
+     display: inline-block;
+     padding: 8px 20px;
+     border: 2px solid #f8b400;
+     border-radius: 20px;
+     transition: all 0.3s ease;
+     margin-top: 5px;
+">
+     Reach Us →
+</a>
+                </div>
               </div>
-            </footer>
-        </div>
-      </section>
+            </div>
+              
+            </div>
+        
+
+              <p style="margin: 0; color: white; font-size: 14px; text-align: center;font: bold;margin-top: 2cap;">
+                © 2025 FC Kovalam. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </section>
 
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
@@ -1101,3 +1358,4 @@ Inspired by the roaring success of Kerala’s beach football scene, this event i
       });
     </script>
   </body>
+</html>

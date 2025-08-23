@@ -656,6 +656,40 @@
           flex-direction: column;
         }
       }
+      .header-banner {
+            position: relative;
+            width: 100%;
+            height: 360px;
+            background:#0dd49b;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(0 0, 100% 0, 100% 88%, 50% 100%, 0 88%)
+        }
+        .header-banner {
+                height: 360px;
+            }
+            @media (max-width: 768px) {
+            .banner-title {
+                font-size: 2.5rem;
+                letter-spacing: 2px;
+            }
+
+            .header-banner {
+                height: 300px;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+          }
+    .banner-title {
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin-bottom: 20px;
+  }
     </style>
   </head>
 
@@ -728,15 +762,18 @@
           </li>
         </ul>
       </div>
-
+      <section class="header-banner">
+        <div class="banner-content">
+            <h1 class="banner-title" style="color: white;margin-top: 4cap;">Achievements</h1>
+        </div>
+      </section>
       <!-- Achievements Section -->
       <section class="achievements-container">
-       <h1 class="achievements-title" style="margin-top: 80px;"><u>Achievements</u></h1>
        <div class="achievements-grid" style="max-width: 1200px; margin: 0 auto; padding: 20px; font-family: 'Segoe UI', Arial, sans-serif;">
         
         <!-- Achievement 1 -->
         <div class="achievement-item">
-          <img src="images/achievements/1.png" alt="La Gazon Winners" class="achievement-image">
+          <img src="images/achievements/1k.png" alt="La Gazon Winners" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">LA GAZON TOURNAMENT WINNERS</h2>
             <p class="achievement-description">FC Kovalam made history by winning the prestigious La Gazon Tournament in Madrid, showcasing our team's technical brilliance against top European competition. Our players demonstrated exceptional skill and tactical awareness throughout the tournament, culminating in a dominant 3-0 victory in the final against Spanish giants. This victory marked our first international trophy and put FC Kovalam on the global football map.</p>
@@ -745,7 +782,7 @@
         
         <!-- Achievement 2 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/2.png" alt="Vinlor Rakuten" class="achievement-image">
+          <img src="images/achievements/2k.png" alt="Vinlor Rakuten" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">VINLOR RAKUTEN CHAMPIONS</h2>
             <p class="achievement-description">Our victory in the Vinlor Rakuten sponsored tournament demonstrated FC Kovalam's growing reputation in international football circles. Competing against professional academies from across Asia, our players adapted brilliantly to different styles of play. The tournament's best attacking team award recognized our exciting brand of football, while two players earned trials with European clubs based on their standout performances throughout the competition.</p>
@@ -754,7 +791,7 @@
         
         <!-- Achievement 3 -->
         <div class="achievement-item">
-          <img src="images/achievements/3.png" alt="FC Kovalam Tournament" class="achievement-image">
+          <img src="images/achievements/3k.png" alt="FC Kovalam Tournament" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">FC KOVALAM TOURNAMENT</h2>
             <p class="achievement-description">Our home tournament saw both senior and youth teams reach the finals, with the senior team claiming the championship trophy in dramatic fashion after a penalty shootout that went to sudden death. The youth team's runner-up finish was equally impressive, with several academy players catching the eye of national team selectors. The tournament attracted record crowds and media attention, solidifying our position as one of the region's premier football institutions.</p>
@@ -763,7 +800,7 @@
         
         <!-- Achievement 4 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/4.png" alt="Ponamallee Winners" class="achievement-image">
+          <img src="images/achievements/4k.png" alt="Ponamallee Winners" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">PONAMALLEE TOURNAMENT WINNERS</h2>
             <p class="achievement-description">Regional dominance was confirmed with this tournament victory where our team displayed remarkable consistency and attacking flair throughout the competition. We maintained an unbeaten record while scoring an average of four goals per game, with our striker claiming the golden boot award. The final victory against our arch-rivals was particularly sweet, coming from behind to win 3-1 in front of a packed stadium of passionate supporters.</p>
@@ -772,7 +809,7 @@
         
         <!-- Achievement 5 -->
         <div class="achievement-item">
-          <img src="images/achievements/5.png" alt="Nadirid Lailica" class="achievement-image">
+          <img src="images/achievements/5k.png" alt="Nadirid Lailica" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">NADIRID LAILICA CHAMPIONS</h2>
             <p class="achievement-description">This international triumph in the Middle East marked a significant milestone for our club's global recognition and player development program. Competing in extreme weather conditions, our players showed tremendous character to overcome professional academies from across the region. The tournament organizers praised our team's sportsmanship and technical ability, with our midfield maestro being named player of the tournament for his influential performances.</p>
@@ -781,7 +818,7 @@
         
         <!-- Achievement 6 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/6.png" alt="KFC Tournament" class="achievement-image">
+          <img src="images/achievements/6k.png" alt="KFC Tournament" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">KFC TOURNAMENT WINNERS</h2>
             <p class="achievement-description">Our dominant performance in this fast-paced tournament included winning all matches by 3+ goals and setting a new fastest goal record of just 7 seconds from kickoff. The team's fitness levels and tactical flexibility were unmatched, allowing us to adapt to different opponents with ease. Our goalkeeper maintained a tournament-record six consecutive clean sheets, while our attacking trio combined for 18 goals over seven matches.</p>
@@ -790,7 +827,7 @@
         
         <!-- Achievement 7 -->
         <div class="achievement-item">
-          <img src="images/achievements/7.png" alt="Emirates U14" class="achievement-image">
+          <img src="images/achievements/7k.png" alt="Emirates U14" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">EMIRATES U14 CHAMPIONS</h2>
             <p class="achievement-description">Our youngest team's impressive showing in Dubai demonstrated the effectiveness of our youth development program, with an average age of just 13.2 years. The players implemented complex tactical instructions with maturity beyond their years, earning praise from international scouts. Three players received invitations to national team trials, while the entire squad was awarded the tournament's Fair Play trophy for their exemplary conduct on and off the pitch.</p>
@@ -799,7 +836,7 @@
         
         <!-- Achievement 8 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/8.png" alt="Tricity Runners" class="achievement-image">
+          <img src="images/achievements/8k.png" alt="Tricity Runners" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">TRICITY STATE RUNNERS-UP</h2>
             <p class="achievement-description">A strong showing in this competitive state-level tournament earned us recognition for our defensive organization and fair play, conceding just one goal in the group stages. Despite fielding a team two years younger than most opponents, our players displayed remarkable composure to reach the final. The narrow 1-0 loss in the championship match couldn't overshadow our overall performance, with our captain being named tournament MVP for his inspirational leadership.</p>
@@ -808,7 +845,7 @@
         
         <!-- Achievement 9 -->
         <div class="achievement-item">
-          <img src="images/achievements/9.png" alt="RMIU Academy" class="achievement-image">
+          <img src="images/achievements/9k.png" alt="RMIU Academy" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">RMIU ACADEMY CHAMPIONS</h2>
             <p class="achievement-description">Our U-16 squad's victory against elite academy teams was sealed with a dramatic penalty shootout in the finals that went to 12 kicks per side. The tournament tested our players' technical and mental strength against some of the country's most prestigious football schools. Three players were selected for the All-Star team, while our goalkeeper's tournament-record 8 penalty saves earned him a professional contract offer from a first division club.</p>
@@ -817,7 +854,7 @@
         
         <!-- Achievement 10 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/10.png" alt="CIPSS Blue Cubs" class="achievement-image">
+          <img src="images/achievements/10k.png" alt="CIPSS Blue Cubs" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">CIPSS BLUE CUBS WINNERS</h2>
             <p class="achievement-description">Success in this academically-focused tournament highlighted our players' technical superiority and tactical understanding against teams known for their disciplined approach. Our creative midfield trio dominated possession in every match, while our defensive unit maintained organization under pressure. The tournament directors praised our team's ability to balance academic requirements with high-level football, awarding us the inaugural "Scholar-Athlete" trophy.</p>
@@ -826,7 +863,7 @@
         
         <!-- Achievement 11 -->
         <div class="achievement-item">
-          <img src="images/achievements/11.png" alt="Sembakkam" class="achievement-image">
+          <img src="images/achievements/11k.png" alt="Sembakkam" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">SEMBAKKAM TOURNAMENT WINNERS</h2>
             <p class="achievement-description">Our third consecutive title in this local competition cemented our dominance against regional rivals, extending our unbeaten run to 22 matches over three seasons. The final victory was particularly satisfying as it came against our closest competitors, with two late goals turning a 1-0 deficit into a 2-1 triumph. Our striker's tournament-leading 9 goals earned him a professional contract, while the team's overall performance attracted record sponsorship deals for the club.</p>
@@ -835,7 +872,7 @@
         
         <!-- Achievement 12 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/12.png" alt="Grande Eva" class="achievement-image">
+          <img src="images/achievements/12k.png" alt="Grande Eva" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">GRANDE EVA U17 CHAMPIONS</h2>
             <p class="achievement-description">Our U-17 squad's victory against long-time academy rivals was sealed with an extra-time winning goal in a match described by scouts as one of the finest youth games in recent memory. The tournament showcased our academy's emphasis on technical development, with our players completing 85% of passes throughout the competition. Five players received call-ups to national youth teams following their performances, while our coaching staff was approached by several professional clubs for their expertise.</p>
@@ -844,7 +881,7 @@
         
         <!-- Achievement 13 -->
         <div class="achievement-item">
-          <img src="images/achievements/13.png" alt="KK Nagar" class="achievement-image">
+          <img src="images/achievements/13k.png" alt="KK Nagar" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">KK NAGAR U14 CHAMPIONS</h2>
             <p class="achievement-description">Our youngest academy team showed remarkable composure, conceding just two goals while scoring 18 throughout the competition against opponents often fielding older players. The technical quality of our players attracted attention from national team scouts, with three players invited to join elite training programs. The tournament directors awarded our team the "Best Sporting Spirit" trophy for our fair play and positive attitude throughout the event.</p>
@@ -853,7 +890,7 @@
         
         <!-- Achievement 14 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/14.png" alt="Vellore FC" class="achievement-image">
+          <img src="images/achievements/14k.png" alt="Vellore FC" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">VELLORE FC RUNNERS-UP</h2>
             <p class="achievement-description">Our U-17 team's performance against professional academy opposition earned plaudits for their technical quality and tactical discipline in challenging conditions. Despite fielding a squad with five players two years younger than the competition limit, we reached the final with a series of impressive victories. The narrow 1-0 loss in the championship match couldn't overshadow our overall achievement, with our goalkeeper being named player of the tournament for his heroic performances.</p>
@@ -862,7 +899,7 @@
         
         <!-- Achievement 15 -->
         <div class="achievement-item">
-          <img src="images/achievements/15.png" alt="Thiruvallur Pongal" class="achievement-image">
+          <img src="images/achievements/15k.png" alt="Thiruvallur Pongal" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">THIRUVALLUR PONGAL CHAMPIONS</h2>
             <p class="achievement-description">Victory in this festive tournament showcased our players' ability to adapt to challenging conditions and physical play during the traditional Pongal celebrations. Competing in extreme heat on uneven pitches, our technical quality shone through as we remained unbeaten throughout the competition. The local community embraced our team's positive attitude, with tournament organizers praising our players for participating in cultural events and coaching clinics for underprivileged children.</p>
@@ -871,7 +908,7 @@
         
         <!-- Achievement 16 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/16.png" alt="Kovilambakkam" class="achievement-image">
+          <img src="images/achievements/16k.png" alt="Kovilambakkam" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">KOVILAMBAKKAM U17 CHAMPIONS</h2>
             <p class="achievement-description">An unprecedented all-FC Kovalam final demonstrated the remarkable depth in our youth system, with both our A and B teams progressing through a competitive field of 32 academies. The championship match was a showcase of our playing philosophy, with both teams emphasizing technical possession and creative attacking play. Tournament scouts noted that at least eight players from the final showed potential for professional careers, a testament to our development program.</p>
@@ -880,7 +917,7 @@
         
         <!-- Achievement 17 -->
         <div class="achievement-item">
-          <img src="images/achievements/17.png" alt="Vallore Katbadi" class="achievement-image">
+          <img src="images/achievements/17k.png" alt="Vallore Katbadi" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">VALLORE KATBADI RUNNERS-UP</h2>
             <p class="achievement-description">Our team showed great character in this traditional tournament, adapting well to its unique challenges including modified rules and local playing styles. Despite fielding a squad of primarily first-year academy players, we reached the final with a series of impressive comebacks. The tournament organizers awarded us the "Most Entertaining Team" prize for our attacking play, while our captain received the "Emerging Talent" award for his leadership and technical displays.</p>
@@ -889,7 +926,7 @@
         
         <!-- Achievement 18 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/18.png" alt="Pallavaram" class="achievement-image">
+          <img src="images/achievements/18k.png" alt="Pallavaram" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">PALLAVARAM U17 RUNNERS-UP</h2>
             <p class="achievement-description">A narrow defeat in the finals couldn't overshadow our team's impressive run in this competitive youth tournament featuring several professional academies. Our players demonstrated remarkable resilience, coming from behind in three consecutive knockout matches to reach the final. The coaching staff was particularly pleased with how our players implemented tactical adjustments between matches, with several opponents praising our team's organization and discipline throughout the tournament.</p>
@@ -898,7 +935,7 @@
         
         <!-- Achievement 19 -->
         <div class="achievement-item">
-          <img src="images/achievements/19.png" alt="Vellore U14" class="achievement-image">
+          <img src="images/achievements/19k.png" alt="Vellore U14" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">VELLORE U14 CHAMPIONS</h2>
             <p class="achievement-description">Our young talents dominated this district-level tournament, showcasing the effectiveness of our academy program by winning all eight matches while conceding just one goal. The team's technical superiority was evident throughout, with our players completing 87% of their passes in the final. Tournament organizers invited our coaching staff to conduct development clinics based on our team's impressive performances and exemplary conduct both on and off the pitch.</p>
@@ -907,7 +944,7 @@
         
         <!-- Achievement 20 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/20.png" alt="Soccer Plus" class="achievement-image">
+          <img src="images/achievements/20k.png" alt="Soccer Plus" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">SOCCER PLUS U14 WINNERS</h2>
             <p class="achievement-description">Victory in this technical skills-focused tournament highlighted our players' superior ball control and creativity in one-on-one situations. The competition tested fundamental skills through a series of technical challenges before culminating in small-sided matches. Our players claimed top honors in four of the six skill categories, while also demonstrating how these technical abilities translated into effective team play during the match phases of the tournament.</p>
@@ -916,7 +953,7 @@
         
         <!-- Achievement 21 -->
         <div class="achievement-item">
-          <img src="images/achievements/21.png" alt="Team Spirit" class="achievement-image">
+          <img src="images/achievements/z.png" alt="Team Spirit" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">TEAM SPIRIT AWARD</h2>
             <p class="achievement-description">Recognized for our squad's unparalleled harmony and collective determination throughout the season, this award celebrates the family atmosphere within FC Kovalam. Players, staff, and supporters created an environment where every individual felt valued and motivated to perform at their best. The award committee particularly noted how our team celebrated every success together and supported each other through challenges, creating a model culture that other clubs aspire to emulate.</p>
@@ -925,7 +962,7 @@
         
         <!-- Achievement 22 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/22.png" alt="Legacy Award" class="achievement-image">
+          <img src="images/achievements/21k.png" alt="Legacy Award" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">LEGACY CLUB AWARD</h2>
             <p class="achievement-description">Honored for our century-long contribution to football development and cultural impact in the region, this recognition celebrates FC Kovalam's enduring values and traditions. From humble beginnings as a local sports club to our current status as a respected football institution, we've maintained our commitment to developing both players and character. The award acknowledges our alumni network of over 200 professional players and countless community initiatives that have shaped generations of football lovers.</p>
@@ -934,7 +971,7 @@
         
         <!-- Achievement 23 -->
         <div class="achievement-item">
-          <img src="images/achievements/23.png" alt="Future Champions" class="achievement-image">
+          <img src="images/achievements/22k.png" alt="Future Champions" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">FUTURE CHAMPIONS PROGRAM</h2>
             <p class="achievement-description">Our youth system was ranked #1 globally for producing world-class talent and winning multiple youth tournaments over the past decade. This recognition comes after an independent study of academy success rates, which highlighted our unique blend of technical training, tactical education, and character development. With 15 academy graduates currently playing in top leagues worldwide and seven youth tournament victories in the past three years, FC Kovalam has established itself as a benchmark for player development.</p>
@@ -943,7 +980,7 @@
         
         <!-- Achievement 24 -->
         <div class="achievement-item alternate">
-          <img src="images/achievements/24.png" alt="Hall of Fame" class="achievement-image">
+          <img src="images/achievements/23k.png" alt="Hall of Fame" class="achievement-image">
           <div class="achievement-content">
             <h2 class="achievement-title">HALL OF FAME INDUCTION</h2>
             <p class="achievement-description">Permanent enshrinement in the National Football Hall of Fame recognized our club's historic achievements and enduring legacy in shaping the sport's development. As only the third club to receive this honor, FC Kovalam joins an elite group of institutions that have made exceptional contributions to football. The induction ceremony highlighted our innovative training methods, community impact, and the production of 45 international players over our storied history.</p>
@@ -1021,4 +1058,5 @@
         });
     </script>
   </body>
+
 </html>
