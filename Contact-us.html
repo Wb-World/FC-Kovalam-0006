@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Contact Us - FC Kovalam</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+  
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      body {
+  background-color:#1c4438;
+  color: white;
+}
+
+.section-md,
+.bg-gray-100,
+.contact-container,
+.contact-card,
+.map-container {
+  background-color: #2d6e5c !important;
+  color: white;
+}
+
+.contact-card {
+  background-color: #1a1a1a !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.contact-form button {
+  background-color: #f8b400;
+  color: black;
+}
+
+
+      .footer-text {
+    margin: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #fff; /* assuming dark background */
+  }
+
+  @media (max-width: 768px) {
+    .footer-text {
+      font-size: 14px;
+      padding: 10px 15px;
+    }
+  }
+      /* Added theme styles without changing your structure */
+      :root {
+        --primary-color: #2d6e5c;
+        --secondary-color: #f8b400;
+        --dark-color: #1e4d3e;
+        --light-color: #f8f9fa;
+      }
+      
+      /* Background colors */
+      .page {
+        background-color: black;
+      }
+    
+      
+      .section-md {
+        background-color: white;
+      }
+      
+      .bg-gray-100 {
+        background-color: var(--light-color) !important;
+      }
+      
+      /* Text colors */
+      .main-nav a {
+        color: white !important;
+      }
+      
+      .main-nav a {
+  color: white !important;
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+      .main-nav a:hover {
+        color: var(--secondary-color) !important;
+      }
+      
+      /* Buttons */
+      button[style*="background-color: orange"] {
+        background-color: var(--secondary-color) !important;
+        color: black !important;
+      }
+      
+      button[style*="background-color: orange"]:hover {
+        background-color: #e0a800 !important;
+      }
+      
+      /* Footer */
+      .footer-classic-dark {
+        background-color: var(--primary-color) !important;
+        color: white !important;
+      }
+      
+      /* Mobile menu */
+      .side-menu {
+        background-color: black;
+      }
+      
+      /* Link hover effects */
+      .main-nav a::after {
+        background-color: var(--secondary-color) !important;
+      }
+      
+      /* Keep all your original responsive styles */
+      @media (max-width: 992px) {
+        .slogan-left,
+        .slogan-right {
+          transform: none !important;
+          padding: 0 !important;
+        }
+
+        .slogan-left {
+          order: 1;
+        }
+
+        .logo-center {
+          order: 2;
+        }
+
+        .slogan-right {
+          order: 3;
+        }
+      }
+
+      /* Responsive utility fix */
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    
+      .post-future {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    
+      @media (max-width: 768px) {
+        .rd-navbar-main-top > .rd-navbar-main-container {
+          flex-direction: column;
+          align-items: center;
+        }
+    
+        .rd-navbar-main-top h3 {
+          font-size: 18px;
+          padding: 10px;
+          text-align: center;
+          transform: none !important;
+        }
+    
+        .rd-navbar-main-top > .rd-navbar-main-container > div {
+          transform: none !important;
+          padding: 10px !important;
+        }
+    
+        .brand-logo {
+          width: 80px !important;
+          margin: 0 auto;
+        }
+    
+        .group-sm.group-flex {
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        }
+    
+        .button-media {
+          width: 90% !important;
+          max-width: 300px;
+          font-size: 18px !important;
+        }
+    
+        .aside-component article {
+          margin-left: 0 !important;
+          text-align: center;
+        }
+    
+        .swiper-container {
+          height: 50vh !important;
+        }
+      }
+    
+      @media (max-width: 480px) {
+        .rd-navbar-main-top h3 {
+          font-size: 16px;
+        }
+    
+        .button-media {
+          height: 60px !important;
+          font-size: 16px !important;
+        }
+    
+        .post-future {
+          max-width: 90%;
+        }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateX(-20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      .nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .nav-item {
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: green;
+    transition: width 0.3s ease;
+  }
+
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
+/* Navigation fixes */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+#hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+  
+  /* Adjust header padding on mobile */
+  .header-container {
+    padding: 10px 0 !important;
+  }
+  
+  /* Make sure logo is properly centered */
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
+/* Side menu base styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding-top: 80px;
+  transform: translateX(-100%); /* hidden by default */
+}
+
+/* Show menu */
+.side-menu.active {
+  transform: translateX(0);
+}
+
+/* Keyframes for sliding and fading */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* List items default state */
+.side-menu ul li {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+/* Animate list items when menu is active */
+.side-menu.active ul li {
+  animation: slideFadeIn 0.5s forwards;
+}
+
+/* Staggered animation delays */
+.side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+.side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+.side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+.side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+.side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+.side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+.side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); /* Or fully black */
+  z-index: 1000;
+}
+
+#overlay.active {
+  display: block;
+}
+
+/* Contact Page Specific Styles */
+.contact-hero {
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/contact-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  background-color: #0dd49b;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.contact-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.contact-card h3 {
+  color: #2d6e5c;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info i {
+  margin-right: 10px;
+  color: #f8b400;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  background-color: #f8b400;
+  color: black;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #e0a800;
+}
+
+.map-container {
+  margin-top: 50px;
+  height: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    height: 40vh;
+    margin-top: 70px;
+  }
+  
+  .contact-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.about-heading {
+  font-family: 'Anton', sans-serif; /* Bold, compressed font */
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Description Paragraph Font */
+.about-description {
+  font-family: 'Inter', sans-serif; /* Clean, modern sans-serif */
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: #ffffff;
+  font: bold;
+}
+    </style>
+  </head>
+  
+  <body>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+      </a>
+    </div>
+    
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
+      </div>
+    </div>
+    
+    <!-- Page -->
+    <div class="page" style="background-color:#2d6e5c">
+      <!-- Overlay to close side menu -->
+      <div id="overlay"></div>
+      
+      <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000;background-color:black;">
+        <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; background-color:black;padding:1cap;">
+          <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 15px 0;">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+    
+            <div class="mobile-logo">
+              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 60px;"/></a>
+            </div> 
+      
+            <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
+                <ul id="navList" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; width: 100%;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: space-evenly; flex-grow: 1;">
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="index.html" class="nav-item" style="color: white;">Home</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="About.html" class="nav-item" style="color: white;">About Us</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Teams.html" class="nav-item" style="color: white;">Teams</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Events.html" class="nav-item" style="color: white;">Events</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Staff.html" class="nav-item" style="color: white;">Staff</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
+                    </div>
+                  
+                    <li style="margin-left: auto;">
+                      <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
+                        Register now!
+                      </button>
+                    </li>
+                  </ul>
+                  
+            </nav>
+          </div>
+        </div>
+      </header>
+      
+      <!-- Mobile Menu -->
+      <div class="side-menu" id="sideMenu" style="background-color: black;">
+        <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 20px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+
+        <ul style="list-style: none; padding: 20px;font-weight: bold;">
+          <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
+          <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
+          <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
+          <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
+          <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
+          <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
+          <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
+          <li>
+            <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
+          </li>
+        </ul>
+      </div>
+  
+
+      <!-- Contact Content Section -->
+      <section class="contact-container">
+        <div class="contact-grid">
+          <div class="contact-card" style="margin-top: 10cap;margin-bottom: 5cap;">
+            <h3 class="about-heading">Contact Information</h3>
+            <div class="about-description">
+              <b>
+              <p><i class="fas fa-map-marker-alt" style="justify-content: center;"></i>
+                Kovalam Village
+                New Majeeth Street
+                Chengalpattu – 603112
+                Tamil Nadu, India
+              </p>
+              <p><i class="fas fa-phone"></i> +91 8148720019</p>
+              <p><i class="fas fa-envelope" style="margin-right: 8px;"></i>fckovalam2019@gmail.com</p>
+              </b>
+            </div>
+            <h3 class="about-heading">Follow Us</h3>
+            <div class="social-links">
+              <a href="#" style="margin-right: 15px; color: #2d6e5c; font-size: 1.5rem;"><i class="fab fa-instagram"></i></a>
+              <a href="#" style="margin-right: 15px; color: #2d6e5c; font-size: 1.5rem;"><i class="fab fa-twitter"></i></a>
+              <a href="#" style="color: #2d6e5c; font-size: 1.5rem;"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Form Card -->
+        <div class="contact-card">
+          <h3 class="about-heading">Send Us a Message</h3>
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="tel" placeholder="Your Phone">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="map-container" style="width: 100%; height: 400px;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15563.130770496948!2d80.23074006607754!3d12.792612860112813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52504501360969%3A0xa6d519897b7d441a!2sKovalam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1752646074511!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        
+      </section>
+      <style>
+        .contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.contact-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  flex: 1 1 350px;
+  max-width: 500px;
+}
+
+.contact-card h3 {
+  margin-bottom: 20px;
+  color: #2d6e5c;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.social-links a {
+  margin-right: 15px;
+  color: #2d6e5c;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+.social-links a:hover {
+  color: #1c4438;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.contact-form button {
+  background-color: #2d6e5c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-card {
+  background: #0dd49b !important;
+  color: white !important;
+}
+
+.contact-card h3,
+.contact-card p,
+.contact-card label {
+  color: white !important;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.contact-form button {
+  background-color: #0dd49b !important;
+  color: white !important;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+  background-color: #0bbd8e !important;
+}
+
+      </style>
+
+      <!-- Footer -->
+      <footer class="section footer-classic footer-classic-dark context-dark">
+        <div class="footer-classic-aside footer-classic-darken">
+          <div class="container">
+            <div class="layout-justify" style="display: flex; justify-content: center; align-items: center; padding: 15px 0;">
+              <p style="margin-bottom: 2cap; text-align: center; font-size: 16px; color: #fff;">
+                &copy; 2025 FC Kovalam. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- Font Awesome for icons -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+  const hamburger = document.getElementById('hamburger');
+  const sideMenu = document.getElementById('sideMenu');
+  const overlay = document.getElementById('overlay');
+
+  hamburger.addEventListener('click', () => {
+    sideMenu.classList.toggle('active');
+    overlay.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+    hamburger.classList.toggle('active'); // for hamburger X animation
+  });
+
+  overlay.addEventListener('click', () => {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+    hamburger.classList.remove('active');
+  });
+});
+      </script>
+      
+    
+  </body>
+</html>

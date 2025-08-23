@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <title>About Us - FC Kovalam</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Kanit:300,400,500,500i,600,900%7CRoboto:400,900">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+      /* Beautiful Typography */
+      body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.7;
+        color: #333;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+      
+      .adj-size {
+        font-size: 20px;
+        font-family: 'Poppins', sans-serif;
+      }
+      
+      /* Responsive Font Sizes */
+      @media (max-width: 768px) {
+        .adj-size {
+          font-size: 18px;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        .adj-size {
+          font-size: 16px;
+        }
+      }
+      
+      /* Responsive Layout Adjustments */
+      @media (max-width: 1200px) {
+        [style*="width: 70%"] {
+          width: 80% !important;
+        }
+      }
+      
+      @media (max-width: 992px) {
+        [style*="width: 70%"] {
+          width: 90% !important;
+        }
+        
+        [style*="font-size: 5cap"] {
+          font-size: 3.5rem !important;
+        }
+        
+        [style*="font-size: 2cap"] {
+          font-size: 1.5rem !important;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        [style*="margin-top: 10cap"] {
+          margin-top: 8rem !important;
+        }
+        
+        [style*="padding: 5cap 0"] {
+          padding: 3rem 0 !important;
+        }
+        
+        [style*="padding: 3cap"] {
+          padding: 2rem !important;
+        }
+        
+        [style*="font-size: 5cap"] {
+          font-size: 2.5rem !important;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        [style*="border-top-right-radius: 5cap"] {
+          border-top-right-radius: 3rem !important;
+        }
+        
+        [style*="font-size: 5cap"] {
+          font-size: 2rem !important;
+        }
+        
+        [style*="font-size: 2cap"] {
+          font-size: 1.2rem !important;
+        }
+      }
+      
+      /* Original Styles Below - Unchanged */
+      /* Animation Keyframes */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes slideInRight {
+        from { transform: translateX(20px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+      }
+
+      @keyframes slideFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateX(30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      
+      .footer {
+          background-color: #000;
+          color: #fff;
+          padding: 20px 0;
+          text-align: center;
+          font-size: 16px;
+          letter-spacing: 0.5px;
+          animation: fadeIn 1s ease-out;
+      }
+
+      /* Hamburger Menu */
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30px;
+        height: 21px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        padding: 0;
+        z-index: 1000;
+        transition: transform 0.3s ease;
+      }
+      
+      .hamburger:hover {
+        transform: scale(1.1);
+      }
+
+      .hamburger span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: white;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+      }
+
+      /* Side Menu */
+      .side-menu {
+        position: fixed;
+        top: -10;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 1001;
+        transition: all 0.3s ease;
+        overflow-y: auto;
+        padding-top: 10px;
+      }
+
+      .side-menu.active {
+        transform: translateX(0);
+      }
+
+      .side-menu ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .side-menu ul li {
+        margin: 20px 0;
+        opacity: 0;
+        transform: translateX(30px);
+        transition: none;
+      }
+
+      .side-menu.active ul li {
+        animation: slideFadeIn 0.5s ease-out forwards;
+      }
+      
+      .side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+      .side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+      .side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+      .side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+      .side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+      .side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+      .side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+      .side-menu.active ul li:nth-child(8) { animation-delay: 0.8s; }
+
+      /* Reset animation when menu is closed */
+      .side-menu:not(.active) ul li {
+        opacity: 0;
+        transform: translateX(30px);
+        animation: none;
+      }
+
+      .side-menu ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-block;
+      }
+      
+      .side-menu ul li a:hover {
+        color: #2a7fef;
+        transform: translateX(5px);
+      }
+
+      .side-menu .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: white;
+        transition: transform 0.3s ease;
+      }
+      
+      .side-menu .close-btn:hover {
+        transform: rotate(90deg);
+      }
+
+      /* Header Styles */
+      .header-container {
+        background: rgba(0,0,0,0.8);
+        position: fixed;
+        width: 100%;
+        z-index: 1000;
+        transition: all 0.3s ease;
+      }
+      
+      .header-container.scrolled {
+        background: rgba(0,0,0,0.95);
+        padding: 10px 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      }
+      
+      .logo-nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+      
+      .brand-logo {
+        height: 60px;
+        width: auto;
+        transition: all 0.3s ease;
+      }
+      
+      .scrolled .brand-logo {
+        height: 50px;
+      }
+      
+      .main-nav {
+        display: flex;
+        align-items: center;
+      }
+      
+      .main-nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .main-nav li {
+        margin: 0 15px;
+        position: relative;
+      }
+      
+      .main-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+        padding: 5px 0;
+        position: relative;
+      }
+      
+      .main-nav a:hover {
+        color: yellow;
+      }
+      
+      .main-nav a:after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background: yellow;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s ease;
+      }
+      
+      .main-nav a:hover:after {
+        width: 100%;
+      }
+      
+      .social-icons {
+        display: flex;
+        margin-left: 30px;
+      }
+      
+      .social-icons a {
+        color: white;
+        font-size: 18px;
+        margin: 0 10px;
+        transition: all 0.3s ease;
+      }
+      
+      .social-icons a:hover {
+        color: #2a7fef;
+        transform: translateY(-3px);
+      }
+      
+      /* About Us Hero */
+      .about-hero {
+        height: 60vh;
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/about-bg.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding-top: 80px;
+        animation: fadeIn 1s ease-out;
+      }
+      
+      .about-hero h1 {
+        font-size: 3.5rem;
+        margin-bottom: 20px;
+        animation: fadeIn 1s ease-out 0.2s both;
+      }
+      
+      .about-hero p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin: 0 auto;
+        animation: fadeIn 1s ease-out 0.4s both;
+      }
+      
+      /* About Content Sections */
+      .about-section {
+        padding: 80px 0;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      
+      .about-section:nth-child(1) { animation-delay: 0.2s; }
+      .about-section:nth-child(2) { animation-delay: 0.4s; }
+      .about-section:nth-child(3) { animation-delay: 0.6s; }
+      
+      .section-title {
+        text-align: center;
+        margin-bottom: 50px;
+      }
+      
+      .section-title h2 {
+        font-size: 2.5rem;
+        position: relative;
+        display: inline-block;
+      }
+      
+      .section-title h2:after {
+        content: '';
+        position: absolute;
+        font-weight: 900;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: pulse 2s infinite;
+      }
+      
+      .about-card {
+        background: white;
+        border-radius: 8px;
+        padding: 40px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin-bottom: 30px;
+        transition: all 0.3s ease;
+      }
+      
+      .about-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      }
+      
+      .about-card h3 {
+        color: #2a7fef;
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+      }
+      
+      .about-card p {
+        margin-bottom: 20px;
+        line-height: 1.8;
+      }
+      
+      /* Timeline for History */
+      .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      
+      .timeline:before {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background: #2a7fef;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+      }
+      
+      .timeline-item {
+        padding: 20px 40px;
+        position: relative;
+        width: 50%;
+        box-sizing: border-box;
+        opacity: 0;
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      
+      .timeline-item:nth-child(1) { animation-delay: 0.2s; }
+      .timeline-item:nth-child(2) { animation-delay: 0.4s; }
+      .timeline-item:nth-child(3) { animation-delay: 0.6s; }
+      .timeline-item:nth-child(4) { animation-delay: 0.8s; }
+      
+      .timeline-item:nth-child(odd) {
+        left: 0;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 50%;
+      }
+      
+      .timeline-content {
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+      }
+      
+      .timeline-content:hover {
+        transform: scale(1.02);
+      }
+      
+      .timeline-year {
+        position: absolute;
+        width: 100px;
+        height: 40px;
+        background: #2a7fef;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        font-weight: bold;
+        animation: float 3s ease-in-out infinite;
+      }
+      
+      .timeline-item:nth-child(odd) .timeline-year {
+        right: -120px;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-year {
+        left: -120px;
+      }
+      
+      /* Call to Action */
+      .section-md {
+        animation: pulse 2s infinite 1s;
+      }
+      
+      .button {
+        transition: all 0.3s ease;
+      }
+      
+      .button:hover {
+        animation: pulse 1s infinite;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 992px) {
+        .main-nav ul {
+          display: none !important;
+        }
+
+        .hamburger {
+          display: flex;
+        }
+        
+        .about-hero h1 {
+          font-size: 2.5rem;
+        }
+        
+        .timeline:before {
+          left: 40px;
+        }
+        
+        .timeline-item {
+          width: 100%;
+          padding-left: 70px;
+          padding-right: 25px;
+        }
+        
+        .timeline-item:nth-child(even) {
+          left: 0;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-year,
+        .timeline-item:nth-child(even) .timeline-year {
+          left: 0;
+          right: auto;
+        }
+      }
+      
+      @media (max-width: 768px) {
+        .about-hero {
+          height: auto !important;
+          padding-top: 200px !important;
+          padding-bottom: 60px;
+        }
+
+        .about-hero h1 {
+          font-size: 2rem;
+        }
+
+        .about-hero p {
+          font-size: 1rem;
+        }
+      }
+      
+      @media (max-width: 576px) {
+        
+/* Side menu (mobile) styles */
+.side-menu {
+  position: fixed;
+  top: -10;
+  left: -100%;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  background-color: black;
+  z-index: 1001;
+  transition: all 0.3s ease;
+  overflow-y: auto;
+  padding-top: 10px;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.side-menu ul li {
+  margin: 20px 0;
+  opacity: 0;
+  transform: translateX(30px);
+  transition: none;
+}
+
+.side-menu.active ul li {
+  animation: slideFadeIn 0.5s ease-out forwards;
+}
+
+.side-menu.active ul li:nth-child(1) { animation-delay: 0.1s; }
+.side-menu.active ul li:nth-child(2) { animation-delay: 0.2s; }
+.side-menu.active ul li:nth-child(3) { animation-delay: 0.3s; }
+.side-menu.active ul li:nth-child(4) { animation-delay: 0.4s; }
+.side-menu.active ul li:nth-child(5) { animation-delay: 0.5s; }
+.side-menu.active ul li:nth-child(6) { animation-delay: 0.6s; }
+.side-menu.active ul li:nth-child(7) { animation-delay: 0.7s; }
+.side-menu.active ul li:nth-child(8) { animation-delay: 0.8s; }
+
+/* Reset animation when menu is closed */
+.side-menu:not(.active) ul li {
+  opacity: 0;
+  transform: translateX(30px);
+  animation: none;
+}
+
+/* Optional overlay behind side-menu */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive Nav Behavior */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-container {
+    padding: 10px;
+  }
+
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
+      }
+      
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+        clear: both;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      } 
+      
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+    </style>
+    <style>
+      /* Root variables */
+:root {
+  --primary-color: #2d6e5c;
+  --secondary-color: #f8b400;
+  --dark-color: #1e4d3e;
+  --light-color: #f8f9fa;
+}
+
+/* Main nav link styles */
+.main-nav a {
+  color: white !important;
+}
+
+.main-nav a:hover {
+  color: var(--secondary-color) !important;
+}
+
+/* Nav item underline effect */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  padding: 0;
+}
+
+.nav-item {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.nav-item:hover::after {
+  width: 100%;
+}
+
+/* Hamburger button styles */
+#hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+
+#hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when active */
+#hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+#hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Side menu (mobile) styles */
+.side-menu {
+  position: fixed;
+        top: -10;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 1001;
+        transition: all 0.3s ease;
+        overflow-y: auto;
+        padding-top: 10px;
+}
+
+.side-menu.active {
+  left: 0;
+}
+
+/* Optional overlay behind side-menu */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive Nav Behavior */
+@media (max-width: 768px) {
+  #hamburger {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-logo img {
+    max-width: 120px;
+    height: auto;
+  }
+
+  .header-container {
+    padding: 10px;
+  }
+
+  .logo-nav-wrapper {
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+}
+
+  /* Heading Font - "ABOUT US" */
+.about-heading {
+  font-family: 'Anton', sans-serif; /* Bold, compressed font */
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Description Paragraph Font */
+.about-description {
+  font-family: 'Inter', sans-serif; /* Clean, modern sans-serif */
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.6;
+  color: #ffffff;
+  font: bold;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="ie-panel">
+      <a href="http://windows.microsoft.com/en-US/internet-explorer/">
+        <img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.">
+      </a>
+    </div>
+    
+    <div class="preloader">
+      <div class="preloader-body">
+        <div class="preloader-item"></div>
+      </div>
+    </div>
+    
+    <div class="page" style="background-color:  #2d6e5c;">
+      <div id="overlay"></div>  
+      <header class="header-container" style="position: fixed; width: 100%; top: 0; z-index: 1000;background-color: #000;">
+        <div class="container" style="width: 100%; max-width: 100%; margin: 0 auto; background-color:black">
+          <div class="logo-nav-wrapper" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 15px 0;">
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger" id="hamburger" aria-label="Menu" style="padding-bottom: 4cap;">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+    
+            <div class="mobile-logo">
+              <a href="index.html"><img src="images/logo.png" alt="FC Kovalam" style="height: 60px;"/></a>
+            </div> 
+      
+            <nav class="main-nav" id="mainNav" style="flex-grow: 1;">
+                <ul id="navList" style="display: flex; list-style: none; margin: 0; padding: 0; align-items: center; width: 100%;">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; flex-grow: 1;justify-content:space-evenly;">
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="index.html" class="nav-item" style="color: white;">Home</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="About.html" class="nav-item" style="color: white;">About Us</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Teams.html" class="nav-item" style="color: white;">Teams</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Events.html" class="nav-item" style="color: white;">Events</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Staff.html" class="nav-item" style="color: white;">Staff</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Achievement.html" class="nav-item" style="color: white;">Achievements</a></li>
+                      <li style="margin: 0 10px;font-size: 2cap;"><a href="Contact-us.html" class="nav-item" style="color: white;">Contact us</a></li>
+                    </div>
+                  
+                    <li style="margin-left: auto;">
+                      <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer;">
+                        Register now!
+                      </button>
+                    </li>
+                  </ul>
+                  
+            </nav>
+          </div>
+        </div>
+      </header>
+      
+     <!-- Mobile Menu -->
+     <div class="side-menu" id="sideMenu" style="background-color: black;">
+      <button class="close-btn" id="closeMenu" aria-label="Close menu" style="position: absolute; top: 35px; right: 20px; background: none; border: none; color: white; font-size: 24px; cursor: pointer;">&times;</button>
+
+      <ul style="list-style: none; padding: 40px;">
+        <li style="margin-bottom: 15px;"><a href="index.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Home</a></li>
+        <li style="margin-bottom: 15px;"><a href="About.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">About Us</a></li>
+        <li style="margin-bottom: 15px;"><a href="Teams.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Teams</a></li>
+        <li style="margin-bottom: 15px;"><a href="Events.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Events</a></li>
+        <li style="margin-bottom: 15px;"><a href="Staff.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Staff</a></li>
+        <li style="margin-bottom: 15px;"><a href="Achievement.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Achievements</a></li>
+        <li style="margin-bottom: 15px;"><a href="Contact-us.html" style="color: white; font-size: 18px; display: block; padding: 10px; text-decoration: none;">Contact us</a></li>
+        <li>
+          <button style="border-radius: 30px; background-color: orange; border: none; padding: 12px 25px; font-weight: bold; font-size: 16px; color: black; cursor: pointer; margin-top: 10px; width: 100%;">Register now!</button>
+        </li>
+      </ul>
+    </div>
+      <!-- Image at the top (outside the card) -->
+      <div style="background-color: #2d6e5c; padding: 5cap 0; display: flex; justify-content: center; margin-top: 10cap; width: 100%;">
+        <div style="width: 70%; max-width: 100%; overflow: hidden; box-shadow: 0 0 20px rgba(0,0,0,0.2); background-color: #0dd49b;border-top-right-radius: 5cap;">
+        
+          <!-- Image: Full width, no gap -->
+          <img src="images/extra/t16.jpg" style="width: 100%; display: block;">
+      
+          <!-- Content -->
+          <div style="padding: 3cap; text-align: center;">
+            <h2 class="about-heading" style="text-align: center;"><b>About Us</b></h2>
+            <p class="about-description">
+                At FCK, our mission is to develop well-rounded, confident footballers who excel both on the pitch and in life.
+                FC Kovalam Club was established in the year 2019 out of love for the beautiful game called football (soccer). Nestled in the picturesque coastal town of Kovalam (Mini Goa), Chennai, Tamil Nadu, FC Kovalam is dedicated to nurturing young talent and igniting a lifelong passion for football.
+            </p>
+          </div>
+      
+        </div>
+      </div>
+      
+
+      </section>
+      
+      <!-- <section class="about-section" style="background-color:  #2d6e5c;max-width: 800cap;"> -->
+      <div class="container">
+        <div class="section-title">            
+        </div>
+<!-- <div class="row justify-content-center" style="background-color: #0dd49b;"> -->
+        <!-- <div> -->
+          <div class="about-card" style="background-color: #0dd49b;max-width: 1400cap; margin: 0 auto;">
+            <h2 class="about-heading" style="text-align: center;"><b>FC Kovalam Mission Statement</b></h2>
+            <p class="adj-size" style="color: whitesmoke;"><strong>“To develop and promote Indian football by providing a professional, disciplined, and inclusive environment that nurtures talent, inspires youth, and builds a strong football culture across the nation.”</strong></p>
+  
+            <ul style="padding-left: 20px;color: whitesmoke;">
+              <li class="adj-size"><strong>Develop Indian Talent:</strong> To identify and train young Indian players with structured grassroots and academy programs focused on skill, fitness, and tactical awareness.</li>
+              <li class="adj-size"><strong>Promote Football Culture:</strong> To raise awareness, excitement, and participation in football at the local and national level through matches, events, and community outreach.</li>
+              <li class="adj-size"><strong>Build Character and Discipline:</strong> To instill values of teamwork, leadership, sportsmanship, and discipline in every player, preparing them for success both on and off the pitch.</li>
+              <li class="adj-size"><strong>Achieve Competitive Excellence:</strong> To create a team that competes with passion, pride, and professionalism in local, state, and national competitions.</li>
+              <li class="adj-size"><strong>Empower the Next Generation:</strong> To inspire children and youth across India to dream big through football—offering them a platform to grow, achieve, and represent their communities and country.</li>
+              <li class="adj-size"><strong>Unite Through Football:</strong> To bring people together from different backgrounds, regions, and communities through the love of the game.</li>
+            </ul>
+          </div>
+        <!-- </div> -->
+        <!-- </div> -->
+      </div>
+      <!-- </section>       -->
+      
+      <!-- Vision Section -->
+      <section class="about-section" style="background-color:  #2d6e5c;max-width: 800cap;">
+        <div class="container">
+            <div>
+            <div class="about-card" style="background-color: #0dd49b;max-width: 1400cap; margin: 0 auto;">
+              <h2 class="about-heading" style="text-align: center;"><b>FC Kovalam Vision Statement</b></h2>
+              <p class="adj-size" style="color: white;"><strong>“To build a respected and successful football club that inspires young talent, fosters community pride, and consistently competes at the highest level, both on and off the field.”</strong></p>
+    
+              <ul style="padding-left: 20px;color: white;">
+                <li class="adj-size"><strong>Player Development:</strong> To nurture and develop young footballers into skilled, disciplined, and confident athletes through structured training, mentorship, and exposure to competitive opportunities.</li>
+                <li class="adj-size"><strong>Community Engagement:</strong> To become a pillar of our local community by promoting unity, participation, and a love for the game among all age groups.</li>
+                <li class="adj-size"><strong>Professional Excellence:</strong> To maintain the highest standards of professionalism, sportsmanship, and integrity in everything we do—on the pitch and in our administration.</li>
+                <li class="adj-size"><strong>Sustainable Growth:</strong> To establish a long-term structure that supports financial sustainability, modern facilities, and strong partnerships with sponsors, schools, and local bodies.</li>
+                <li class="adj-size"><strong>Winning Spirit:</strong> To cultivate a culture of resilience, teamwork, and a relentless drive to win—while respecting the spirit of the game.</li>
+              </ul>
+            </div>
+            </div>
+
+        </div>
+      </section>
+      
+      <!-- History Section -->
+      <section class="about-section bg-gray-100" style="background-color: #2d6e5c;">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="about-card">
+                <b style="font-size: 2cap;">
+                  <div class="section-title">
+                    <h2>History of Kovalam</h2>
+                  </div>
+                <p>
+                  In 2019, on the golden sands of India's coastline, a dream was born. With no backing, no sponsors, and limited resources—just a ball, the open beach, and a burning passion for the game—a man with unmatched talent took the first step in building what would become one of India's most inspiring football teams.
+                </p>
+                <p>
+                  The journey began with nothing but determination. With no financial help, no proper training ground, and no recognition, the founder trained alone—often using makeshift equipment and drawing lines in the sand. What he lacked in support, he made up for with belief, discipline, and vision. Slowly, others noticed. A few local youngsters joined him, drawn not by fame or money, but by their love for football and a desire to be part of something special.
+                </p>
+                <p>
+                  By 2020, the team had grown into a brotherhood—united by sweat, struggle, and the sea breeze. They trained hard, organized friendly matches, and started gaining attention for their raw skill, unity, and fighting spirit. Without any big names or facilities, they took on more experienced teams and began to win hearts—and games.
+                </p>
+                <p>
+                  Their biggest victory wasn't just on the scoreboard, but in proving that a dream fueled by passion can overcome any obstacle.
+                </p>
+                <p>
+                  Today, the team stands as a symbol of grassroots football in India—a testament to grit, talent, and the power of belief. The story is still being written, with eyes set on national recognition and international glory.
+                </p>
+                </b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container">
+          <p>&copy; 2025 FC Kovalam. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.getElementById('hamburger');
+        const sideMenu = document.getElementById('sideMenu');
+        const overlay = document.getElementById('overlay');
+
+        function openMenu() {
+          sideMenu.classList.add('active');
+          overlay.classList.add('active');
+          document.body.classList.add('menu-open');
+          hamburger.classList.add('active');
+        }
+
+        function closeMenu() {
+          sideMenu.classList.remove('active');
+          overlay.classList.remove('active');
+          document.body.classList.remove('menu-open');
+          hamburger.classList.remove('active');
+          
+          // Reset animation on all menu items
+          const menuItems = sideMenu.querySelectorAll('ul li');
+          menuItems.forEach(item => {
+            item.style.animation = 'none';
+            item.offsetHeight; // Trigger reflow
+            item.style.animation = '';
+          });
+        }
+
+        hamburger.addEventListener('click', () => {
+          if (sideMenu.classList.contains('active')) {
+            closeMenu();
+          } else {
+            openMenu();
+          }
+        });
+
+        overlay.addEventListener('click', closeMenu);
+      });
+    </script>
+  </body>
+</html>
