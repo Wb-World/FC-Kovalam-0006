@@ -909,6 +909,10 @@ img {
             .custom-box {
               padding: 2cap;
             }
+
+            .footer-one {
+              flex: 1 1 100%;
+            }
           }
         </style>
         <div class="row">
@@ -1037,89 +1041,226 @@ Inspired by the roaring success of Kerala's beach football scene, this event is 
             .angled-image.last img {
               clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
             }
+            /* Mobile responsiveness for footer */
+@media (max-width: 768px) {
+  /* Adjust the main footer container */
+  footer {
+    padding: 30px 15px; /* Reduce padding for mobile */
+  }
+
+  /* Center the content container */
+  footer > div {
+    padding: 0 10px;
+  }
+
+  /* Adjust the inner container with background */
+  footer > div > div {
+    padding: 20px; /* Reduce padding for mobile */
+  }
+
+  /* Stack the flex items vertically */
+  .footer-one {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Logo and Navigation Section */
+  .footer-one > div:nth-child(1) {
+    flex: 0 0 100%; /* Full width */
+    margin-bottom: 30px;
+  }
+
+  .footer-one > div:nth-child(1) img {
+    height: 80px; /* Reduce logo size */
+  }
+
+  .footer-one > div:nth-child(1) ul li {
+    margin-bottom: 10px;
+  }
+
+  .footer-one > div:nth-child(1) ul li a {
+    font-size: 14px; /* Smaller font size */
+  }
+
+  /* Address Section */
+  .footer-one > div:nth-child(2) {
+    flex: 0 0 100%; /* Full width */
+    padding: 0;
+    margin-top: 0; /* Remove margin-top */
+    margin-bottom: 30px;
+  }
+
+  .footer-one > div:nth-child(2) p:first-child {
+    font-size: 18px; /* Smaller title */
+  }
+
+  .footer-one > div:nth-child(2) p:last-child {
+    font-size: 16px; /* Smaller address text */
+    line-height: 1.5;
+  }
+
+  /* Follow Us Section */
+  .footer-one > div:nth-child(3) {
+    flex: 0 0 100%; /* Full width */
+    text-align: center;
+    margin-top: 0; /* Remove margin-top */
+  }
+
+  .footer-one > div:nth-child(3) > div {
+    margin-bottom: 20px;
+  }
+
+  .footer-one > div:nth-child(3) > div p {
+    font-size: 16px; /* Smaller title */
+  }
+
+  .footer-one > div:nth-child(3) > div > div {
+    justify-content: center; /* Center social icons */
+    gap: 15px;
+  }
+
+  .footer-one > div:nth-child(3) > div > div svg {
+    width: 24px; /* Smaller icons */
+    height: 24px;
+  }
+
+  .footer-one > div:nth-child(3) a:last-child {
+    font-size: 14px; /* Smaller button text */
+    padding: 6px 15px; /* Adjust button padding */
+  }
+
+  /* Copyright text */
+  footer > div > p {
+    font-size: 12px; /* Smaller font size */
+    margin-top: 20px;
+  }
+}
+
+/* Extra small screens (below 480px) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-bottom: 10% !important; /* Increase padding-bottom to move content downward */
+    padding-top: 80cap !important; /* Adjust padding-top to ensure proper spacing */
+    align-items: flex-end; /* Keep content aligned at the bottom */
+    justify-content: center;
+  }
+
+  .hero-section h1 {
+    margin-top: 20px; /* Add margin-top to push the text further down */
+    font-size: 2.5rem !important; /* Maintain smaller font size for mobile */
+  }
+
+  .hero-section p {
+    font-size: 1.2rem !important; /* Maintain smaller font size for slogan */
+    margin-top: 10px; /* Add some spacing for the slogan */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    padding-bottom: 10% !important; /* Further increase padding for smaller screens */
+    padding-top: 80cap !important; /* Adjust padding-top for smaller screens */
+  }
+
+  .hero-section h1 {
+    margin-top: 15px; /* Slightly reduce margin-top for very small screens */
+    font-size: 2rem !important;
+  }
+
+  .hero-section p {
+    font-size: 1rem !important;
+    margin-top: 8px;
+  }
+}
         </style>
         
-        <footer style="background-color: #2d6e5c; color: #ffffff; padding: 40px 20px 20px; font-family: 'Inter', Arial, sans-serif;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <!-- Main content container with green background -->
-                <div style="background-color:#0dd49b; border-radius: 12px; padding: 30px 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
-                        
-                        <!-- Logo and Navigation Section -->
-                        <div style="flex: 1 1 100%; text-align: center; margin-bottom: 30px; order: 1;">
-                            <div style="margin-bottom: 20px;">
-                                <img src="images/logo.png" alt="FC Kovalam Logo" style="max-width: 180px; height: auto; object-fit: contain;">
-                            </div>
-                            <div>
-                                <b>
-                                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-                                    <li><a href="index.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Home</a></li>
-                                    <li><a href="About.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">About Us</a></li>
-                                    <li><a href="Teams.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Teams</a></li>
-                                    <li><a href="Staff.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Staff</a></li>
-                                    <li><a href="Events.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Events</a></li>
-                                    <li><a href="Contact-us.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Contact us</a></li>
-                                </ul>
-                                </b>
-                            </div>
-                        </div>
-                        
-                        <!-- Address Section -->
-                        <div style="flex: 1 1 100%; text-align: center; margin-bottom: 30px; order: 3;">
-                            <p style="margin: 0 0 12px 0; font-weight: 600; font-size: 20px; color: #f8b400;">
-                                FC KOVALAM SPORTS ACADEMY
-                            </p>
-                            <p style="font-size: 16px; line-height: 1.6; color: #ffffff; margin-bottom: 20px;">
-                                Kovalam Village, New Majeeth Street<br>
-                                Chengalpattu – 603112<br>
-                                Tamil Nadu, India
-                            </p>
-                        </div>
-                        
-                        <!-- Follow Us Section -->
-                        <div style="flex: 1 1 100%; text-align: center; margin-bottom: 20px; order: 2;">
-                            <div style="margin-bottom: 20px;">
-                                <p style="margin: 0 0 15px 0; font-weight: 600; font-size: 18px; color: #f8b400;">Follow Us</p>
-                                <div style="display: flex; gap: 20px; justify-content: center;">
-                                    <a href="https://instagram.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="https://twitter.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                                        </svg>
-                                    </a>
-                                    <a href="https://youtube.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
-                                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                            <a href="contact-us.html" style="
-                                color: #f8b400;
-                                text-decoration: none;
-                                font-weight: 600;
-                                font-size: 15px;
-                                display: inline-block;
-                                padding: 8px 20px;
-                                border: 2px solid #f8b400;
-                                border-radius: 20px;
-                                transition: all 0.3s ease;
-                            ">
-                                Reach Us →
-                            </a>
-                        </div>
-                    </div>
+        <footer style="background-color: #000000; color: #ffffff; padding: 50px 20px 30px; font-family: 'Inter', Arial, sans-serif;background-color: #2d6e5c">
+          <div style="max-width: 1200px; margin: 0 auto;">
+            <!-- Logo and Navigation -->
+            <div style="background-color:#0dd49b; border-radius: 12px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              <!-- Logo and Navigation -->
+              <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; margin-bottom: 40px; padding-bottom: 30px;" class="footer-one">
+                <!-- Logo Section (Left) -->
+                <div style="flex: 0 0 25%; margin-bottom: 20px;">
+                  <div style="margin-bottom: 20px;">
+                    <img src="images/logo.png" alt="FC Kovalam Logo" style="width: auto; height: 120px; max-width: 100%; object-fit: contain;">
+                  </div>
+                  <div>
+                    <b>
+                    <ul style="list-style: none; padding-left: 0; margin: 0;">
+                      <li style="margin-bottom: 12px;"><a href="index.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Home</a></li>
+                      <li style="margin-bottom: 12px;"><a href="About.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">About Us</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Teams.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Teams</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Staff.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Staff</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Events.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Events</a></li>
+                      <li style="margin-bottom: 12px;"><a href="Contact-us.html" style="color: #ffffff; text-decoration: none; font-size: 16px; transition: color 0.3s;">Contact us</a></li>
+                    </ul>
+                    </b>
+                  </div>
                 </div>
-                
-                <!-- Copyright -->
-                <p style="margin: 20px 0 0; color: white; font-size: 14px; text-align: center; font-weight: bold;">
-                    © 2025 FC Kovalam. All rights reserved.
-                </p>
+            
+                <!-- Address Section (Center) -->
+                <div style="flex: 0 0 40%; text-align: center; padding: 0 20px;margin-top: 15cap;">
+                  <p style="margin: 0 0 12px 0; font-weight: 600; font-size: 22px; color: #f8b400;">
+                    FC KOVALAM SPORTS ACADEMY
+                  </p>
+                  <p style="font-size: 20px; line-height: 1.6; color: #ffffff;">
+                    Kovalam Village, New Majeeth Street<br>
+                    Chengalpattu – 603112<br>
+                    Tamil Nadu, India
+                  </p>
+                </div>
+            
+                <!-- Follow Us Section (Right) -->
+                <div style="flex: 0 0 25%; text-align: right;margin-top: 15cap;" class="footer-one">
+                  <div style="margin-bottom: 25px;">
+                    <p style="margin: 0 0 15px 0; font-weight: 600; font-size: 19px; color: #f8b400;">Follow Us</p>
+                    <div style="display: flex; gap: 20px; justify-content: flex-end;">
+                      <a href="https://instagram.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                        </svg>
+                      </a>
+                      <a href="https://twitter.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                      </a>
+                      <a href="https://youtube.com" style="color: #ffffff; text-decoration: none; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <a href="contact-us.html" style="
+     color: #f8b400;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 15px;
+     display: inline-block;
+     padding: 8px 20px;
+     border: 2px solid #f8b400;
+     border-radius: 20px;
+     transition: all 0.3s ease;
+     margin-top: 5px;
+">
+     Reach Us →
+</a>
+                </div>
+              </div>
             </div>
+              
+            </div>
+        
+
+              <p style="margin: 0; color: white; font-size: 14px; text-align: center;font: bold;margin-top: 2cap;">
+                © 2025 FC Kovalam. All rights reserved.
+              </p>
+            </div>
+          </div>
         </footer>
       </div>
     </section>
