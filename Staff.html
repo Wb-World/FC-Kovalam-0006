@@ -941,21 +941,23 @@
             <div class="staff-grid">
               <div style="display: flex; flex-direction: column; align-items: center; gap: 1.5rem;">
                 <style>
-                  /* For Mobile & Tablet (screen width ≤ 768px) */
-                  @media (max-width: 768px) {
-                    .st2 {
-                      width: 100%;
-                      height: 100%; /* Maintain aspect ratio */
-                    }
-                  }
-                
-                  /* For Laptop/Desktop (screen width ≥ 1024px) */
-                  @media (min-width: 1024px) {
-                    .st2 {
-                      width: 80%;
-                      height: 80%; /* You can use fixed height if needed */
-                    }
-                  }
+                  .st2 {
+  max-width: 400px;   /* adjust for desktop */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mobile (<= 768px) */
+@media (max-width: 768px) {
+  .st2 {
+    max-width: none;   /* remove limit */
+    width: 100vw;      /* full screen width */
+    height: auto;      /* keep aspect ratio */
+  }
+}
+
                 </style>
                 <img src="images/staffs/s7.png" alt="image be add" style="padding-left: 0cap;" class="st2">
                      <div style="text-align: center;">
