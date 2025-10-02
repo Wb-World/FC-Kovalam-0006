@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="images/logo.png" type="image/png">
     <style>
+       body {
+        user-select: none;
+      }
       .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
       html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
 
@@ -827,6 +830,9 @@ From barefoot training on the beach to national-level challenges, these kids are
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
         document.addEventListener('DOMContentLoaded', function () {
           const hamburger = document.getElementById('hamburger');
           const sideMenu = document.getElementById('sideMenu');

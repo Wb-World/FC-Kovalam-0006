@@ -16,10 +16,7 @@
     <link rel="icon" href="images/logo.png" type="image/png">
     <style>
       /* Disable text and image selection */
-      * {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
+      body {
         user-select: none;
       }
       
@@ -1573,9 +1570,9 @@ Inspired by the roaring success of Kerala's beach football scene, this event is 
     <script src="js/script.js"></script>
     <script>
       // Disable right-click context menu
-      // document.addEventListener('contextmenu', function(e) {
-      //   e.preventDefault();
-      // });
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
       
       // Disable text selection
       document.addEventListener('selectstart', function(e) {

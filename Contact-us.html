@@ -20,6 +20,7 @@
       body {
   background-color:#1c4438;
   color: white;
+  user-select: none;
 }
 
 .section-md,
@@ -763,6 +764,9 @@
     <!-- Font Awesome for icons -->
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script>
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
       document.addEventListener('DOMContentLoaded', function () {
   const hamburger = document.getElementById('hamburger');
   const sideMenu = document.getElementById('sideMenu');

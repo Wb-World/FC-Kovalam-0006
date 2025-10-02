@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/nav.css">
     <style>
+       body {
+        user-select: none;
+      }
       .adj-size {
         font-size: 20px;
       }
@@ -1019,6 +1022,9 @@ We thank our sponsors, volunteers, local authorities, and the football-loving co
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
       hamburger.addEventListener('click', () => {
   const isMenuOpen = sideMenu.classList.contains('active');
 

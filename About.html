@@ -20,6 +20,7 @@
     <style>
       /* Beautiful Typography */
       body {
+        user-select: none;
         font-family: 'Poppins', sans-serif;
         line-height: 1.7;
         color: #333;
@@ -1041,6 +1042,9 @@
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <script>
+      document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+      });
       document.addEventListener('DOMContentLoaded', function () {
         const hamburger = document.getElementById('hamburger');
         const sideMenu = document.getElementById('sideMenu');
