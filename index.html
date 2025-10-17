@@ -18,6 +18,12 @@
       /* Disable text and image selection */
       body {
         user-select: none;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        background: transparent;
+        font-family: Arial, sans-serif;
+        overflow-x: hidden;
       }
       
       img {
@@ -27,6 +33,9 @@
         -o-user-drag: none;
         user-drag: none;
         pointer-events: none;
+        max-width: 100%;
+        height: auto;
+        display: block;
       }
       
       /* JavaScript disabled message */
@@ -57,13 +66,6 @@
       
       .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
       
-      body {
-        margin: 0;
-        padding: 0;
-        min-height: 100vh;
-        background: transparent;
-      }
-
       .page {
         background: linear-gradient(to top, 
                               rgba(45,110,92,0.8) 60%,  
@@ -78,13 +80,6 @@
         text-align: center;
         font-size: 16px;
         color: #fff;
-      }
-
-      @media (max-width: 768px) {
-        .footer-text {
-          font-size: 14px;
-          padding: 70px 15px;
-        }
       }
       
       :root {
@@ -153,167 +148,6 @@
         background-color: var(--secondary-color) !important;
       }
 
-      @media (max-width: 992px) {
-        .slogan-left,
-        .slogan-right {
-          transform: none !important;
-          padding: 0 !important;
-        }
-
-        .slogan-left {
-          order: 1;
-        }
-
-        .logo-center {
-          order: 2;
-        }
-
-        .slogan-right {
-          order: 3;
-        }
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-      }
-
-      .post-future {
-        width: 100%;
-        max-width: 600px;
-      }
-
-      @media (max-width: 768px) {
-        #hamburger {
-          display: block;
-        }
-
-        .main-nav {
-          display: none;
-        }
-
-        .mobile-logo img {
-          max-width: 120px;
-          height: auto;
-        }
-
-        .header-container {
-          padding: 10px;
-        }
-
-        .logo-nav-wrapper {
-          justify-content: space-between !important;
-          padding: 0 15px !important;
-        }
-
-        .angled-image-wrapper {
-          flex-direction: column !important;
-        }
-
-        .angled-image {
-          width: 100% !important;
-        }
-
-        .angled-image img {
-          clip-path: none !important;
-          border-radius: 0 !important;
-        }
-
-        .post-future-content {
-          padding: 2cap !important;
-        }
-
-        .rd-navbar-main-top > .rd-navbar-main-container {
-          flex-direction: column;
-          align-items: center;
-        }
-
-        .rd-navbar-main-top h3 {
-          font-size: 18px;
-          padding: 10px;
-          text-align: center;
-          transform: none !important;
-        }
-
-        .rd-navbar-main-top > .rd-navbar-main-container > div {
-          transform: none !important;
-          padding: 10px !important;
-        }
-
-        .brand-logo {
-          width: 80px !important;
-          margin: 0 auto;
-        }
-
-        .group-sm.group-flex {
-          flex-direction: column;
-          gap: 15px;
-          align-items: center;
-        }
-
-        .button-media {
-          width: 90% !important;
-          max-width: 300px;
-          font-size: 18px !important;
-        }
-
-        .aside-component article {
-          margin-left: 0 !important;
-          text-align: center;
-        }
-
-        .swiper-container {
-          height: 50vh !important;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .rd-navbar-main-top h3 {
-          font-size: 16px;
-        }
-
-        .button-media {
-          height: 60px !important;
-          font-size: 16px !important;
-        }
-
-        .post-future {
-          max-width: 90%;
-        }
-
-        .video-container {
-          height: 150vh !important;
-        }
-
-        .hero-section {
-          padding-bottom: 7% !important;
-        }
-
-        .hero-section h1 {
-          font-size: 3rem !important;
-        }
-
-        .hero-section p {
-          font-size: 3cap !important;
-        }
-
-        .row {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-        }
-
-        .container {
-          padding-left: 10px !important;
-          padding-right: 10px !important;
-        }
-
-        /* Add spacing between hero section and first image section on mobile */
-        .row.row-30.p-4 {
-          padding-top: 60px !important;
-        }
-      }
-
       @keyframes fadeIn {
         from { opacity: 0; transform: translateX(-20px); }
         to { opacity: 1; transform: translateX(0); }
@@ -377,30 +211,6 @@
 
       #hamburger.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-      }
-
-      @media (max-width: 768px) {
-        #hamburger {
-          display: block;
-        }
-
-        .main-nav {
-          display: none;
-        }
-
-        .mobile-logo img {
-          max-width: 120px;
-          height: auto;
-        }
-        
-        .header-container {
-          padding: 10px 0 !important;
-        }
-        
-        .logo-nav-wrapper {
-          justify-content: space-between !important;
-          padding: 0 15px !important;
-        }
       }
 
       .side-menu {
@@ -502,7 +312,6 @@
         height: 100vh;
         overflow: hidden;
         z-index: 0;
-        padding-bottom: 10%;
       }
 
       /* Content container */
@@ -537,25 +346,6 @@
                     rgba(45,110,92,0.8) 100%,  
                     rgba(45,110,92,0.3) 92%, 
                     transparent 100%);
-      }
-
-      /* Touch-friendly improvements */
-      @media (max-width: 768px) {
-        .button-media {
-          min-height: 44px !important;
-          touch-action: manipulation;
-        }
-
-        a, button {
-          min-height: 44px;
-          touch-action: manipulation;
-        }
-
-        .side-menu ul li a {
-          min-height: 44px !important;
-          display: flex !important;
-          align-items: center !important;
-        }
       }
 
       /* Reset browser defaults */
@@ -693,7 +483,6 @@
         line-height: 1.75;
         color: #FFFFFF;
         margin: 0;
-        font: bold;
         
         /* Enhanced properties */
         text-rendering: optimizeLegibility;
@@ -749,90 +538,9 @@
         font-weight: bold;
       }
 
-      /* Responsive adjustments */
-      @media (max-width: 768px) {
-        .main-nav ul li {
-          font-size: 2cap; /* Using cap units for responsive sizing */
-        }
-      }
-
-      /* Responsive image grid adjustments */
-      @media (max-width: 768px) {
-        .post-future-figure {
-          flex-direction: column;
-          height: auto !important;
-        }
-        
-        .post-future-figure img {
-          width: 100% !important;
-          height: 100% !important;
-          border-radius: 0 !important;
-        }
-        
-        .post-future-content {
-          padding: 20px !important;
-        }
-        
-        .hero-section h1 {
-          font-size: 2.5rem !important;
-        }
-        
-        .hero-section p {
-          font-size: 1.2rem !important;
-        }
-        
-        .footer > div > div {
-          flex-direction: column;
-          text-align: center;
-        }
-        
-        .footer > div > div > div {
-          flex: 1 1 100% !important;
-          margin-bottom: 30px;
-        }
-        
-        .footer .follow-us-section {
-          text-align: center !important;
-          justify-content: center !important;
-        }
-        
-        .footer .follow-us-section div {
-          justify-content: center !important;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .hero-section h1 {
-          font-size: 2rem !important;
-        }
-        
-        .description {
-          font-size: 1rem !important;
-        }
-        
-        .footer {
-          padding: 30px 15px !important;
-        }
-        
-        .footer .logo-section img {
-          height: 80px !important;
-        }
-      }
-      
       /* Default (desktop / large screens) */
       .custom-box {
         padding: 10cap;
-      }
-    
-      /* Mobile view (max-width 768px or your breakpoint) */
-      @media (max-width: 768px) {
-        .custom-box {
-          padding: 2cap;
-        }
-
-        .footer-one {
-          flex: 1 1 100%;
-        }
       }
       
       .angled-image-wrapper {
@@ -867,110 +575,190 @@
         .angled-image.last img {
           clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
         }
+
+      /* ========== RESPONSIVE STYLES ========== */
+      
+      /* Large screens (desktop) */
+      @media (min-width: 1200px) {
+        .hero-section h1 {
+          font-size: 5rem !important;
+        }
         
-        /* Mobile responsiveness for footer */
-      @media (max-width: 768px) {
-        /* Adjust the main footer container */
-        footer {
-          padding: 30px 15px; /* Reduce padding for mobile */
+        .hero-section h1 span:first-child {
+          font-size: 70px !important;
         }
-
-        /* Center the content container */
-        footer > div {
-          padding: 0 10px;
-        }
-
-        /* Adjust the inner container with background */
-        footer > div > div {
-          padding: 20px; /* Reduce padding for mobile */
-        }
-
-        /* Stack the flex items vertically */
-        .footer-one {
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-          margin-bottom: 20px;
-        }
-
-        /* Logo and Navigation Section */
-        .footer-one > div:nth-child(1) {
-          flex: 0 0 100%; /* Full width */
-          margin-bottom: 30px;
-        }
-
-        .footer-one > div:nth-child(1) img {
-          height: 80px; /* Reduce logo size */
-        }
-
-        .footer-one > div:nth-child(1) ul li {
-          margin-bottom: 10px;
-        }
-
-        .footer-one > div:nth-child(1) ul li a {
-          font-size: 14px; /* Smaller font size */
-        }
-
-        /* Address Section */
-        .footer-one > div:nth-child(2) {
-          flex: 0 0 100%; /* Full width */
-          padding: 0;
-          margin-top: 0; /* Remove margin-top */
-          margin-bottom: 30px;
-        }
-
-        .footer-one > div:nth-child(2) p:first-child {
-          font-size: 18px; /* Smaller title */
-        }
-
-        .footer-one > div:nth-child(2) p:last-child {
-          font-size: 16px; /* Smaller address text */
-          line-height: 1.5;
-        }
-
-        /* Follow Us Section */
-        .footer-one > div:nth-child(3) {
-          flex: 0 0 100%; /* Full width */
-          text-align: center;
-          margin-top: 0; /* Remove margin-top */
-        }
-
-        .footer-one > div:nth-child(3) > div {
-          margin-bottom: 20px;
-        }
-
-        .footer-one > div:nth-child(3) > div p {
-          font-size: 16px; /* Smaller title */
-        }
-
-        .footer-one > div:nth-child(3) > div > div {
-          justify-content: center; /* Center social icons */
-          gap: 15px;
-        }
-
-        .footer-one > div:nth-child(3) > div > div svg {
-          width: 24px; /* Smaller icons */
-          height: 24px;
-        }
-
-        .footer-one > div:nth-child(3) a:last-child {
-          font-size: 14px; /* Smaller button text */
-          padding: 6px 15px; /* Adjust button padding */
-        }
-
-        /* Copyright text */
-        footer > div > p {
-          font-size: 12px; /* Smaller font size */
-          margin-top: 20px;
+        
+        .post-future-figure {
+          height: 800px !important;
         }
       }
-
-      /* Hero Section Mobile Responsive Styles */
-      @media (max-width: 480px) {
+      
+      /* Medium screens (laptops, small desktops) */
+      @media (min-width: 992px) and (max-width: 1199px) {
+        .hero-section h1 {
+          font-size: 4rem !important;
+        }
+        
+        .hero-section h1 span:first-child {
+          font-size: 60px !important;
+        }
+        
+        .post-future-figure {
+          height: 700px !important;
+        }
+        
+        .main-nav a {
+          font-size: 14px;
+        }
+      }
+      
+      /* Tablets and small laptops */
+      @media (min-width: 768px) and (max-width: 991px) {
         .hero-section {
-          padding-top: 25vh !important; /* More padding for small phones */
-          padding-bottom: 8% !important;
-          min-height: 50vh;
+          padding-top: 20vh !important;
+          min-height: 55vh;
+        }
+        
+        .hero-section h1 {
+          font-size: 3.5rem !important;
+        }
+        
+        .hero-section h1 span:first-child {
+          font-size: 50px !important;
+        }
+        
+        .hero-section h1 span:last-child {
+          font-size: 40px !important;
+        }
+        
+        .hero-section p {
+          font-size: 24px !important;
+        }
+        
+        .post-future-figure {
+          height: 600px !important;
+        }
+        
+        .main-nav ul li {
+          margin: 0 8px;
+        }
+        
+        .main-nav a {
+          font-size: 13px;
+        }
+        
+        .custom-box {
+          padding: 5cap;
+        }
+        
+        .footer-section {
+          flex: 0 0 30% !important;
+        }
+        
+        .footer-section.address-section {
+          text-align: center !important;
+        }
+      }
+      
+      /* Mobile devices */
+      @media (max-width: 767px) {
+        #hamburger {
+          display: block;
+        }
+
+        .main-nav {
+          display: none;
+        }
+
+        .mobile-logo img {
+          max-width: 120px;
+          height: auto;
+        }
+        
+        .header-container {
+          padding: 10px 0 !important;
+        }
+        
+        .logo-nav-wrapper {
+          justify-content: space-between !important;
+          padding: 0 15px !important;
+        }
+        
+        .angled-image-wrapper {
+          flex-direction: column !important;
+        }
+
+        .angled-image {
+          width: 100% !important;
+        }
+
+        .angled-image img {
+          clip-path: none !important;
+          border-radius: 0 !important;
+        }
+
+        .post-future-content {
+          padding: 2cap !important;
+        }
+
+        .rd-navbar-main-top > .rd-navbar-main-container {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .rd-navbar-main-top h3 {
+          font-size: 18px;
+          padding: 10px;
+          text-align: center;
+          transform: none !important;
+        }
+
+        .rd-navbar-main-top > .rd-navbar-main-container > div {
+          transform: none !important;
+          padding: 10px !important;
+        }
+
+        .brand-logo {
+          width: 80px !important;
+          margin: 0 auto;
+        }
+
+        .group-sm.group-flex {
+          flex-direction: column;
+          gap: 15px;
+          align-items: center;
+        }
+
+        .button-media {
+          width: 90% !important;
+          max-width: 300px;
+          font-size: 18px !important;
+        }
+
+        .aside-component article {
+          margin-left: 0 !important;
+          text-align: center;
+        }
+
+        .swiper-container {
+          height: 50vh !important;
+        }
+        
+        .post-future-figure {
+          flex-direction: column;
+          height: auto !important;
+        }
+        
+        .post-future-figure img {
+          width: 100% !important;
+          height: auto !important;
+          border-radius: 0 !important;
+        }
+        
+        .hero-section {
+          padding-top: 60vh !important;
+          padding-bottom: 15% !important;
+          min-height: 70vh;
         }
         
         .hero-section h1 {
@@ -989,51 +777,147 @@
         .hero-section p {
           font-size: 20px !important;
         }
-
         
+        .main-nav ul {
+          flex-direction: column;
+          gap: 10px;
+        }
+        
+        .main-nav ul li {
+          margin: 5px 0;
+          font-size: 2cap;
+        }
+        
+        .register-button {
+          width: 100%;
+          margin-top: 10px;
+        }
+        
+        .custom-box {
+          padding: 2cap;
+        }
+        
+        .footer-one {
+          flex: 1 1 100%;
+        }
+        
+        .footer-container {
+          flex-direction: column !important;
+          align-items: flex-start !important;
+          text-align: left !important;
+          gap: 30px !important;
+        }
+        
+        .footer-section {
+          flex: 1 1 100% !important;
+          width: 100% !important;
+          text-align: left !important;
+          margin-bottom: 0 !important;
+          padding: 0 !important;
+        }
+        
+        .logo-section {
+          order: 1;
+        }
+        
+        .address-section {
+          order: 2;
+          text-align: left !important;
+          padding: 0 !important;
+        }
+        
+        .social-section {
+          order: 3;
+          text-align: left !important;
+        }
+        
+        .social-section > div > div {
+          justify-content: flex-start !important;
+        }
+        
+        /* Adjust spacing for mobile */
+        .footer-container {
+          margin-bottom: 20px !important;
+          padding-bottom: 20px !important;
+        }
+        
+        /* Adjust font sizes for mobile */
+        .address-section p:first-child {
+          font-size: 20px !important;
+        }
+        
+        .address-section p:last-child {
+          font-size: 18px !important;
+        }
+        
+        .social-section p {
+          font-size: 18px !important;
+        }
+        
+        /* Adjust padding for mobile */
+        .footer-container > div {
+          padding: 20px 0 !important;
+        }
+        
+        .footer {
+          padding: 30px 15px !important;
+        }
+        
+        .footer .logo-section img {
+          height: 80px !important;
+        }
+        
+        .footer-text {
+          font-size: 14px;
+          padding: 70px 15px;
+        }
+        
+        .video-container {
+          height: 70vh !important;
+        }
+        
+        .row {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+        .container {
+          padding-left: 10px !important;
+          padding-right: 10px !important;
+        }
+
+        /* Add spacing between hero section and first image section on mobile */
+        .row.row-30.p-4 {
+          padding-top: 60px !important;
+        }
+        
+        .button-media {
+          min-height: 44px !important;
+          touch-action: manipulation;
+        }
+
+        a, button {
+          min-height: 44px;
+          touch-action: manipulation;
+        }
+
+        .side-menu ul li a {
+          min-height: 44px !important;
+          display: flex !important;
+          align-items: center !important;
+        }
       }
-
-      @media (max-width: 767px) and (orientation: landscape) {
+      
+      /* Small mobile devices */
+      @media (max-width: 480px) {
         .hero-section {
-          padding-top: 20vh !important; /* Less padding in landscape */
-          min-height: 70vh;
+          padding-top: 50vh !important;
+          padding-bottom: 20% !important;
+          min-height: 60vh;
         }
         
-        .hero-section h1 span:first-child {
-          font-size: 50px !important;
-        }
-        
-        .hero-section h1 span:last-child {
-          font-size: 40px !important;
-        }
-        
-        .hero-section p {
-          font-size: 24px !important;
-        }
-      }
-
-      @media (min-width: 768px) and (max-width: 1024px) {
-        .hero-section {
-          padding-top: 20vh !important;
-          min-height: 55vh;
-        }
-        
-        .hero-section h1 span:first-child {
-          font-size: 60px !important;
-        }
-        
-        .hero-section h1 span:last-child {
-          font-size: 50px !important;
-        }
-        
-        .hero-section p {
-          font-size: 28px !important;
-        }
-      }
-
-      @media (max-width: 320px) {
-        .hero-section {
-          padding-top: 28vh !important; /* Even more padding for very small screens */
+        .hero-section h1 {
+          font-size: 2rem !important;
         }
         
         .hero-section h1 span:first-child {
@@ -1046,82 +930,6 @@
         
         .hero-section p {
           font-size: 18px !important;
-        }
-        .content-container{
-          padding-top: 400px;
-        }
-      }
-
-      @media (max-width: 280px) {
-        .hero-section {
-          padding-top: 30vh !important;
-        }
-        
-        .hero-section h1 span:first-child {
-          font-size: 32px !important;
-        }
-        
-        .hero-section h1 span:last-child {
-          font-size: 26px !important;
-        }
-        
-        .hero-section p {
-          font-size: 16px !important;
-        }
-      }
-
-      /* Additional responsive improvements */
-      @media (max-width: 768px) {
-        .post-future-figure {
-          flex-direction: column;
-          height: auto !important;
-        }
-        
-        .post-future-figure img {
-          width: 100% !important;
-          height: auto !important;
-        }
-        
-        .angled-image-wrapper {
-          flex-direction: column;
-        }
-        
-        .angled-image {
-          width: 100% !important;
-        }
-        
-        .angled-image img {
-          clip-path: none !important;
-          border-radius: 0 !important;
-        }
-        
-        .hero-section h1 {
-          font-size: 2.5rem !important;
-          line-height: 1.2;
-        }
-        
-        .hero-section p {
-          font-size: 1.2rem !important;
-        }
-        
-        .main-nav ul {
-          flex-direction: column;
-          gap: 10px;
-        }
-        
-        .main-nav ul li {
-          margin: 5px 0;
-        }
-        
-        .register-button {
-          width: 100%;
-          margin-top: 10px;
-        }
-      }
-      
-      @media (max-width: 480px) {
-        .hero-section h1 {
-          font-size: 2rem !important;
         }
         
         .description {
@@ -1143,24 +951,90 @@
         .post-future-content {
           padding: 15px !important;
         }
+        
+        .rd-navbar-main-top h3 {
+          font-size: 16px;
+        }
+
+        .button-media {
+          height: 60px !important;
+          font-size: 16px !important;
+        }
+
+        .post-future {
+          max-width: 90%;
+        }
+
+        .video-container {
+          height: 60vh !important;
+        }
       }
       
-      /* Tablet specific adjustments */
-      @media (min-width: 769px) and (max-width: 1024px) {
-        .hero-section h1 {
-          font-size: 4rem !important;
+      /* Extra small mobile devices */
+      @media (max-width: 320px) {
+        .hero-section {
+          padding-top: 45vh !important;
+          padding-bottom: 25% !important;
         }
         
-        .description {
-          font-size: 1.1rem !important;
+        .hero-section h1 span:first-child {
+          font-size: 32px !important;
         }
         
-        .main-nav ul li {
-          margin: 0 8px;
+        .hero-section h1 span:last-child {
+          font-size: 26px !important;
         }
         
-        .main-nav a {
-          font-size: 14px;
+        .hero-section p {
+          font-size: 16px !important;
+        }
+        
+        .video-container {
+          height: 50vh !important;
+        }
+      }
+      
+      /* Landscape mode for mobile */
+      @media (max-width: 767px) and (orientation: landscape) {
+        .hero-section {
+          padding-top: 40vh !important;
+          padding-bottom: 10% !important;
+          min-height: 80vh;
+        }
+        
+        .hero-section h1 span:first-child {
+          font-size: 40px !important;
+        }
+        
+        .hero-section h1 span:last-child {
+          font-size: 34px !important;
+        }
+        
+        .hero-section p {
+          font-size: 20px !important;
+        }
+        
+        .video-container {
+          height: 100vh !important;
+        }
+      }
+      
+      /* Touch-friendly improvements */
+      @media (max-width: 768px) {
+        .button-media {
+          min-height: 44px !important;
+          touch-action: manipulation;
+        }
+
+        a, button {
+          min-height: 44px;
+          touch-action: manipulation;
+        }
+
+        .side-menu ul li a {
+          min-height: 44px !important;
+          display: flex !important;
+          align-items: center !important;
         }
       }
     </style>
@@ -1251,7 +1125,6 @@
       <!-- Single Main Section -->
       <section style="
                       width: 100%;
-                      height: 10%;
                       background: linear-gradient(to top, 
                                 rgba(45,110,92,0.8) 100%,
                                 rgba(45,110,92,0.3) 50%, 
@@ -1260,8 +1133,8 @@
                       -webkit-backdrop-filter: blur(6px);
                       z-index: 1;">
         <!-- Video Background -->
-        <div class="video-container" style="margin-bottom: 20rem;">
-          <img src="images/344679c9-6c87-4b56-9f3b-c0f71f6f224e.jpeg" alt="ground-image">
+        <div class="video-container">
+          <img src="images/344679c9-6c87-4b56-9f3b-c0f71f6f224e.jpeg" alt="ground-image" style="width: 100%; height: 100%; object-fit: cover;">
 
           <!-- Blur Shade -->
           <div style="position: absolute;
@@ -1282,18 +1155,18 @@
         <div class="content-container">
           <div class="hero-section">
             <div style="text-align: center; width: 90%; max-width: 1000px;">
-              <h1 style="color: white; font-size: 5rem; font-weight: 700;">
-                <span style="display: block; color: white;font-size: 70px;">FC KOVALAM</span>
+              <h1 style="color: white; font-weight: 700;">
+                <span style="display: block; color: white;">FC KOVALAM</span>
                 <span style="color: white; display: block;">WELCOMES YOU</span>
               </h1>
-              <p style="font-size: 4cap;color:#0dd49b"><b>"play the game, to make a name"</b></p>
+              <p style="font-size: clamp(1rem, 3vw, 1.5rem);color:#0dd49b"><b>"play the game, to make a name"</b></p>
             </div>
           </div>
         </div>
         
         <div class="row">
           <div class="col-12 custom-box">
-            <article style="max-width: 200cap; margin: 0; padding: 0;">
+            <article style="max-width: 100%; margin: 0; padding: 0;">
               <img 
                 src="images/teams/t10.jpg" 
                 alt="FC Kovalam Youth Academy" 
@@ -1313,8 +1186,8 @@
         
           
         <div class="col-12 custom-box">
-          <article style="max-width: 200cap; border-top-left-radius: 2cap; border-top-right-radius: 2cap;">
-            <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
+          <article style="max-width: 100%; border-top-left-radius: 2cap; border-top-right-radius: 2cap;">
+            <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; overflow: hidden;">
               <img src="images/temples/CARMELCHURCH.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" name="tmpl1"/>
               <img src="images/temples/DARGHA.jpg" alt="2" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; transition: none; transform: none;" />
               <img src="images/temples/KAILASANATHARKOVIL.jpg" alt="3" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-right-radius: 2cap; transition: none; transform: none;" />
@@ -1322,7 +1195,7 @@
       
             <!-- Text Content Section -->
             <div class="post-future-content p-4" style="background-color: #0dd49b;border-bottom-left-radius: 2cap;border-bottom-right-radius: 2cap;">
-              <h3 class="post-future-title mt-4 description" style="font-size: 2cap; color: white;">
+              <h3 class="post-future-title mt-4 description" style="font-size: clamp(1rem, 2vw, 1.5rem); color: white;">
                 In a beautiful display of unity, a church, mosque, and temple stand together in this coastal town—Our Lady of Mount Carmel Shrine, a serene Dargah, and the sacred Kailasanathar Temple. Together, they reflect the town's rich cultural heritage and peaceful coexistence of faiths, celebrating harmony in diversity.
               </h3>
             </div>
@@ -1331,7 +1204,7 @@
         
         <div class="col-12 custom-box">
           <article style="max-width: 100%; max-height: 100%;border-top-left-radius: 2cap;border-top-right-radius: 2cap;">
-            <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; height: 800px; overflow: hidden;">
+            <div class="post-future-figure" style="display: flex; gap: 0; padding: 0; margin: 0; overflow: hidden;">
               <img src="images/extra/t6.jpg" alt="1" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-left-radius: 2cap; transition: none; transform: none;" />
               <img src="images/extra/t7.jpg" alt="2" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; transition: none; transform: none;" />
               <img src="images/extra/t12.jpg" alt="3" style="width: 33.33%; height: 100%; object-fit: cover; padding: 0; margin: 0; border-top-right-radius: 2cap; transition: none; transform: none;" />
@@ -1348,7 +1221,7 @@
         </div>
 
         <div class="col-12 custom-box">
-          <article style="max-width: 200cap;">
+          <article style="max-width: 100%;">
             <a href="#">
               <img src="images/extra/t18.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" style="border-top-left-radius: 2cap;border-top-right-radius: 2cap;"/>
             </a>
@@ -1366,7 +1239,7 @@ This unique celebration wasn't just about the game – it was about giving our y
         </div>
 
         <div class="col-12 custom-box">
-          <article style="max-width: 200cap;">
+          <article style="max-width: 100%;">
             <a href="#">
               <img src="images/ABI01344.jpg" alt="FC Kovalam Youth Academy" class="img-fluid w-100" style="border-top-left-radius: 2cap;border-top-right-radius: 2cap;"/>
             </a>
@@ -1447,115 +1320,6 @@ Inspired by the roaring success of Kerala's beach football scene, this event is 
                 </div>
               </div>
               
-              <style>
-                /* Hero Section Mobile Responsive Styles */
-@media (max-width: 480px) {
-  .hero-section {
-    padding-top: 110vh !important; /* More padding for small phones */
-    padding-bottom: 8% !important;
-    min-height: 50vh;
-  }
-}
-
-@media (max-width: 767px) and (orientation: landscape) {
-  .hero-section {
-    padding-top: 20vh !important; /* Less padding in landscape */
-    min-height: 70vh;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .hero-section {
-    padding-top: 20vh !important;
-    min-height: 55vh;
-  }
-}
-
-@media (max-width: 320px) {
-  .hero-section {
-    padding-top: 28vh !important; /* Even more padding for very small screens */
-  }
-}
-
-@media (max-width: 280px) {
-  .hero-section {
-    padding-top: 30vh !important;
-  }
-}
-                /* Mobile Responsive Styles */
-                @media (max-width: 768px) {
-                  .footer-container {
-                    flex-direction: column !important;
-                    align-items: flex-start !important;
-                    text-align: left !important;
-                    gap: 30px !important;
-                  }
-                  
-                  .footer-section {
-                    flex: 1 1 100% !important;
-                    width: 100% !important;
-                    text-align: left !important;
-                    margin-bottom: 0 !important;
-                    padding: 0 !important;
-                  }
-                  
-                  .logo-section {
-                    order: 1;
-                  }
-                  
-                  .address-section {
-                    order: 2;
-                    text-align: left !important;
-                    padding: 0 !important;
-                  }
-                  
-                  .social-section {
-                    order: 3;
-                    text-align: left !important;
-                  }
-                  
-                  .social-section > div > div {
-                    justify-content: flex-start !important;
-                  }
-                  
-                  /* Adjust spacing for mobile */
-                  .footer-container {
-                    margin-bottom: 20px !important;
-                    padding-bottom: 20px !important;
-                  }
-                  
-                  /* Adjust font sizes for mobile */
-                  .address-section p:first-child {
-                    font-size: 20px !important;
-                  }
-                  
-                  .address-section p:last-child {
-                    font-size: 18px !important;
-                  }
-                  
-                  .social-section p {
-                    font-size: 18px !important;
-                  }
-                  
-                  /* Adjust padding for mobile */
-                  .footer-container > div {
-                    padding: 20px 0 !important;
-                  }
-                }
-              
-                /* Tablet specific adjustments */
-                @media (min-width: 769px) and (max-width: 1024px) {
-                  .footer-section {
-                    flex: 0 0 30% !important;
-                  }
-                  
-                  .address-section {
-                    text-align: center !important;
-                  }
-                }
-              </style>
-        
-
               <p style="margin: 0; color: white; font-size: 14px; text-align: center;font: bold;margin-top: 2cap;">
                 © 2025 FC Kovalam. All rights reserved.
               </p>
@@ -1573,7 +1337,7 @@ Inspired by the roaring success of Kerala's beach football scene, this event is 
     <script>
       // Disable right-click context menu
       document.addEventListener('contextmenu', function(e) {
-         e.preventDefault();
+        e.preventDefault();
       });
       
       // Disable text selection
@@ -1621,7 +1385,4 @@ Inspired by the roaring success of Kerala's beach football scene, this event is 
       });
     </script>
   </body>
-
 </html>
-
-
