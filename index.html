@@ -323,12 +323,12 @@
 
       /* Hero section */
       .hero-section {
-        height: 25vh;
+        height: -25vh;
         display: flex;
         align-items: flex-end;
         justify-content: center;
         padding-bottom: 3%;
-        padding-top: 75vh; /* Default for desktop */
+        padding-top: 65vh; /* Default for desktop */
       }
 
       /* Cards section */
@@ -663,7 +663,7 @@
       /* Mobile devices */
       @media (max-width: 767px) {
         .hero-section > div {
-          padding-top: 50vh !important;
+          padding-top: 0vh !important;
         }
         #hamburger {
           display: block;
@@ -914,7 +914,7 @@
       /* Small mobile devices */
       @media (max-width: 480px) {
         .hero-section {
-          padding-top: 470px !important;
+          padding-top: 250px !important;
           padding-bottom: 20% !important;
           min-height: 60vh;
         }
@@ -1145,12 +1145,12 @@
                       bottom: 0;
                       left: 0;
                       width: 100%;
-                      height: 2%;
+                      height:34% !important;
                       background: linear-gradient(to top, 
                                 rgba(45,110,92,0.8) 60%,
                                 rgba(45,110,92,0.3) 92%, 
                                 transparent 100%);
-                      backdrop-filter: blur(3px);
+                      backdrop-filter: blur(-1px);
                       -webkit-backdrop-filter: blur(6px);
                       z-index: 1;"></div>
         </div>
@@ -1161,7 +1161,7 @@
             <div style="text-align: center; width: 90%; max-width: 1000px;">
               <h1 style="color: white; font-weight: 700;">
                 <span style="display: block; color: white;">FC KOVALAM</span>
-                <span style="color: white; display: block;">WELCOMES YOU</span>
+                <span style="color: white; display: block;color: rgba(0, 0, 0, 0);-webkit-text-stroke: 2px #ebf7ff;">WELCOMES YOU</span>
               </h1>
               <p style="font-size: clamp(1rem, 3vw, 1.5rem);color:#0dd49b"><b>"play the game, to make a name"</b></p>
             </div>
@@ -1340,9 +1340,9 @@ Inspired by the roaring success of Kerala's beach football scene, this event is 
     <script src="js/script.js"></script>
     <script>
       // Disable right-click context menu
-      document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-      });
+      // document.addEventListener('contextmenu', function(e) {
+      //   e.preventDefault();
+      // });
       
       // Disable text selection
       document.addEventListener('selectstart', function(e) {
